@@ -1,0 +1,198 @@
+{include file=header.html}
+<link rel="stylesheet" type="text/css" href="{lib file=plugin/datepicker_skin.css}">
+<script type="text/javascript" src="{lib file=plugin/datepicker.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=plugin/datepicker-zh-CN.js}" charset="utf-8"></script>
+
+<div class="layout archit2">
+	{include file=member.menu2.html}
+    <div class="m_con">
+    	<div class="m_c_item">
+			<div class="m_c_tit o_C1_40">
+					<a class="active">基本信息</a>
+					<span class="bevel"></span>
+			</div>	
+            <div class="m_c_bx p_works">
+					<div style="height:60px;overflow: hidden;"></div>
+                    <form method="post" enctype="multipart/form-data" id="profile_form">
+					<table width="500px" border="0" cellspacing="0" cellpadding="0" align="center" class="tab_inpt">
+						<tr>
+							<td align="right" class="tit">头像</td>
+							<td width="20">&nbsp;</td>
+							
+							<td><div class="imgshow" id="photoPreVies" style=""><img id="uploadimg" src="<!--{if $profile.portrait}-->{$profile.portrait}?{$random_number}<!--{else}-->{$site_url}/data/system/default_user_portrait.gif<!--{/if}-->" width="120" height="120" alt="" ectype="avatar" /></div>
+              <input type="file" style="display:none;" name="portrait" size="1" class="up-filea avatar_img" id="imgUpload"/>
+                <input type="button" value="修改头像" onclick="imgUpload.click(this)" style="position:absolute;left:750px;top:170px;width:66px;height:30px;">
+                            </td>	
+                          
+						</tr>
+						
+						<tr>
+							<td align="right" class="tit">昵称</td>
+							<td>&nbsp;</td>
+							<td><input type="text" name="real_name" id="textfield" class="text"  value="{$profile.user_name|escape}" datatype="/^([\u4e00-\u9fa5-0-9a-zA-Z_-]){1,12}$/" nullmsg="请填写昵称" errormsg="昵称仅支持中文、字母、数字、划线或减号<br/>长度必须在1-12个之间！" /></td>
+						</tr>
+                        <tr>
+							<td align="right">&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="Validform_checktip">1-12个中文，字母，数字，下划线或减号</td>
+						</tr>
+						<tr>
+							<td align="right" class="tit">{$lang.gender}</td>
+							<td>&nbsp;</td>
+							<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									
+                                    
+                   <td><input type="radio" name="gender" value="0" {if $profile.gender eq 0}checked="checked"{/if} />{$lang.unknown}  </td>
+                   <td>
+                          <input type="radio" name="gender" value="1" {if $profile.gender eq 1}checked="checked"{/if} />{$lang.male}   </td>
+                   <td>
+                          <input type="radio" name="gender" value="2" {if $profile.gender eq 2}checked="checked"{/if} />{$lang.female} </td>
+                                    
+								</tr>
+							</table></td>
+						</tr>
+						<tr>
+							<td align="right" class="tit">{$lang.birthday}</td>
+							<td>&nbsp;</td>
+							<td><input type="text" name="birthday" id="birthday_date" class="text" value="{$profile.birthday|escape}" datatype="/^(19|20)(\d){2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$/" nullmsg="请选择出生日期" errormsg="出生日期格式不正确" readonly="readonly"/></td>
+						</tr>
+						<tr>
+							<td align="right" class="tit">{$lang.email}</td>
+							<td>&nbsp;</td>
+							<td><input type="text" name="email" id="textfield" class="text" value ="{$profile.email}" datatype="e" nullmsg="请填写邮箱" errormsg="邮箱格式不对！"/></td>
+						</tr>
+                        
+                       
+					</table>
+                     <input type="submit" class="profile_button" style="padding-left:0px;" value="{$lang.save_edit}">
+                     
+                    </form>
+				</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript" src="{lib file=plugin/Validform_v5.3.2_min.js}" charset="utf-8"></script>
+<script type="text/javascript">
+
+$(function(){
+	$(function(){
+            size=$('.imgshow').width();
+            $("#imgUpload").change(function(event){
+                  var img = '<img id="uploadimg" src="" width="120" height="120"/>';//清楚默认的背景。针对IE6,7,8,9
+                    $(".imgshow").empty().append(img);
+                showImg(event);
+            });
+        });
+	var size;
+  //头像预览
+        function showImg(event){
+
+            if(typeof FileReader =='undefined' || typeof FileReader == undefined){
+                //如果浏览器是ie
+                //低版本firefox getAsDataURL
+
+                try {
+                    var fileObj=document.getElementById("imgUpload");
+			               var file = null;
+                    if(fileObj.files && fileObj.files[0] ){
+                        file = fileObj.files[0];
+                    }else if(fileObj.files && fileObj.files.item(0)) {
+                        file = fileObj.files.item(0);
+                    }
+
+                    var src;
+                    if (window.createObjectURL!=undefined) { // basic
+                        src = window.createObjectURL(file) ;
+                    } else if (window.URL !=undefined) { // mozilla(firefox)
+                        src = window.URL.createObjectURL(file) ;
+                    } else if (window.webkitURL !=undefined) { // webkit or chrome
+                        src = window.webkitURL.createObjectURL(file) ;
+                    }else{
+                    	$('#imgUpload').css('display','block');//针对IE6,7 显示上传按钮的隐藏属性--IE6和7 的 BUG
+                    	photoPreView();                        //IE6,7,8,9 头像预览
+                    	 $('#imgUpload').css('display','none');//针对IE6,7 隐藏上传按钮的隐藏属性--IE6和7 的 BUG
+                    	return;
+                    }
+
+                    var img = '<img id="uploadimg" src="'+src+'" width="120" height="120"/>';
+                    $(".imgshow").empty().append(img);
+                } catch (e) {
+
+                }
+            }else{
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    if(this.result.indexOf("data:image")!=-1){
+                        var img = '<img id="uploadimg" src="'+this.result+'" width="120" height="120"/>';
+
+
+
+                        $(".imgshow").empty().append(img);
+                        $('#text').html('加载完成');
+                    }else{
+                        var fileExtend=document.getElementById("imgUpload").value.substring(document.getElementById("imgUpload").value.lastIndexOf('.')).toLowerCase();
+                        fileExtend=fileExtend.replace('.','');
+                        if(fileExtend=='jpg'){
+                            fileExtend='jpeg';
+                        }
+                        var src= this.result.replace('data:',"data:image/"+fileExtend+";");
+                        var img = '<img id="uploadimg" src="'+src+'"  width="120" height="120"/>';
+                        $(".imgshow").empty().append(img);
+                    }
+
+                }
+                reader.readAsDataURL(document.getElementById("imgUpload").files[0]);
+            }
+        }
+    $("#profile_form").Validform();
+    /*$('input[ectype="change_avatar"]').change(function(){
+        var src = getFullPath($(this)[0]);
+        $('img[ectype="avatar"]').attr('src', src);
+        $('input[ectype="change_avatar"]').removeAttr('name');
+        $(this).attr('name', 'portrait');
+    });*/
+  $('#birthday_date').datepicker({
+	yearRange: '1950:2050', //取值范围.
+        showOn: 'both', //输入框和图片按钮都可以使用日历控件。
+        buttonImageOnly: true,
+        showButtonPanel: true
+  }); 
+});
+function photoPreView(){
+var image= document.getElementById("imgUpload");
+  var photoPreView = document.getElementById("uploadimg");
+  if( image.value != '' || image.value != undefined ){
+  var checkimg = image.value.toLowerCase() ;
+  var path = getPath();
+  photoPreView.style.width = "100px"; 
+  photoPreView.style.height = "100px"; 
+photoPreView.style.margin="10px";
+  photoPreView.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)"; //打开滤镜，否则不能预览图片 
+  photoPreView.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = path; 
+
+
+	}
+}
+
+function getPath(image)
+{ 
+  var obj= document.getElementById( "imgUpload" );
+  if(obj) 
+  { 
+    if ( window.navigator.userAgent.indexOf("MSIE") >= 1 ) 
+    { 
+      obj.select() ; 
+      return document.selection.createRange().text ; 
+    }else if( window.navigator.userAgent.indexOf("Firefox") >= 1 ){ 
+      if(obj.files) 
+      { 
+        return obj.files.item(0).getAsDataURL() ; 
+      } 
+      return obj.value ; 
+      } 
+    return obj.value ; 
+  } 
+}
+</script>
+{include file=footer.html}

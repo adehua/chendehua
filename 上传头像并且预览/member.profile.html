@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+<script type="text/javascript" src="http://fun.kid.qq.com/funshop/static/default/js2013/jquery-1.7.min.js"></script>
+
+					<table width="500px" border="0" cellspacing="0" cellpadding="0" align="center" class="tab_inpt">
+						<tr>
+							<td align="right" class="tit">头像</td>
+							<td width="20">&nbsp;</td>
+							
+							<td><div class="imgshow" id="photoPreVies" style=""><img id="uploadimg" src="" width="120" height="120" alt=""  /></div>
+              <input type="file" style="display:none;" name="portrait" size="1" class="up-filea avatar_img" id="imgUpload"/>
+                <input type="button" value="修改头像" onclick="imgUpload.click(this)" style="position:absolute;left:750px;top:170px;width:66px;height:30px;">
+                            </td>	
+                          
+						</tr>
+						       
+                       
+					</table>
+</body>
+</html>
+<script type="text/javascript">
+
+$(function(){
+	$(function(){
+            size=$('.imgshow').width();
+            $("#imgUpload").change(function(event){
+                  var img = '<img id="uploadimg" src="" width="120" height="120"/>';//清楚默认的背景。针对IE6,7,8,9
+                    $(".imgshow").empty().append(img);
+                showImg(event);
+            });
+        });
+	var size;
+  //头像预览
+        function showImg(event){
+
+            if(typeof FileReader =='undefined' || typeof FileReader == undefined){
+                //如果浏览器是ie
+                //低版本firefox getAsDataURL
+
+                try {
+                    var fileObj=document.getElementById("imgUpload");
+			               var file = null;
+                    if(fileObj.files && fileObj.files[0] ){
+                        file = fileObj.files[0];
+                    }else if(fileObj.files && fileObj.files.item(0)) {
+                        file = fileObj.files.item(0);
+                    }
+
+                    var src;
+                    if (window.createObjectURL!=undefined) { // basic
+                        src = window.createObjectURL(file) ;
+                    } else if (window.URL !=undefined) { // mozilla(firefox)
+                        src = window.URL.createObjectURL(file) ;
+                    } else if (window.webkitURL !=undefined) { // webkit or chrome
+                        src = window.webkitURL.createObjectURL(file) ;
+                    }else{
+                    	$('#imgUpload').css('display','block');//针对IE6,7 显示上传按钮的隐藏属性--IE6和7 的 BUG
+                    	photoPreView();                        //IE6,7,8,9 头像预览
+                    	 $('#imgUpload').css('display','none');//针对IE6,7 隐藏上传按钮的隐藏属性--IE6和7 的 BUG
+                    	return;
+                    }
+
+                    var img = '<img id="uploadimg" src="'+src+'" width="120" height="120"/>';
+                    $(".imgshow").empty().append(img);
+                } catch (e) {
+
+                }
+            }else{
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    if(this.result.indexOf("data:image")!=-1){
+                        var img = '<img id="uploadimg" src="'+this.result+'" width="120" height="120"/>';
+
+
+
+                        $(".imgshow").empty().append(img);
+                        $('#text').html('加载完成');
+                    }else{
+                        var fileExtend=document.getElementById("imgUpload").value.substring(document.getElementById("imgUpload").value.lastIndexOf('.')).toLowerCase();
+                        fileExtend=fileExtend.replace('.','');
+                        if(fileExtend=='jpg'){
+                            fileExtend='jpeg';
+                        }
+                        var src= this.result.replace('data:',"data:image/"+fileExtend+";");
+                        var img = '<img id="uploadimg" src="'+src+'"  width="120" height="120"/>';
+                        $(".imgshow").empty().append(img);
+                    }
+
+                }
+                reader.readAsDataURL(document.getElementById("imgUpload").files[0]);
+            }
+        }
+});
+function photoPreView(){
+var image= document.getElementById("imgUpload");
+  var photoPreView = document.getElementById("uploadimg");
+  if( image.value != '' || image.value != undefined ){
+  var checkimg = image.value.toLowerCase() ;
+  var path = getPath();
+  photoPreView.style.width = "100px"; 
+  photoPreView.style.height = "100px"; 
+photoPreView.style.margin="10px";
+  photoPreView.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)"; //打开滤镜，否则不能预览图片 
+  photoPreView.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = path; 
+
+
+	}
+}
+
+function getPath(image)
+{ 
+  var obj= document.getElementById( "imgUpload" );
+  if(obj) 
+  { 
+    if ( window.navigator.userAgent.indexOf("MSIE") >= 1 ) 
+    { 
+      obj.select() ; 
+      return document.selection.createRange().text ; 
+    }else if( window.navigator.userAgent.indexOf("Firefox") >= 1 ){ 
+      if(obj.files) 
+      { 
+        return obj.files.item(0).getAsDataURL() ; 
+      } 
+      return obj.value ; 
+      } 
+    return obj.value ; 
+  } 
+}
+</script>
