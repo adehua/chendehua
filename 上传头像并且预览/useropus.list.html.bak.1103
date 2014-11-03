@@ -1,0 +1,162 @@
+<!---->
+<div class="sub_cons" style="display:block;">
+
+    {foreach from=$opusList item=flist key=key}
+    <div class="item mt25">
+        {foreach from=$flist item = list name=l_name}
+        <div class="case" elid="{$list.elid}">
+            {if $list.status == 3}
+            <a href="javascript:showEbook({$list.elid},'{$list.fmt_size}');" class="pic useropus_pic" style="z-index:1">
+                {elseif !$list.order_id }
+                <a href="{$site_url}/testfunshow/index/index/0/{$list.elid}/" class="pic useropus_pic">
+		{else}
+		<a href="javascript:0;" class="pic useropus_pic">
+                    {/if}
+                    <img src="{$list.eurl}" alt="">
+		    <div >
+                    <span class="baffle"></span><span class="text">{$list.name}</span>
+                    <b class="bianji" onclick="check_editable();" ></b>
+                    <b class="shanchu" onclick="delete_album({$list.elid});"></b>
+		    </div>
+                </a>
+
+                <div {if $smarty.foreach.l_name.index eq 4}class="last_work"{else}class="xiangxi"{/if} style="display: none;">
+                    <div class="tit">
+                        {if $list.status == 3}
+                        <a href="javascript:showEbook({$list.elid},'{$list.fmt_size}');">
+                            {elseif !$list.order_id}
+                            <a href="{$site_url}/testfunshow/index/index/0/{$list.elid}/">
+			    {else}
+			    <a href="javascript:0;">
+                                {/if}
+                                {$list.name}</a>
+                    </div>
+                    <div class="intro">
+                        <span class="lv">状态</span>：<span class="lan">{if $list.status==3}已发布{elseif $list.status==2}等待审核{elseif $list.status==1}未完成{elseif $list.status==5}审核未通过{/if}</span><br>
+                        已在大厅中展示 <span class="hei">取消</span>
+                    </div>
+                    <div class="btn_ss">
+                        <a href="{$site_url}/index.php?app=cart&act=add&elid={$list.elid}&quantity=1" class="gouwuche">加入购物车</a>
+                        <a href="{$site_url}/index.php?app=cart&act=add&elid={$list.elid}&quantity=1&go_cart=1" class="xianzaiqudayin">现在去打印</a>
+                    </div>
+                </div>
+        </div>
+        {/foreach}
+    </div>
+    {/foreach}
+    <!--分页-->
+    {if !empty($opusList)}
+    <div class="page">
+        <a href="{$prexPageUrl}" class="btn p_l"></a><span class="page_num">
+<em class="cur">{$currentPage}</em><em class="total">{$pageCount}</em>
+</span><a href="{$nextPageUrl}" class="btn p_r"></a>
+    </div>
+    {/if}
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".case").bind("mouseover", function () {
+            $(this).children(".xiangxi").show();
+	    $(this).children(".last_work").show();
+	    $(this).css("z-index", 30);
+        });
+        $(".case").bind("mouseout", function () {
+            $(this).children(".xiangxi").hide();
+	    $(this).children(".last_work").hide();
+	    $(this).css("z-index", 1);
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        $('.page a').click(function () {
+            var url = $(this).attr("href");
+            pageAjax(url);
+            return false;
+        });
+    });
+
+    $(".gouwuche").click(function () {
+        var url = $(this).attr("href");
+        $.get(url, function (data) {
+            var res = eval("(" + data + ")");
+            if (res.done == true) {
+                alert("加入成功!");
+            } else {
+		alert(res.msg);
+            }
+        });
+        return false;
+    });
+
+    $(".xianzaiqudayin").click(function () {
+        var url = $(this).attr("href");
+        $.get(url, function (data) {
+
+		if (data != '' && data != undefined && data != null) {
+			var res = eval("(" + data + ")");
+                	alert(res.msg);
+		}
+
+	window.location = "./index.php?app=cart";
+        });
+        return false;
+    });
+    /*$(".case>a").click(function () {
+
+        check_editable();
+        return false;
+
+    });*/
+
+    function check_editable()
+    {
+        var elid = $(".case>a").parent(".case").attr("elid");
+        var edit_url = $(".case>a").attr("href");
+        var url = "{$site_url}testfunshow/index/check_in_order/" + elid;
+        var is_in_order;
+        var go_url = "fdf";
+        $.get(url, function (data, go_url) {
+            var res = eval("(" + data + ")");
+            if (res.is_in_order == true) {
+                alert("该作品已加入购物车,暂不支持修改 !");
+            } else {
+                go_edit(edit_url);
+            }
+        });
+    }
+
+    function go_edit(edit_url) {
+        window.location = edit_url;
+
+    }
+
+    function delete_album(elid)
+    {
+        var url = '{$site_url}/testfunshow/personal/delebook/' + elid + '/{$g_tk}/{$uid}';
+        $.ajax({
+            url : url,
+            type : 'post',
+            success : function(data)
+            {
+                if (data)
+                {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert("删除失败");
+                }
+            }
+
+        });
+	return false;
+    }
+
+
+</script>
+
+

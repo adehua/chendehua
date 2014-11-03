@@ -20,9 +20,9 @@
 							<td width="20">&nbsp;</td>
 							
 							<td><div class="imgshow" id="photoPreVies" style=""><img id="uploadimg" src="<!--{if $profile.portrait}-->{$profile.portrait}?{$random_number}<!--{else}-->{$site_url}/data/system/default_user_portrait.gif<!--{/if}-->" width="120" height="120" alt="" ectype="avatar" /></div>
-              <input type="file"  name="portrait1"  ectype="change_avatar" size="1" class="up-filea avatar_img" id="imgUpload" style="position:absolute;left:750px;top:170px;width:68px;height:30px;"/>
+              <input type="file" style="display:" name="portrait1"  ectype="change_avatar" size="1" class="up-filea avatar_img" id="imgUpload"/>
                 <!--<input type="button" value="修改头像" onclick="imgUpload.click(this)" style="position:absolute;left:750px;top:170px;width:66px;height:30px;"-->
-		<!-- <span type=""  onclick="imgUpload.click(this)" id="aaa"> 修改头像 </span> -->
+		<span type="" id="aaa"> 修改头像 </span>
                             </td>	
                           
 						</tr>
@@ -79,16 +79,27 @@
 $(function(){
 
 
-  $("#aaa").click(function(){
-    $("#imgUpload").click();
-  });
+$("#aaa").click(function(){
+                $("#imgUpload").click();
+            });
+	/*$(function(){
+            size=$('.imgshow').width();
+
+            $("#imgUpload").change(function(event){
+
+		 var img = '<img id="uploadimg" src="" width="120" height="120"/>';//清楚默认的背景。针对IE6,7,8,9
+                  $("#uploadimg").css("src","");
+                showImg(event);
+            });
+        });*/
 	var size=$('.imgshow').width();
   //头像预览
-        function showImg(){
-        var event =$('.imgshow');
+        function showImg(event){
+
             if(typeof FileReader =='undefined' || typeof FileReader == undefined){
                 //如果浏览器是ie
                 //低版本firefox getAsDataURL
+
                 try {
                     var fileObj=document.getElementById("imgUpload");
 			               var file = null;
@@ -97,6 +108,7 @@ $(function(){
                     }else if(fileObj.files && fileObj.files.item(0)) {
                         file = fileObj.files.item(0);
                     }
+
                     var src;
                     if (window.createObjectURL!=undefined) { // basic
                         src = window.createObjectURL(file) ;
@@ -106,8 +118,9 @@ $(function(){
                         src = window.webkitURL.createObjectURL(file) ;
                     }else{
                     	//$('#imgUpload').css('display','block');//针对IE6,7 显示上传按钮的隐藏属性--IE6和7 的 BUG
+
                     	photoPreView();                        //IE6,7,8,9 头像预览
-			                 //$('#imgUpload').css('display','none');//针对IE6,7 隐藏上传按钮的隐藏属性--IE6和7 的 BUG
+			//$('#imgUpload').css('display','none');//针对IE6,7 隐藏上传按钮的隐藏属性--IE6和7 的 BUG
                     	return ; 
                     }
 
@@ -121,8 +134,11 @@ $(function(){
                 reader.onload = function(e) {
                     if(this.result.indexOf("data:image")!=-1){
                         var img = '<img id="uploadimg" src="'+this.result+'" width="120" height="120"/>';
-                        $(".imgshow").empty().append(img);
 
+
+
+                        $(".imgshow").empty().append(img);
+                        $('#text').html('加载完成');
                     }else{
                         var fileExtend=document.getElementById("imgUpload").value.substring(document.getElementById("imgUpload").value.lastIndexOf('.')).toLowerCase();
                         fileExtend=fileExtend.replace('.','');
@@ -140,9 +156,12 @@ $(function(){
         }
     $("#profile_form").Validform();
     $('input[ectype="change_avatar"]').change(function(){
-      showImg();
-      $('input[ectype="change_avatar"]').removeAttr('name');
-      $(this).attr('name', 'portrait');
+	showImg(event);
+	//alert($('#photoPreVies').html());
+        //var src = getFullPath($(this)[0]);
+        //$('img[ectype="avatar"]').attr('src', src);
+        $('input[ectype="change_avatar"]').removeAttr('name');
+        $(this).attr('name', 'portrait');
     });
   $('#birthday_date').datepicker({
 	yearRange: '1950:2050', //取值范围.
@@ -158,14 +177,17 @@ var image= document.getElementById( "imgUpload" );
   if( image.value != ''  ){
   var checkimg = image.value.toLowerCase() ;
   var path = getPath();
-/*var img = '<img id="uploadimg" src="'+path+'"  width="120" height="120"/>';
-                        $(".imgshow").empty().append(img);*/
+	
+	//$('#uploadimg').attr('src',path));
+
+
+
   photoPreView.style.width = "120px"; 
   photoPreView.style.height = "120px"; 
 //photoPreView.style.margin = "10px;";
   photoPreView.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)"; //打开滤镜，否则不能预览图片 
-  photoPreView.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = path;
-  $("#uploadimg").attr('src',''); 
+  photoPreView.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = path; 
+$("#uploadimg").attr('src','');
 	}
 }
 
