@@ -1,0 +1,161 @@
+首先是分页的样式，样式就不太过多的详述
+
+				#fun_page{height: 27px;margin:auto;text-align:center;}
+				#fun_page a {font:12px/27px "Arial","Helvetica";width: 27px;height: 27px;background:url("../images/pageimage.gif") no-repeat 0 0;text-align: center;text-decoration: none;color: #333;overflow: hidden; float:left;margin-right: 9px;}
+				#fun_page a:hover {background:url("../images/pageimagehover.gif") no-repeat 0 0;color: #ffffff;}
+				#fun_page span.active {cursor: default;font:12px/27px "Arial","Helvetica";width: 27px;height: 27px;text-align: center;overflow: hidden; float:left;margin-right: 9px;background:url("../images/pageimagehover.gif") no-repeat 0 0;color: #ffffff}
+				#fun_page span.disabled {cursor: default;font:12px/27px "Arial","Helvetica";width: 27px;height: 27px;background:url("../images/pageimage.gif") no-repeat 0 0;_display:inline;text-align: center;color: #333;overflow: hidden; float:left;margin-right: 9px;}
+
+				#fun_page span.qingxuanze  {float:left; width: 50px;height: 27px;text-align: right;color: #333;overflow: hidden;margin-right: 4px;font:12px/27px "Arial","Helvetica";margin-right: 9px;}
+				#fun_page #pageinput{width: 43px;height: 27px;border: 0px;background:url("../images/pageinput.gif") no-repeat 0 0; float:left;padding:0px 2px;line-height:27px;}
+				#fun_page #pagego{background:url("../images/pagego.gif") no-repeat 0 0;cursor: pointer;margin-left: 3px;font:12px/27px "Arial","Helvetica";width: 27px;height: 27px;_display:inline;display:inline-block;text-align: center; color: #333;overflow: hidden; float:left;}
+
+
+具体的html也不述说。
+html里面是通过后台传输过来的 pages（总页面数量）、page_now（当前的页面）、page_url（分页的url如 index.php?app=aaa&page=） 
+首先引用js文件，即分页函数
+HTML代码如下(由JS控制)
+<script type="text/javascript">
+$(function(){
+	var page_now = "";
+	var pages = "";
+	var url = "";
+	var pagestr = page_now_function(page_now,pages,url);
+	if(pages <=1){
+        var str ="";
+    }else{
+        var str = "<div style='margin-top:20px;'><div id='fun_page' style='width:"+pagestr[5]+"px;'>" 
+                + pagestr[0] + pagestr[1] + pagestr[2] + pagestr[3] + pagestr[4]
+                + "<span class='qingxuanze'>跳转到</span>"
+                + "<input type='text' name='pageinput' id='pageinput' onkeyup='pageinput(this);'>"
+                + "<input type='hidden' id='page_url' value="+url+">"
+                + "<span onclick='pagesubmits("+pages+");' id='pagego' ></span>"
+                + "</div></div>";
+    $("#page_tabb_box").append(str);	//page_tabb_box 即这个分页所需要放入的div，fun_page这个div 是分页的代码，fun_page这个div的外面的这个div表示分页需要margin的地方，可以再page_tabb_box这个div控制
+	}
+});
+</script>
+
+
+
+JS分页函数如下
+<script>
+function pageinput(){
+
+		var _this = $("#pageinput").val();
+		_this=_this.replace(/[^\d]/g,'');
+		 $("#pageinput").val(_this);
+	}
+	function page_now_function(page_now,pages,url){ 	
+		var page_pre = page_now - 1;    //上一页
+		var page_next = page_now + 1;  //下一页
+		if(page_now <= 1 ){
+            var new_page_shouye = "<span class='disabled'>首页</span>";
+            var new_page_pre = "<span class='disabled'>&lt;</span>";
+        }else{
+            var new_page_shouye = "<a href='"+url+"1'>首页</a>";
+            var new_page_pre = "<a href='"+url+page_pre+"'>&lt;</a>";
+        }
+        if ( page_next> pages) {
+            var new_page_moye = "<span class='disabled'>末页</span>";
+            var new_page_next = "<span class='disabled'>&gt;</span>";
+
+        } else {
+            var new_page_moye = "<a href='"+url+pages+"'>末页</a>";
+            var new_page_next = "<a href='"+url+page_next+"'>&gt;</a>";
+        }
+		if(pages <=5){
+			var str ="";
+			var new_page_shouye = "";
+			for(var i = 1;i <= pages;i++){
+				if(i == page_now){
+					str +="<span class='active'>"+i+"</span>"
+				}else{
+					str +="<a href='"+url+i+"'>"+i+"</a>";
+				}
+			}
+			var new_page_moye = "";
+			var fun_page_width = (pages+2)*36;
+		}else if(pages == 6){
+			var str = "";
+			var fun_page_width = (9+2)*36;
+			if(page_now > 3){
+				str  +=  "<a href='1'>1</a>";
+				str  +=   "<span class='disabled'>...</span>";
+				for(var i = 2;i<=6;i++){
+					if(i == page_now){
+						str +="<span class='active'>"+i+"</span>";
+					}else{
+						str +="<a href='"+url+i+"'>"+i+"</a>";
+					}
+				}
+			}else{ 
+				for(var i=1;i<=5;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>";
+					}else{
+						str +="<a href='"+url+i+"'>"+i+"</a>";
+					}
+				}
+				str += "<span class='disabled'>...</span>";
+				str += "<a href='"+url+"6'>"+6+"</a>";
+			}
+		}else if(pages>=7){
+			if(page_now >3 && page_now<pages-2){ //7个数以上 并且当前
+				var str = "";
+				str  +=  "<a href='"+url+"1'>1</a>";
+				str  +=   "<span class='disabled'>...</span>";
+				for(var i=page_now-2;i<page_now;i++){
+					str +="<a href='"+url+i+"'>"+i+"</a>";
+				}
+				str +="<span class='active'>"+page_now+"</span>";
+				for(var i=page_now+1;i<page_now+3;i++){
+					str +="<a href='"+url+i+"'>"+i+"</a>";
+				}
+				str += "<span class='disabled'>...</span>";
+				str += "<a href='"+url+pages+"'>"+pages+"</a>";
+				var fun_page_width = (11+2)*36;
+			}else if(0<page_now && page_now <=3){
+				var str = "";
+
+				for(var i=1;i<=5;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>"
+					}else{
+						str +="<a href='"+url+i+"'>"+i+"</a>";
+					}
+				}
+				str += "<span class='disabled'>...</span>";
+				str += "<a href='"+url+pages+"'>"+pages+"</a>";
+				var fun_page_width = (9+2)*36;
+			}else{
+				var str = "";
+				str  +=  "<a href='"+url+"1'>1</a>";
+				str  +=   "<span class='disabled'>...</span>";
+				for(var i=pages-4;i<=pages;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>"
+					}else{
+						str +="<a href='"+url+i+"'>"+i+"</a>";
+					}
+				}
+				var fun_page_width = (9+2)*36;
+			}
+			
+		}
+		var arrayObj = new Array(new_page_shouye,new_page_pre,str,new_page_next,new_page_moye,fun_page_width+136); //首页，上一页，循环中间数字链接，下一页，末页，当前宽度
+		return arrayObj;
+	}
+
+	function pagesubmits(pages){  //其他跳转函数
+		var this_go_page = parseInt(document.getElementById("pageinput").value); //跳转的页面的page数
+		var this_go_url = document.getElementById("page_url").value; //跳转的URL
+		if(this_go_page < 1){     //将小于1的数强制转换为1
+			this_go_page = 1;
+		}
+		if(this_go_page > pages){		//将大于总页数的数强制转换到 最后一页
+			this_go_page = pages;
+		}
+		window.location.href = this_go_url+this_go_page;
+	}	
+</script>
