@@ -1,0 +1,32 @@
+七 - Jquery动画效果
+	1、show（speed,[callback]）和hide（）用于显示和隐藏元素，和在一起等同tooggle
+			speed 可能的值：毫秒 （比如 1500）"slow""normal""fast"
+	2、slideUp(speed,[callback])和slideDown（）上下滑动，同上和slideToggle
+	3、fadeIn()与fadeOut()方法实现淡入淡出效果，fadeTo()方法设置淡入淡出效果的不透明度
+	4、animate（{params},speed,[callback]）由小变大其中，params参数为制作动画效果的CSS属性名与值，speed参数为动画的效果的速度，单位为毫秒，可选项callback参数为动画完成时执行的回调函数名
+	5、delay()方法的功能是设置一个延时值来推迟动画效果的执行
+九 - 表单插件 引用不同的插件
+	1、表单验证插件——validate
+		（1）可以直接在表单中填写如<input type="text" name="real_name" id="textfield" class="text"  value="未來的夢" datatype="/^([\u4e00-\u9fa5-0-9a-zA-Z_-]){1,12}$/" nullmsg="请填写昵称" errormsg="昵称仅支持中文、字母、数字、划线或减号<br/>长度必须在1-12个之间！" />
+		（2）class="{required:true,minlength:5,messages:{required:'请输入内容'}}" 必须搭配$().ready(function() { $("#signupForm").validate();});
+		（3）或者在JS中$().ready(function() {$("#signupForm").validate({rules: {firstname: "required",email: {required: true,email: true},});});
+	2、表单插件——form
+		调用表单插件的ajaxForm()或ajaxSubmit()方法向服务器发送表单数据，
+	3、图片灯箱插件——lightBox
+	4、图片放大镜插件——jqzoom
+	5、cookie插件——cookie
+	6、搜索插件——autocomplete
+	6、右键菜单插件——contextMenu
+$("#txtContent").contextMenu('sysMenu',{ bindings:
+{
+'Li3': function (Item) {$(".tip").show().html("您点击了“保存”项");},'Li4': function (Item) {$(".tip").show().html("您点击了“退出”项");
+}}});
+	7、自定义对象级插件——lifocuscolor插件自定义的lifocuscolor插件可以在<ul>元素中，鼠标在表项<li>元素移动时，自定义其获取焦点时的背景色，即定义<li>元素选中时的背景色，调用格式为：
+$(Id).focusColor(color)
+	8、自定义类级别插件—— twoaddresult
+十 = UI型插件 需要http://www.imooc.com/data/jquery-ui-1.9.2.min.js
+	1、拖曳插件——draggable
+拖曳插件draggable的功能是拖动被绑定的元素，当这个jQuery UI插件与元素绑定后，可以通过调用draggable()方法，实现各种拖曳元素的效果，调用格式如下：$(selector). draggable({options})
+	2、放置插件——droppable
+	3、拖曳排序插件——sortable拖曳排序插件的功能是将序列元素（例如<option>、<li>）按任意位置进行拖曳从而形成一个新的元素序列，实现拖曳排序的功能，它的调用格式为
+		
