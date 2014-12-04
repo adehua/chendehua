@@ -17,16 +17,41 @@
 	5、cookie插件——cookie
 	6、搜索插件——autocomplete
 	6、右键菜单插件——contextMenu
-$("#txtContent").contextMenu('sysMenu',{ bindings:
+		$("#txtContent").contextMenu('sysMenu',{ bindings:
 {
 'Li3': function (Item) {$(".tip").show().html("您点击了“保存”项");},'Li4': function (Item) {$(".tip").show().html("您点击了“退出”项");
 }}});
-	7、自定义对象级插件——lifocuscolor插件自定义的lifocuscolor插件可以在<ul>元素中，鼠标在表项<li>元素移动时，自定义其获取焦点时的背景色，即定义<li>元素选中时的背景色，调用格式为：
+	7、自定义对象级插件——lifocuscolor
+		插件自定义的lifocuscolor插件可以在<ul>元素中，鼠标在表项<li>元素移动时，自定义其获取焦点时的背景色，即定义<li>元素选中时的背景色，调用格式为：
 $(Id).focusColor(color)
 	8、自定义类级别插件—— twoaddresult
 十 = UI型插件 需要http://www.imooc.com/data/jquery-ui-1.9.2.min.js
 	1、拖曳插件——draggable
-拖曳插件draggable的功能是拖动被绑定的元素，当这个jQuery UI插件与元素绑定后，可以通过调用draggable()方法，实现各种拖曳元素的效果，调用格式如下：$(selector). draggable({options})
+		拖曳插件draggable的功能是拖动被绑定的元素，当这个jQuery UI插件与元素绑定后，可以通过调用draggable()方法，实现各种拖曳元素的效果，调用格式如下：$(selector). draggable({options})
 	2、放置插件——droppable
-	3、拖曳排序插件——sortable拖曳排序插件的功能是将序列元素（例如<option>、<li>）按任意位置进行拖曳从而形成一个新的元素序列，实现拖曳排序的功能，它的调用格式为
+	3、拖曳排序插件——sortable
+		拖曳排序插件的功能是将序列元素（例如<option>、<li>）按任意位置进行拖曳从而形成一个新的元素序列，实现拖曳排序的功能，它的调用格式为$(selector).sortable({options});如$("ul").sortable({
+})
+	4、面板折叠插件——accordion
+		面板折叠插件可以实现页面中指定区域类似“手风琴”的折叠效果
+	5、选项卡插件——tabs
+		使用选项卡插件可以将<ul>中的<li>选项定义为选项标题，在标题中，再使用<a>元素的“href”属性设置选项标题对应的内容，它的调用格式如下：
+ $(tabs).tabs({
+//设置各选项卡在切换时的动画效果fx: { opacity: "toggle", height: "toggle" },event: "mousemove" //通过移动鼠标事件切换选项卡})
+	6、对话框插件——dialog
+	7、菜单工具插件——menu
+	8、微调按钮插件——spinner
+	9、工具提示插件——tooltip
+		工具提示插件可以定制元素的提示外观，提示内容支持变量、Ajax远程获取，还可以自定义提示内容显示的位置，它的调用格式如下：$(selector).tooltip({options});
+
+十一 - 工具类函数
+	1、获取浏览器的名称与版本信息
+		在jQuery中，通过$.browser对象可以获取浏览器的名称和版本信息，如$.browser.chrome为true，表示当前为Chrome浏览器，$.browser.mozilla为true，表示当前为火狐浏览器，还可以通过$.browser.version方式获取浏览器版本信息。
+	2、检测浏览器是否属于W3C盒子模型
+	3、检测对象是否为空
+		在jQuery中，可以调用名为$.isEmptyObject的工具函数，检测一个对象的内容是否为空，如果为空，则该函数返回true，否则，返回false值，调用格式如下：$.isEmptyObject(obj);
+	4、URL操作函数
+		调用名为$. param的工具函数，能使对象或数组按照key/value格式进行序列化编码，该编码后的值常用于向服务端发送URL请求，调用格式为：$. param (obj);
+	5、使用$.extend()扩展工具函数
+	
 		
