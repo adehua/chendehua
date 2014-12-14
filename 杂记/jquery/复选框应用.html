@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#checkedall").click(function(){
+			$("[name=items]:checkbox").attr("checked",true);
+		})
+		$("#checkedno").click(function(){
+			$("[name=items]:checkbox").attr("checked",false);
+		})
+		$("#checkedrev").click(function(){
+			$("[name=items]:checkbox").each(function(){
+				this.checked=!this.checked;
+			})
+		})
+		$("#send").click(function(){
+			var str="你选中的是:\r\n";
+			$("[name=items]:checkbox:checked").each(function(){
+				str+=$(this).val()+"\r\n";
+			})
+			alert(str);
+		})
+	})
+</script>
+<style>
+*{margin:0; padding:0;}
+
+</style>
+</head>
+<body>
+	<form action="" method="" id="regForm">
+		你爱好的运动是？<br/>
+		<input type="checkbox" name="items" value="足球">足球
+		<input type="checkbox" name="items" value="蓝球">蓝球
+		<input type="checkbox" name="items" value="羽毛球">羽毛球<br/>
+		<input type="button" id="checkedall" value="全选"/>
+		<input type="button" id="checkedno" value="全不选"/>
+		<input type="button" id="checkedrev" value="反选"/>
+		<input type="button" id="send" value="提交"/>
+	</form>
+</body>
+</html> 

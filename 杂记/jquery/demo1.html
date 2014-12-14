@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+	window.onload=function(){
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			var arrays=new Array();
+			var items=document.getElementsByName("check");
+			for(i=0;i<items.length;i++)
+			{
+				if(items[i].checked)
+				{
+					arrays.push(items[i].value);
+				}
+			}
+			alert("选中的个数为"+arrays.length);
+		}
+	}
+</script>
+</head>
+
+<body>
+	<input type="checkbox" value="1" name="check" check/>
+	<input type="checkbox" value="2" name="check" check/>
+	<input type="checkbox" value="3" name="check"/>
+	<input type="button" value="你选中的个数" id="btn"/>
+</body>
+</html> 
+<!--
+$(function(){
+		var $cr=$("#cr");//jq对象
+		var cr=$cr[0];//DOM对象
+		$cr.click(function(){
+			if(cr.checked){
+				alert("感谢您的支持");
+			}
+			//第二种方法
+			if($cr.is(":checked")){
+				alert("");
+			}
+			
+			var $p=$("p");for()
+		})
+		
+	})
+-->

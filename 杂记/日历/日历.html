@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>glDatePicker 演示程序</title>
+  <link href='css.css' rel="stylesheet" type="text/css">
+	<script id="jquery_183" type="text/javascript" class="library" src="http://fun.kid.qq.com/funshop/static/default/js2013/jquery-1.7.min.js"></script>
+	<script src='glDatePicker.min.js'>
+	</script>
+	</head>
+	<body>
+		<h1>
+			glDatePicker 演示程序
+		</h1>
+    <input type="text" id="example" style="width:335px;"/>
+	
+	</body>
+</html>
+<script>
+$(window).load(function() {
+	$('#example').glDatePicker({
+		showAlways : true,
+		format : 'yyyy-mm-dd'
+	});
+});
+</script>

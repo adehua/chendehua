@@ -1,0 +1,129 @@
+<html>
+<head>
+<script type="text/javascript" src="http://112.126.70.249//Public/weixin/js/login/jquery-2.0.3.min.js"></script>
+</head>
+<style>
+.fileUpload {
+	float: left;
+	position: absolute;
+	overflow: hidden;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.fileUpload span{
+	color:#fff;
+	background-color:#428bca;
+	border-color:#428bca;
+}
+.uploadFile{
+	position: absolute;
+	left: 0px;
+	top:0px;
+	float: left;
+}
+#ai{
+    position: absolute;
+    left: 100px;
+    top:200px;
+}
+</style>
+<body>
+<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+<div class="fileUpload btn btn-primary">
+    <span  onclick="uploadBtn.click()">Upload</span>
+    <input id="uploadBtn" size="1" type="file" class="upload" />
+</div>
+	、、、、、、、、、、、、、、、、、、、、、、、
+    <form>
+	   <div class="imgshow">
+            <img src="/Public/default/bds.jpg" />
+               
+            </div>
+            <input type="file" style="display:none;" name="avatar" class="up-file" id="imgUpload"/>
+            <span  id="aaa">Upload</span>
+            <input type="submit" value="提交" id="ai">
+        </form>
+	<script tyle="text/javascript">
+document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+</script>
+<script type="text/javascript">
+        var size;
+        function showImg(event){
+            if(typeof FileReader =='undefined'){
+                //如果浏览器是ie
+                //低版本firefox getAsDataURL
+                try {
+                    var fileObj=document.getElementById("imgUpload");
+                    var file = null;
+                    if(fileObj.files && fileObj.files[0] ){
+                        file = fileObj.files[0];
+                    }else if(fileObj.files && fileObj.files.item(0)) {
+                        file = fileObj.files.item(0);
+                    }
+                    var src;
+                    if (window.createObjectURL!=undefined) { // basic
+                        src = window.createObjectURL(file) ;
+                    } else if (window.URL !=undefined) { // mozilla(firefox)
+                        src = window.URL.createObjectURL(file) ;
+                    } else if (window.webkitURL !=undefined) { // webkit or chrome
+                        src = window.webkitURL.createObjectURL(file) ;
+                    }else{
+                        return
+                    }
+                    var img = '<img src="'+src+'" width="120" height="120"/>';
+                    $(".imgshow").empty().append(img);
+                } catch (e) {
+
+                }
+            }else{
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    if(this.result.indexOf("data:image")!=-1){
+                        var img = '<img src="'+this.result+'" width="120" height="120"/>';
+                        $(".imgshow").empty().append(img);
+                        $('#text').html('加载完成');
+                    }else{
+                        var fileExtend=document.getElementById("imgUpload").value.substring(document.getElementById("imgUpload").value.lastIndexOf('.')).toLowerCase();
+                        fileExtend=fileExtend.replace('.','');
+                        if(fileExtend=='jpg'){
+                            fileExtend='jpeg';
+                        }
+                        var src= this.result.replace('data:',"data:image/"+fileExtend+";");
+                        var img = '<img src="'+src+'" width="120" height="120"/>';
+                        $(".imgshow").empty().append(img);
+                    }
+
+                }
+                reader.readAsDataURL(document.getElementById("imgUpload").files[0]);
+            }
+        }
+        $(function(){
+            $("#aaa").click(function(){
+                $("#imgUpload").click();
+            });
+            size=$('.imgshow').width();
+            $("#imgUpload").change(function(event){
+                showImg(event);
+            });
+
+        });
+        
+       
+        
+    </script>
+</body>
+</html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">

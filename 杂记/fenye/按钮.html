@@ -1,0 +1,192 @@
+var page_now = res.page_now;	//当前页
+var pages = res.pages;		//总页数
+var pagestr = page_now_function(page_now,pages);
+			str += "<div id='fun_page'>"
+			+pagestr[0]+pagestr[1]+pagestr[2]+pagestr[3]+pagestr[4]
+			+ "<span class='qingxuanze'>跳转到</span>"
+			+ "<input type='text' name='pageinput' id='pageinput' onkeyup='pageinput(this);'>"
+			+ "<span onclick='pagesubmit("+pages+");' id='pagego' ></span>"
+			+ "</div>";
+			function pageinput(){
+
+		var _this = $("#pageinput").val();
+		_this=_this.replace(/[^\d]/g,'');
+		 $("#pageinput").val(_this);
+	}
+	function page_now_function(page_now,pages){ 	
+		var page_pre = page_now - 1;    //上一页
+		var page_next = page_now + 1;  //下一页
+		if(page_now <= 1 ){
+            var new_page_shouye = "<span class='disabled'>首页</span>";
+            var new_page_pre = "<span class='disabled'><</span>";
+        }else{
+            var new_page_shouye = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page=1&page_n=15'>首页</a>";
+            var new_page_pre = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+page_pre+"&page_n=15'><</a>";
+        }
+        if ( page_next> pages) {
+            var new_page_moye = "<span class='disabled'>末页</span>";
+            var new_page_next = "<span class='disabled'>></span>";
+
+        } else {
+            var new_page_moye = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+pages+"&page_n=15'>末页</a>";
+            var new_page_next = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+page_next+"&page_n=15'>></a>";
+        }
+		if(pages <=5){
+			var str ="";
+			for(var i=1;i<=pages;i++){
+				if(i==page_now){
+					str +="<span class='active'>"+i+"</span>"
+				}else{
+					str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+				}
+			}
+		}else if(pages == 6){
+			var str ="";
+			if(page_now >3){
+				str  +=  "<a href='1'>1</a>";
+				str  +=   "<a class='disabled'>...</a>";
+				for(var i=2;i<=6;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>";
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+			}else{ 
+				for(var i=1;i<=5;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>";
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+				str += "<a class='disabled'>...</a>";
+				str += "<a href='6'>"+6+"</a>";
+			}
+		}else if(pages>=7){
+			if(page_now >3 && page_now<pages-2){ //7个数以上 并且当前
+				var str = "";
+				str  +=  "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page=1&page_n=15'>1</a>";
+				str  +=   "<a class='disabled'>...</a>";
+				for(var i=page_now-2;i<page_now;i++){
+					str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+				}
+				str +="<span class='active'>"+page_now+"</span>";
+				for(var i=page_now+1;i<page_now+3;i++){
+					str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+				}
+				str += "<a class='disabled'>...</a>";
+				str += "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+pages+"&page_n=15'>"+pages+"</a>";
+			}else if(0<page_now && page_now <=3){
+				var str = "";
+				for(var i=1;i<=5;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>"
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+				str += "<a class='disabled'>...</a>";
+				str += "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+pages+"&page_n=15'>"+pages+"</a>";
+			}else{
+				var str = "";
+				str  +=  "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page=1&page_n=15'>1</a>";
+				str  +=   "<a class='disabled'>...</a>";
+				for(var i=pages-4;i<=pages;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>"
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+			}
+			
+		}
+		var arrayObj = new Array(new_page_shouye,new_page_pre,str,new_page_next,new_page_moye)
+		return arrayObj;
+	}
+
+	function pagesubmit(pages){  //跳转函数
+		var this_go_page = parseInt(document.getElementById("pageinput").value); //跳转的页面
+		if(this_go_page < 1){     //将小于1的数强制转换为1
+			this_go_page = 1;
+		}
+		if(this_go_page > pages){		//将大于总页数的数强制转换到 最后一页
+			this_go_page = pages;
+		}
+		 ajaxData("{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+this_go_page+"&page_n=15");
+	}Array ( [limit] => 0,18 [curr_page] => 1 [pageper] => 18 [item_count] => 74 [page_count] => 5 [page_links] => Array ( [1] => index.php?app=search&keyword=&page=1 [2] => index.php?app=search&keyword=&page=2 [3] => index.php?app=search&keyword=&page=3 [4] => index.php?app=search&keyword=&page=4 [5] => index.php?app=search&keyword=&page=5 ) [first_link] => [first_suspen] => [last_link] => [last_suspen] => [prev_link] => [next_link] => index.php?app=search&keyword=&page=2 )
+
+
+	Array ( [limit] => 0,18 [curr_page] => 1 [pageper] => 18 [item_count] => 0 [page_count] => 0 [page_links] => Array ( ) [first_link] => [first_suspen] => [last_link] => [last_suspen] => [prev_link] => [next_link] => )
+
+
+
+
+
+Array
+(
+    [limit] => 0,18
+    [curr_page] => 1
+    [pageper] => 18
+    [item_count] => 74
+    [page_count] => 5
+    [page_links] => Array
+        (
+            [1] => index.php?app=search&keyword=&page=1
+            [2] => index.php?app=search&keyword=&page=2
+            [3] => index.php?app=search&keyword=&page=3
+            [4] => index.php?app=search&keyword=&page=4
+            [5] => index.php?app=search&keyword=&page=5
+        )
+
+    [first_link] => 
+    [first_suspen] => 
+    [last_link] => 
+    [last_suspen] => 
+    [prev_link] => 
+    [next_link] => index.php?app=search&keyword=&page=2
+)
+
+
+
+
+
+
+
+
+	Array
+(
+    [limit] => 0,18
+    [curr_page] => 1
+    [pageper] => 18
+    [item_count] => 0
+    [page_count] => 0
+    [page_links] => Array
+        (
+        )
+
+    [first_link] => 
+    [first_suspen] => 
+    [last_link] => 
+    [last_suspen] => 
+    [prev_link] => 
+    [next_link] => 
+)
+
+
+function check_input($value)
+	{
+		//htmlentities($str, ENT_NOQUOTES);
+		// 去除斜杠
+		if (get_magic_quotes_gpc())
+		{
+			$value = stripslashes($value);
+		}
+		// 如果不是数字则加引号
+		if (!is_numeric($value))
+		{
+			$value = mysql_real_escape_string($value);
+		}
+		return $value;
+	}

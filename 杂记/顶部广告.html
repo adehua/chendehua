@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<style>
+			#top{width: 1000px;margin: auto;}
+			#content{width: 1000px;height: 2000px;margin: auto;background: #eee;}
+			#xx{display:none;}
+		</style>
+	</head>
+	<script>
+		 function $(id){
+		 	return document.getElementById(id);
+		 }
+		window.onload=function(){
+			var xx = document.getElementById("xx")
+			var top = document.getElementById("top")
+			var h=0;
+			var maxh=xx.height;
+			
+			function ooo(){
+				if(h<maxh){
+					h+=5;
+					xx.style.height = h+'px';
+					xx.style.display = 'block';
+					setTimeout(ooo,1);
+				}
+			}
+			function xxx(){
+				if(h>0){
+					h-=5;
+					xx.style.height = h+'px';
+					xx.style.display = 'block';
+					setTimeout(xxx,1);
+				}
+			}
+			setTimeout(ooo,1000);
+			xx.onmouseover=function(){
+				xxx();
+			}
+		}
+		
+	</script>
+	<body>
+		<div id="top">
+			<img id="xx" src="http://img.mukewang.com/52d3d6d30001162406000338.jpg" width="1000" height="200">
+		</div>
+		<div id="content">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,226 @@
+<html>	
+<meta http-equiv="type-content" content="text/html" charset="utf-8">						
+	<head>
+	<script src="http://fun.kid.qq.com//static/default/js2013/jquery-1.7.min.js" ></script>
+		<style>
+			
+			
+			#fun_page_now{height:27px; text-align: center;}
+			#fun_page_now a {font:12px/27px "Arial","Helvetica";width: 27px;height: 27px;background:url("pageimage.gif") no-repeat 0 0;_display:inline;display:inline-block;text-align: center;text-decoration: none;color: #333;overflow: hidden; float:left; }
+			#fun_page_now a:hover {background:url("pageimagehover.gif") no-repeat 0 0;
+				color: #ffffff;display:inline-block;}
+			#fun_page_now span.active {background:url("pageimagehover.gif") no-repeat 0 0;color: #ffffffdisplay:inline-block;}
+			#fun_page_now span.disabled {cursor: default;display:inline-block;}
+			#fun_page_now span:hover.disabled  {cursor: default;background:url("pageimage.gif") no-repeat 0 0;color: #333;display:inline-block;}
+			#fun_page_now span  {float:left; width: 50px;height: 27px;_display:inline;display:inline-block;text-align: right;color: #333;overflow: hidden;font:12px/27px "Arial","Helvetica";  text-align:center;}
+			#fun_page_now #page_nowinput{width: 47px;height: 27px;border: 0px;background:url("page_nowinput.gif") no-repeat 0 0; float:left;}
+			#fun_page_now #page_nowgo{width: 30px;background:url("page_nowgo.gif") no-repeat 0 0;cursor: pointer;}
+			
+			
+		</style>
+	</head>
+	<body>
+	<div style="width:1000px; height:200px; border:1px solid black; margin:0 auto;position: relative;">
+		<div id='fun_page_now' style=" ">
+			<!-- <a href='#' class='disabled'>首页</a>
+			<a href='#' class='disabled'><</a> -->
+			<!-- <a class='active'>1</a>
+			<a href='#'>2</a>
+			<a href='#'>3</a>
+			<a href='#'>4</a>
+			<a href='#'>5</a>
+			<a class='disabled'>...</a>
+			<a href='#'>9999</a> -->
+			<!-- <a href='#'>></a>
+			<a href='#'>末页</a> -->
+			<!-- <span>跳转到</span>
+			<input type='text' name='page_nowinput' id='page_nowinput'>
+			<span onclick='page_nowsubmit();' id='page_nowgo'></span> -->
+		</div>
+	</div>
+		<script type="text/javascript">
+$(function(){ 
+	function page_now_function(page_now,pages){ 	
+		var page_pre = page_now - 1;    //上一页
+		var page_next = page_now + 1;  //下一页
+		if(page_now <= 1 ){
+            var new_page_shouye = "<span class='disabled'>首页</span>";
+            var new_page_pre = "<span class='disabled'><</span>";
+        }else{
+            var new_page_shouye = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page=1&page_n=15'>首页</a>";
+            var new_page_pre = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+page_pre+"&page_n=15'><</a>";
+        }
+        if ( page_next> pages) {
+            var new_page_moye = "<span class='disabled'>末页</span>";
+            var new_page_next = "<span class='disabled'>></span>";
+
+        } else {
+            var new_page_moye = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+pages+"&page_n=15'>末页</a>";
+            var new_page_next = "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+page_next+"&page_n=15'>></a>";
+        }
+		if(pages <=5){
+			var str ="";
+			for(var i=1;i<=pages;i++){
+				if(i==page_now){
+					str +="<span class='active'>"+i+"</span>"
+				}else{
+					str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+				}
+			}
+		}else if(pages == 6){
+			var str ="";
+			if(page_now >3){
+				str  +=  "<a href='1'>1</a>";
+				str  +=   "<a class='disabled'>...</a>";
+				for(var i=2;i<=6;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>";
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+			}else{ 
+				for(var i=1;i<=5;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>";
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+				str += "<a class='disabled'>...</a>";
+				str += "<a href='6'>"+6+"</a>";
+			}
+		}else if(pages>=7){
+			if(page_now >3 && page_now<pages-2){ //7个数以上 并且当前
+				var str = "";
+				str  +=  "<a href='1'>1</a>";
+				str  +=   "<a class='disabled'>...</a>";
+				for(var i=page_now-2;i<page_now;i++){
+					str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+				}
+				str +="<a class='active'>"+page_now+"</a>";
+				for(var i=page_now+1;i<page_now+3;i++){
+					str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+				}
+				str += "<a class='disabled'>...</a>";
+				str += "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+pages+"&page_n=15'>"+pages+"</a>";
+			}else if(0<page_now && page_now <=3){
+				var str = "";
+				for(var i=1;i<=5;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>"
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+				str += "<a class='disabled'>...</a>";
+				str += "<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+pages+"&page_n=15'>"+pages+"</a>";
+			}else{
+				var str = "";
+				str  +=  "<a href='1'>1</a>";
+				str  +=   "<a class='disabled'>...</a>";
+				for(var i=pages-4;i<=pages;i++){
+					if(i==page_now){
+						str +="<span class='active'>"+i+"</span>"
+					}else{
+						str +="<a href='{$site_url}/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page="+i+"&page_n=15'>"+i+"</a>";
+					}
+				}
+			}
+			
+		}
+		var arrayObj = new Array(new_page_shouye,new_page_pre,str,new_page_next,new_page_moye)
+		return arrayObj;
+	}
+	var str = page_now_function(10,20);
+	$("#fun_page_now").append(str[0],str[1],str[2],str[3],str[4]);
+		//var str="<a>aaaa</a>";
+		
+		//alert(1);
+	});
+
+</script>
+	</div>
+	</body>
+</html>
+<script>
+function page_nowsubmit(){
+	var this_go_page_now = parseInt(document.getElementById("page_nowinput").value); //跳转的页面
+	if(this_go_page_now < 1){     //将小于1的数强制转换为1
+		this_go_page_now = 1;
+	}
+	if(this_go_page_now > 100){		//将大于总页数的数强制转换到 最后一页
+		this_go_page_now = 100;
+	}
+	window.location.href = "http://ecmall.qq.com/index.php?app=api&m=ebook_list&cate_id=3&sign=0&page_now="+this_go_page_now+"&page_now_n=15";
+	
+}
+</script>
+
+<!-- 
+	总页数 page_nowpages
+	总页数   page_nowpages<6
+		<a class="disabled">首页</a>
+		<a class="disabled"><</a>
+		<a class="active">1</a>
+		<a href='#'>2</a>
+		<a href='#'>3</a>
+		<a href='#'>4</a>
+		<a href='#'>5</a>
+		<a href='#'>></a>
+		<a href='#'>末页</a>
+		<span>跳转到</span>
+		<input type="text" name="page_nowinput" class="page_nowinput">
+		<span class="page_nowgo"></span>
+	
+	总页数   page_nowpages>5
+		<a class="disabled">首页</a>
+		<a class="disabled"><</a>
+		<a class="active">1</a>
+		<a href='#'>2</a>
+		<a href='#'>3</a>
+		<a href='#'>4</a>
+		<a href='#'>5</a>
+		<a class="disabled">...</a>
+		<a href='#'>--page_nowpages--</a>
+		<a href='#'>></a>
+		<a href='#'>末页</a>
+		<span>跳转到</span>
+		<input type="text" name="page_nowinput" class="page_nowinput">
+		<span class="page_nowgo"></span>
+
+
+
+
+			<a if(page_now>1){href='#' }else{class="disabled}">首页</a>
+			<a if(page_now>1){href='#' }else{class="disabled><</a>
+			<a class="active">1</a>
+			<a href='#'>2</a>
+			<a href='#'>3</a>
+			<a href='#'>4</a>
+			<a href='#'>5</a>
+			<a class="disabled">...</a>
+			<a href='#'>9999</a>
+			<a href='#'>></a>
+			<a href='#'>末页</a>
+			<span>跳转到</span>
+			<input type="text" name="page_nowinput" id="page_nowinput">
+			<span onclick="page_nowsubmit();" id="page_nowgo"></span>
+
+
+function page_nowsubmit(){
+	var this_go_page_now = parseInt($("#page_nowinput").val()); //跳转的页面
+	if(this_go_page_now < 1){     //将小于1的数强制转换为1
+		this_go_page_now = 1;
+	}
+	if(this_go_page_now > 100){		//将大于总页数的数强制转换到 最后一页
+		this_go_page_now = 100;
+	}
+	
+}
+
+
+
+
+
+ -->

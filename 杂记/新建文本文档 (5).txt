@@ -1,0 +1,36 @@
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+-->
+</style>
+			
+  			<div>
+ 				<p align="center" class="STYLE1">【相册制作台】新手操作指南</P>
+						<p> </P>
+							<p> 亲爱的fun迷，你好！欢迎来到“做自己，秀自己”的Fun秀个性DIY专属电子书平台。看到众多小写手和网友们的作品，你也心动了吧？想要快速上手Fun秀？很简单，先来这里get新技能吧，它能助你快速走上fun秀大神之路哦！</P>
+					        <p> </P>
+				<p><strong>第一技能：选择模板</strong></P>
+						<p> </P>
+ 				<p><img src="http://mat1.gtimg.com/kid/images/mobangif.gif" width="1000" height="499"></P>
+						<p> </P>
+ 				<p><strong>第二技能：上传照片</strong></P>
+						<p> </P>
+ 				<p><img src="http://mat1.gtimg.com/kid/images/funxszn/tupiangif.gif" width="1000" height="499"> </P>
+				<p> </P>
+					<p><strong>第三技能：添加文字</strong></P>
+						<p> </P>
+ 				<p><img src="http://mat1.gtimg.com/kid/images/funxszn/wenzigif.gif" width="1000" height="499"> </P>
+				<p> </P>
+						<p><strong>第四技能：添加/修改背景、饰物、形象等素材</strong></P>
+						<p> </P>
+ 				<p><img src="http://mat1.gtimg.com/kid/images/funxszn/beijinggif.gif" width="1000" height="499"> </P>
+				<p> </P>
+						<p><strong>第五技能：保存作品</strong></P>
+						<p> </P>
+ 				<p><img src="http://mat1.gtimg.com/kid/images/funxszn/baocungif.gif" width="1000" height="499"> </P>
+  			</div>
+  
+ 

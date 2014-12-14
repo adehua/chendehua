@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){	
+		var $oLenght=$(".put_up").length;
+		for(var i=0;i<$oLenght;i++)
+		{
+			$(".put_up").eq(i).click(function(){                         
+				var $oHeight=$(".result_content_detail").eq($(this).index()).height();	
+				if($oHeight==252)
+				{
+					$(this).siblings("ul").animate({height: '108px'}, "slow");
+					$(this).find("span").eq(0).html("查看详情");
+					$(this).find("span").eq(1).removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");	
+					
+				}
+				else
+				{
+					$(this).siblings("ul").animate({height: '252px'}, "slow"); 
+					$(this).find("span").eq(0).html("收起");	
+					$(this).find("span").eq(1).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");		
+								slide=0;		
+				}			
+			})
+		}
+	})
+</script>
+<style>
+*{margin:0; padding:0;}
+ .result_content{height:auto; width:100%; border-top:1px solid #aeaeae; border-bottom:1px solid #aeaeae;}
+.result_content ul{width:100%; height:auto; font-size:12px; overflow:hidden;}
+.result_content ul li{list-style:none; height:36px; line-height:36px; width:100%;}
+.result_content ul li span{display:block; width:21%; font-weight:bold; float:left; text-align:right; margin-right:18px;}
+.result_content a{display:block; height:27px; line-height:27px; background:#eff2f5; width:100%; border-top:1px solid #aeaeae; font-size:12px; text-align:center; color:#0066cc; text-decoration:none;}
+.glyphicon{height:27px; line-height:27px; color:#0569cd; margin-left:18px;}
+.result_content_mt{margin-top:10px;}
+</style>
+</head>
+
+<body>
+	<div class="result_content">
+		<ul class="result_content_detail">
+			<li><span>姓名</span>张三</li>
+			<li><span>身份证号</span>110101198801010001</li>
+			<li><span>用户名</span>zhangsan</li>
+			<li><span>手机</span>18611080001</li>
+			<li><span>邮箱</span>zhangsan@mail.com</li>
+			<li><span>固定电话</span>010-68571998</li>
+			<li><span>地址</span>北京市海淀区</li>
+		</ul>
+		<a class="put_up" href="#"><span>收起</span><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </div> 
+	<div class="result_content result_content_mt">
+		<ul class="result_content_detail">
+			<li><span>姓名</span>张三</li>
+			<li><span>身份证号</span>110101198801010001</li>
+			<li><span>用户名</span>zhangsan</li>
+			<li><span>手机</span>18611080001</li>
+			<li><span>邮箱</span>zhangsan@mail.com</li>
+			<li><span>固定电话</span>010-68571998</li>
+			<li><span>地址</span>北京市海淀区</li>
+		</ul>
+		<a class="put_up" href="#"><span>收起</span><span class="glyphicon glyphicon-chevron-up"></span></a>
+ </div> 
+</body>
+</html> 

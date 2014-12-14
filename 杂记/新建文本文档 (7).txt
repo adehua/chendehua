@@ -1,0 +1,25 @@
+<style type="text/css">
+<!--
+.green_hands p{font-size:14px;line-height:30px;}
+.green_hands img{margin:10px 0px;}
+--> 
+</style>
+ 			<div class="green_hands">
+ 				<p align="center" class="center_style" style="font-size: 24px;font-weight: bold;margin-bottom:20px;">【相册制作台】新手操作指南</p>
+				<p>????亲爱的fun迷，你好！欢迎来到“做自己，秀自己”的Fun秀个性DIY专属电子书平台。看到众多小写手和网友们的作品，你也心动了吧？想要快速上手Fun秀？很简单，先来这里get新技能吧，它能助你快速走上fun秀大神之路哦！</p>
+				<p><strong>第一技能：选择模板</strong></p>
+ 				<a href="http://mat1.gtimg.com/kid/images/mobangif.gif" target="_blank">
+ 				<a href="http://mat1.gtimg.com/kid/images/mobangif.gif" target="_blank"><img src="http://mat1.gtimg.com/kid/images/mobangif.gif" width="955" height="499"></a> 				</a>
+			  <p><strong>第二技能：上传照片</strong></p>
+ 				<a href="http://mat1.gtimg.com/kid/images/mobangif.gif" target="_blank"><a href="http://mat1.gtimg.com/kid/images/funxszn/tupiangif.gif" target="_blank"><img src="http://mat1.gtimg.com/kid/images/funxszn/tupiangif.gif" width="955" height="499"></a>
+				<p><strong>第三技能：添加文字</strong></p>
+ 				<a href="http://mat1.gtimg.com/kid/images/funxszn/wenzigif.gif" target="_blank"><img src="http://mat1.gtimg.com/kid/images/funxszn/wenzigif.gif" width="955" height="499"> </a>
+			        <p><strong>第四技能：添加/修改背景、饰物、形象等素材</strong></p>
+ 				<a href="http://mat1.gtimg.com/kid/images/funxszn/beijinggif.gif" target="_blank"><img src="http://mat1.gtimg.com/kid/images/funxszn/beijinggif.gif" width="955" height="499"></a>
+						<p><strong>第五技能：保存作品</strong></p>
+ 				<a href="http://mat1.gtimg.com/kid/images/funxszn/baocungif.gif" target="_blank"><img src="http://mat1.gtimg.com/kid/images/funxszn/baocungif.gif" width="955" height="499"> </a>
+  			</div>
+  
+ <script type="text/javascript">
+$(".help_center").height($(".cons").height()+120);
+</script>

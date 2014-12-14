@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="http://fun.kid.qq.com/funshop/static/default/js2013/jquery-1.7.min.js"></script>
+
+<head>
+	<meta charset="UTF-8">
+	<title>发送成功</title>
+	<style type="text/css">
+	#co {height: 2000px;}
+	#masks{background-color:#333333;opacity:0.5;filter: alpha(opacity=50); /*IE*/position:absolute; left:0;top:0;z-index:1;}
+	#message_mframe{position: fixed;_position:absolute;z-index: 2;}
+	#message_mframe #mframe_close{background: url(img/close.png) no-repeat;position:relative;top:35px;left:604px;width: 33px;height: 35px;cursor:pointer;}
+	#message_mframe .mframe{width:604px;height: 370px;font-family: "微软雅黑";font-size: 16px;float: left;}
+	#message_mframe .message_err{background: url(img/fail.png) no-repeat;}
+	#message_mframe .message_suc{background: url(img/success.png) no-repeat;}
+	#message_mframe .mframe .ctext{margin-left: 270px;margin-top: 175px;height:30px;width: 335px;position: relative;}
+	#message_mframe .mframe .s_button{color: #fff;position: relative;margin-top: 120px;height: 25px;width: 280px;margin-left:180px; }
+	#message_mframe .mframe .s_button #message_span2{margin-left:108px; }
+	#message_mframe .mframe .s_button a{list-style: none;text-decoration: none;color: #fff;}
+	#message_mframe .mframe .s_button a:hover{text-decoration:underline;}
+	</style>
+</head>
+<body>
+	<div id="co"></div>
+<div id="masks"></div>
+<div id="message_mframe">
+	<div id="mframe_close">
+		<a target="_blank" href="javascript:void(0);"></a>
+	</div>
+	<div class="mframe margin_clear">
+		<div class="ctext">
+			示例文字示例文字示例文字示例文字示例文字示例文字示例文字示例文字示例文字！示例文字示例文字示例文字示例文字示例文字示例文字示例文字示例文字示例文字！
+		</div>
+		<div class="s_button">
+			<a target="_blank" href="javascript:void(0);" id="message_span1">重新发送</a>
+			<a target="_blank" href="javascript:void(0);" id="message_span2">返回私信列表</a>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>
+<script>
+window.onload=function(){
+	message_success_show('aa','http://www.baidu.com');
+	//mframe_openSend();
+}
+function message_error_show(contents,urls,times){	//错误提示页面，内容、跳转时间、返回URL、返回当前页面 contents，urls1必须输入
+	var time = times == undefined || times == null || times == '' ? 3000 : times*1000;
+	$("#message_mframe .mframe").removeClass('message_suc');
+	$("#message_mframe .mframe").removeClass('message_err');
+	$("#message_mframe .mframe").addClass('message_err');
+	mframe_openSend(); 
+	$('#message_span1').click(function(){	//点击不做任何事情
+		message_mframe_close();
+	});
+	$('#message_span2').click(function(){	//点击不做任何事情
+		window.location = urls;
+	});
+	window.setTimeout("message_mframe_close()",parseInt(time));
+}
+function message_success_show(contents,urls,times){	//成功提示页面，内容、跳转时间、返回URL、返回当前页面 contents，urls1必须输入
+	var time = times == undefined || times == null || times == '' ? 3000 : times*1000;
+	$("#message_mframe .mframe").removeClass('message_suc');
+	$("#message_mframe .mframe").removeClass('message_err');
+	$("#message_mframe .mframe").addClass('message_suc');
+	mframe_openSend(); 
+	$('#message_span1').click(function(){	//点击刷新当前页面
+		message_mframe_close();
+		window.location.reload();
+	});
+	$('#message_span2').click(function(){	//点击返回指定页面
+		window.location = urls;
+	});
+	window.setTimeout("window.location='http://www.baidu.com'",parseInt(time));
+}
+
+function message_mframe_view(){	//显示图层页面
+	window.onresize=function(){	//改变浏览器大小刷新图层
+		mframe_openSend();
+	}
+	var str_view ="xxx";
+}
+
+function mframe_openSend(){	//弹出框
+	//获取页面的高度和宽度
+	var sWidth = document.body.scrollWidth;
+	var sHeight = document.body.scrollHeight;
+	//获取页面的可视区域高度和宽度
+	var wHeight = document.documentElement.clientHeight;
+	var wWidth = document.documentElement.clientWidth;
+	var oMasks = document.getElementById("masks");
+	oMasks.style.height = sHeight + "px";
+	oMasks.style.width=sWidth + "px";
+	var oMessage_mframe = document.getElementById("message_mframe");
+	//设置的left和top
+	var this_left = parseInt(wWidth/2) - 604/2;
+	var this_top = parseInt(wHeight/2) - 370/2;
+	this_left <=0 ? 0 : this_left;
+	this_top <=0 ? 0 : this_top;
+	oMessage_mframe.style.top = this_top + "px";
+	oMessage_mframe.style.left = this_left + "px";
+	oMessage_mframe.style.display = "block";
+	oMasks.style.display = "block";
+	//点击关闭按钮
+	var omframe_close=document.getElementById("mframe_close");
+	//点击登陆框以外的区域也可以关闭登陆框
+	omframe_close.onclick=function(){
+		message_mframe_close();
+	};
+};
+function message_mframe_close(){	//关闭弹出层
+	var oMasks = document.getElementById("masks");
+	var oMessage_mframe = document.getElementById("message_mframe");
+	oMessage_mframe.style.display = "none";
+	oMasks.style.display = "none";
+}
+
+
+</script>

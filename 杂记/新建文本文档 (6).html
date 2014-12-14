@@ -1,0 +1,31 @@
+<html>
+<head>
+	<style type="text/css">
+		#mask{
+			background:#000;
+			opacity:0.75;
+			filter:alpha(opacity=75);
+			height:1000px;
+			width: 100%;
+			position:absolute;
+			left:0;
+			top:0;
+			z-index: 100px;
+		}
+		#log{
+			background: #fff;
+			width: 400px;
+			height: 400px;
+			position:fixed;
+			left:50%;
+			top:20%;
+			z-index: 101px;
+		}
+	</style>
+</head>
+<body>
+	<input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"> 
+<script language="JavaScript">
+</script>
+</body>
+	</html>

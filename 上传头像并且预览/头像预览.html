@@ -1,0 +1,266 @@
+{include file=header.html}
+<link rel="stylesheet" type="text/css" href="{lib file=plugin/datepicker_skin.css}">
+<script type="text/javascript" src="{lib file=plugin/datepicker.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=plugin/datepicker-zh-CN.js}" charset="utf-8"></script>
+
+<div class="layout archit2">
+	{include file=member.menu2.html}
+    <div class="m_con">
+    	<div class="m_c_item">
+			<div class="m_c_tit o_C1_40">
+					<a class="active">基本信息</a>
+					<span class="bevel"></span>
+			</div>	
+            <div class="m_c_bx p_works">
+					<div style="height:60px;overflow: hidden;"></div>
+                    <form method="post" enctype="multipart/form-data" id="profile_form" onsubmit="return post_member();">
+					<table width="500px" border="0" cellspacing="0" cellpadding="0" align="center" class="tab_inpt">
+						<tr>
+							<td align="right" class="tit">头像</td>
+							<td width="20">&nbsp;</td>
+							
+							<td><div style="width:140px;height:140px;border:1px solid #d4d3ce;box-shadow:3px 3px 5px #dfdbd1;-moz-box-shadow:3px 3px 5px #dfdbd1;-webkit-box-shadow:3px 3px 5px #dfdbd1;filter: progid:DXImageTransform.Microsoft.Shadow(color='#dfdbd1', Direction=135, Strength=5);"><div class="imgshow" id="photoPreVies" style=""><img id="uploadimg" src="<!--{if $profile.portrait}-->{$profile.portrait}?{$random_number}<!--{else}-->http://img1.gtimg.com/kid/pics/hv1/155/153/1753/114027995.png<!--{/if}-->" width="120" height="120" alt="" ectype="avatar" /></div></div>
+
+              <input type="file"  name="portrait"  ectype="change_avatar" size="1" class="up-filea avatar_img" id="imgUpload" style="position:absolute;left:752px;top:152px;width:60px;height:50px;cursor: pointer;-moz-opacity:0 ;filter:alpha(opacity: 0);opacity: 0;z-index: 2;"/>
+                <input type="button" value="修改头像" style="position:absolute;left:750px;top:170px;width:60px;height:30px;z-index:1;"></td>	
+						</tr>
+						<tr>
+							<td align="right" class="tit">昵称</td>
+							<td>&nbsp;</td>
+							<td><input type="text" name="real_name" id="textfield" class="text"  value="{$profile.user_name|escape}" /></td>
+						</tr>
+                        <tr>
+							<td align="right">&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="Validform_checktip">1-12个中文，字母，数字，下划线或减号</td>
+						</tr>
+						<tr>
+							<td align="right" class="tit">{$lang.gender}</td>
+							<td>&nbsp;</td>
+							<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>           
+                   <td><input type="radio" name="gender" value="0" {if $profile.gender eq 0}checked="checked"{/if} />{$lang.unknown}  </td>
+                   <td>
+                          <input type="radio" name="gender" value="1" {if $profile.gender eq 1}checked="checked"{/if} />{$lang.male}   </td>
+                   <td>
+                          <input type="radio" name="gender" value="2" {if $profile.gender eq 2}checked="checked"{/if} />{$lang.female} </td>      
+								</tr>
+							</table></td>
+						</tr>
+						<tr>
+							<td align="right" class="tit">{$lang.birthday}</td>
+							<td>&nbsp;</td>
+							<td><input type="text" name="birthday" id="birthday_date" class="text" value="{$profile.birthday|escape}" readOnly="readonly" /></td>
+						</tr>
+						<tr>
+							<td align="right" class="tit">{$lang.email}</td>
+							<td>&nbsp;</td>
+							<td><input type="text" name="email" id="textfield" class="text" value ="{$profile.email}" /></td>
+						</tr>
+						<tr>
+            <td align="right" class="tit">{$lang.studentid}</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="studentid" id="student_code" class="text" value="{$profile.studentid}" style="font-size:16px;"/></td>
+          </tr> 
+					</table>
+         <input type="submit" class="profile_button" style="padding-left:0px;" value="{$lang.save_edit}">
+        </form>
+				</div>
+		</div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="{lib file=message_show.js}"></script>
+<script language="javascript" type="text/javascript" src="{lib file=ajaxfileupload.js}"></script>
+<script type="text/javascript">
+var portraiturl;	//头像的URL
+$(function(){
+portraiturl = $("#uploadimg").attr("src");
+  $("#aaa").click(function(){
+    $("#imgUpload").click();
+  });
+	var size=$('.imgshow').width();
+  $('#birthday_date').datepicker({
+    yearRange: '1950:2050', //取值范围.
+          showOn: 'both', //输入框和图片按钮都可以使用日历控件。
+
+          buttonImageOnly: true,
+          showButtonPanel: true
+  }); 
+});
+  $('input[ectype="change_avatar"]').change(function(){	//异步修改头像 
+    //showImg();  //JS预览
+    $.ajaxFileUpload({  
+       url:'{$site_url}/index.php?app=member&act=ajax_upload_portrait',//用于文件上传的服务器端请求的
+       type:"post",//请求方法  
+       secureuri:false,//一般设置为false  
+       fileElementId:'imgUpload',//文件id属性 
+       dataType:"JSON",//返回值类型 一般设置为json,一定要大写,否则可能会出现一些bug  
+       success:function(data){  
+        var datas = eval("("+data+")");
+        if(datas.status != 1){  //头像上传成功后上传其他资料
+             message_error_show("头像修改失败",'{$site_url}/index.php?app=member&act=profile','重新修改','返回个人中心',3);
+        }else{
+          window.location.reload();
+        }
+      }
+    });
+  });
+
+window.onresize=function(){	//改变浏览器的时候刷新弹出层的宽度和高度
+	message_onresize();	//跳转页面onresize函数
+}
+function post_member(){ //异步修改头像
+	var real_name = $("input[name='real_name']").val();
+	var gender = $("input[name='gender']:checked").val();
+	var birthday = $("input[name='birthday']").val();
+	var email = $("input[name='email']").val();
+	var studentid = $("input[name='studentid']").val();
+	if(!isname(real_name)) return false;
+	if(!isbirthday(birthday)) return false;
+	if(!isemail(email)) return false;
+	if(!isstudentid(studentid)) return false;
+  $.ajax({
+    type : "post",
+    url : "{$site_url}/index.php?app=member&act=profile",
+    data : "real_name="+real_name+"&gender="+gender+"&birthday="+birthday+"&email="+email+"&studentid="+studentid+"&portrait="+portraiturl,
+    success : function(data){
+      var datas = eval("("+data+")");
+      if(datas.status == 1)
+      {
+        message_success_show(datas.show,'{$site_url}/index.php?app=member','再次修改','返回个人中心',3);
+      }else{
+        message_error_show(datas.show,'{$site_url}/index.php?app=member&act=profile','重新修改','返回个人中心',3);
+      } 
+    }
+  });
+
+	return false;
+}
+function isname(s) 
+{ 
+	var reg = /^([\u4e00-\u9fa5-0-9a-zA-Z_-]){1,12}$/;
+	if (!reg.exec(s)) {
+		message_error_show('昵称仅支持中文、字母、数字、划线或减号，长度必须在1-12个之间！','{$site_url}/index.php?app=member','重新修改','返回个人中心',3);
+		return false; 
+	}
+	return true;
+} 
+function isbirthday(s)
+{
+        var reg = /^(19|20)(\d){2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$/;
+        if (!reg.exec(s)) {
+		message_error_show('生日格式不正确！','{$site_url}/index.php?app=member','重新修改','返回个人中心',3);
+                return false;
+        }
+        return true;
+}
+function isemail(s)
+{
+        var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i;
+        if (!reg.exec(s)) {
+		message_error_show('邮箱地址不正确!','{$site_url}/index.php?app=member','重新修改','返回个人中心',3);
+                return false;
+        }
+        return true;
+}
+function isstudentid(s)
+{
+        var reg = /^(\d){0,16}$/;
+        if (!reg.exec(s)) {
+		message_error_show('学籍号的长度或者格式不对！,长度必须在0-16个数字!','{$site_url}/index.php?app=member','重新修改','返回个人中心',3);
+                return false;
+        }
+        return true;
+}
+
+  /* 头像预览 */
+  function showImg(){
+    var event =$('.imgshow');
+          if(typeof FileReader =='undefined' || typeof FileReader == undefined){
+            //如果浏览器是ie
+            //低版本firefox getAsDataURL
+            try {
+                var fileObj=document.getElementById("imgUpload");
+                 var file = null;
+                if(fileObj.files && fileObj.files[0] ){
+                    file = fileObj.files[0];
+                }else if(fileObj.files && fileObj.files.item(0)) {
+                    file = fileObj.files.item(0);
+                }
+                var src;
+                if (window.createObjectURL!=undefined) { // basic
+                    src = window.createObjectURL(file) ;
+                } else if (window.URL !=undefined) { // mozilla(firefox)
+                    src = window.URL.createObjectURL(file) ;
+                } else if (window.webkitURL !=undefined) { // webkit or chrome
+                    src = window.webkitURL.createObjectURL(file) ;
+                }else{
+                  photoPreView();                        //IE6,7,8,9 头像预览
+                  return ; 
+                }
+
+                var img = '<img id="uploadimg" src="'+src+'" width="120" height="120"/>';
+                $(".imgshow").empty().append(img);
+            } catch (e) {
+
+            }
+        }else{
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                if(this.result.indexOf("data:image")!=-1){
+                    var img = '<img id="uploadimg" src="'+this.result+'" width="120" height="120"/>';
+                    $(".imgshow").empty().append(img);
+
+                }else{
+                    var fileExtend=document.getElementById("imgUpload").value.substring(document.getElementById("imgUpload").value.lastIndexOf('.')).toLowerCase();
+                    fileExtend=fileExtend.replace('.','');
+                    if(fileExtend=='jpg'){
+                        fileExtend='jpeg';
+                    }
+                    var src= this.result.replace('data:',"data:image/"+fileExtend+";");
+                    var img = '<img id="uploadimg" src="'+src+'"  width="120" height="120"/>';
+                    $(".imgshow").empty().append(img);
+                }
+
+            }
+            reader.readAsDataURL(document.getElementById("imgUpload").files[0]);
+        }
+    }
+function photoPreView(){
+  var image= document.getElementById( "imgUpload" );
+  var photoPreView = document.getElementById( "uploadimg" ) ;
+  if( image.value != ''  ){
+    var checkimg = image.value.toLowerCase() ;
+    var path = getPath();
+    $(".imgshow").empty();
+    $(".imgshow").append('<img id="uploadimg" src="'+path+'"  width="120" height="120"/>');//只有异步上传的时候去掉
+    var photoPreViews = document.getElementById("photoPreVies") ;
+    photoPreViews.style.width = "120px"; 
+    photoPreViews.style.height = "120px";
+    $('#photoPreVies').css("margin","10px");
+    photoPreViews.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)"; //打开滤镜，否则不能预览图片 
+    photoPreViews.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = path;
+	}
+}
+
+function getPath(image)
+{ 
+  var obj= document.getElementById("imgUpload");
+  if(obj) 
+  { 
+    if ( window.navigator.userAgent.indexOf("MSIE") >= 1 ) 
+    { 
+      obj.select() ; 
+      return document.selection.createRange().text ; 
+    }else if( window.navigator.userAgent.indexOf("Firefox") >= 1 ){ 
+      if(obj.files) 
+      { 
+        return obj.files.item(0).getAsDataURL() ; 
+      } 
+      return obj.value ; 
+      } 
+    return obj.value ; 
+  } 
+}
+</script>
+{include file=footer.html}

@@ -1,0 +1,55 @@
+<html>
+<head>
+	<mate http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	<div class="content1">
+		<div id="show">要显示的时间</div>
+		<div id="textshow"><span id="timeShow"></span></div>
+	</div>
+</body>
+</html>
+<script>
+window.onload=function(){
+ 	showTime2();
+ 	
+}
+function showTime2(){
+	var nowtime = new Date();
+ 	var endtime = new Date("2014/10/28,01:01:01");
+ 	var lefttime = parseInt(endtime.getTime()-nowtime.getTime())/1000;
+ 	var d=parseInt(lefttime/(24*60*60));
+ 	var h=parseInt(lefttime/(60*60)%24);
+ 	var m=parseInt(lefttime/60%60);
+ 	 var s=parseInt(lefttime%60);
+ document.getElementById("timeShow").innerHTML = d+'天'+h+'小时'+m+'分'+s+'秒';
+ setTimeout(showTime2,500);
+}
+function checkTime(){
+	if(i<10){
+		i="0"+i;
+	}
+	return i;
+}
+function showTime(){
+	var myDate=new Date();
+	var y =myDate.getFullYear();
+	var m =myDate.getMonth()+1;
+	var d =myDate.getDate();
+	var w =myDate.getDay();
+	var h =myDate.getHours();
+	var m =myDate.getMinutes();
+	var s =myDate.getSeconds();
+	var weekday = new Array(7);
+	weekday[0] = "星期日";
+	weekday[1] = "星期一";
+	weekday[2] = "星期二";
+	weekday[3] = "星期三";
+	weekday[4] = "星期四";
+	weekday[5] = "星期五";
+	weekday[6] = "星期六";
+
+	document.getElementById('show').innerHTML = y +'年'+m+'月'+d+'日'+weekday[w]+h+':'+m+':'+s;
+	setTimeout(showTime,1000);
+}
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>jquery限制输入字数,并提示剩余字数</title> 
+<script type="text/javascript" src="http://fun.kid.qq.com/funshop/static/default/js2013/jquery-1.7.min.js"></script>
+
+<script type="text/javascript"> 
+var sz = new Array();
+sz =['1','2'];
+for(var i=sz.length-1;i>=0;i--){
+	if(sz[i] == '1'){
+		sz.splice(i,1);
+	}
+	if(sz[i] == '2'){
+		sz.splice(i,1);
+	}
+}
+alert(sz);
+</script> 
+</head> 
+<body> 
+
+</body> 
+</html> 

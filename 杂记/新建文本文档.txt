@@ -1,0 +1,13 @@
+<ul class="focus_con">
+        <li class="item"><a href="http://kid.qq.com/zt2013/Fun_story/index.htm" ><img src="http://img1.gtimg.com/kid/pics/hv1/163/223/1754/114110878.jpg" /></a></li>
+        <li class="item"><a href="http://kid.qq.com/zt2014/FunNovel/index.htm" ><img src="http://img1.gtimg.com/kid/pics/hv1/57/224/1754/114111027.jpg" /></a></li>
+        <li class="item"><a href="http://fun.kid.qq.com/funshop/index.php?app=goods&id=366" ><img src="http://img1.gtimg.com/kid/pics/hv1/210/225/1754/114111435.jpg" /></a></li>
+    </ul>
+<div class="focus_dot">
+<a href="javascript:void(0);"></a>
+<a href="javascript:void(0);"></a>
+<a href="javascript:void(0);"></a>
+
+</div>
+<a href="javascript:void(0);" class="nextBtn"><</a>
+<a href="javascript:void(0);" class="prevBtn">></a>

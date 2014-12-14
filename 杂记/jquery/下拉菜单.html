@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+	  $("#menu ul li").on("mouseover",function(){
+		 $("#menu ul li").children("ul").hide();	
+		 $(this).children("ul").show();
+	  })  
+	})
+</script>
+<style>
+*{margin:0; padding:0;}
+li{list-style:none;}
+#menu{background:#eee; width:600px; height:40px; margin:0 auto;}
+#menu ul li{float:left; line-height:40px; text-align:center; position:relative;}
+#menu ul li a{text-decoration:none; color:#000; display:block; width:90px;}
+#menu ul li a:hover{color:#FFF; background:#666;}
+#menu ul li ul li{float:none; border-left:none; margin-top:2px; background:#eee;}
+#menu ul li ul{width:90px; position:absolute; left:0; top:40px; display:none;}
+</style>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">课程大厅</a>
+				<ul>
+					<li><a href="#">Javascript</a></li>
+					<li><a href="#">JQuery</a></li>
+				</ul>
+			</li>
+			<li><a href="#">学习中心</a>
+				<ul>
+					<li><a href="#">Javascript</a></li>
+					<li><a href="#">JQuery</a></li>
+				</ul>
+			</li>
+			<li><a href="#">经典案例</a></li>
+			<li><a href="#">关于我们</a></li>
+		</ul>
+	</div>
+</body>
+</html> 
