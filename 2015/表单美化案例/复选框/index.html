@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<style type="text/css">
+		body{font:12px/22px "微软雅黑";}
+		.checkbox{width:520px;height:30px;border:1px solid #DFDFDF;border-width:1px 0 1px;margin:20px auto;padding-left:10px;overflow:hidden;}
+		.checkbox form{height:30px;}
+		.checkbox form input{display:none;}
+		.checkbox form label{line-height:30px;display:block;}
+		.checkbox ul li{float:left;margin-right:10px;}
+
+		.checkbox ul li{position:relative;}
+		.checkbox ul li label{display:block;position:relative;padding-right:1em;padding:0 0 0 25px;cursor:pointer;}
+
+		.checkbox ul li label{background:url(images/checkbox.gif) no-repeat -10px -13px;}
+		.checkbox ul label.hover{background-position:-10px -113px;}
+		.checkbox ul label.d_checked{background-position: -10px -213px;}
+		/*.checkbox ul li label.checkedHover{background-position:-10px -313px;}
+		.checkbox ul li label.focus{outline:1px dotted #ccc;}*/
+	</style>
+</head>
+<body>
+	<div class="checkbox">
+		<form action="#" method="post" name="typeForm">
+	    	<ul id="divs">
+	            <li><input type="checkbox" name="type" id="x" value=""/><label for="x" >消费者保障</label></li>
+	            <li><input type="checkbox" name="type" id="po" value=""/><label for="po" >破损补寄</label></li>
+	            <li><input type="checkbox" name="type" id="s" value=""/><label for="s">7天退换</label></li>
+	            <li><input type="checkbox" name="type" id="z" value=""/><label for="z">正品保障</label></li>
+	            <li><input type="checkbox" name="type" id="d" value=""/><label for="d">电子凭证</label></li>
+	            <li><input type="checkbox" name="type" id="wang" value=""/><label for="wang">旺旺在线</label></li>
+	        </ul>
+	    </form>
+	</div>
+</body>
+<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+	function d_event(e,t,f){
+		if(e.addEventlistener){
+			e.addEventlistener(e,t,f);
+		}else if(e.attachEvent){
+			e.attachEvent("on" + t,f);
+		}else{
+			e['on'+t] = f;
+		}
+	}
+	window.onload=function(){
+		 var divs_li = $("divs").getElementsByTagName("li");
+		 for (var i = 0; i < divs_li.length; i++) {
+		 	var _this = divs_li[i].getElementsByTagName("label")[0];
+			d_event(_this,'click',function(e){
+				var e = e || window.event;
+				var ev = e.target || e.srcElement;
+		 		if(ev.className == 'd_checked'){
+		 			ev.className = '';
+		 		}else{
+					ev.className = 'd_checked';
+				}
+		 	});
+		 	d_event(_this,'mouseover',function(e){
+		 		var e = e || window.event;
+				var ev = e.target || e.srcElement;
+		 		if(ev.className != 'd_checked'){
+		 			ev.className = 'hover';
+		 		}
+		 	});
+		 	d_event(_this,'mouseout',function(e){
+		 		var e = e || window.event;
+				var ev = e.target || e.srcElement;
+		 		if(ev.className == 'hover' || ev.className != 'd_checked'){
+		 			ev.className = '';
+		 		}
+		 	});
+		 };
+	}
+
+</script>
+</html>

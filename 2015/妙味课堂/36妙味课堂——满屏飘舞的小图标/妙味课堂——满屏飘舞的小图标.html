@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>满屏飘舞的小图标-妙味课堂-www.miaov.com</title>
+<style>
+html{height:100%;overflow:hidden;}
+body{margin:0;height:100%; background:#7a4b94;}
+h1 { margin:0; height:50px; background:#333; line-height:50px; position:relative; z-index:999; filter:alpha(opacity:80); opacity:0.8; }
+h1 strong { color:#fff; font-family:arial; font-size:18px; position:absolute; top:0px; left:4%; }
+a { position:absolute; top:0px; right:20px; color:#fff; margin-right:50px; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; }
+a:hover { text-decoration:underline; }
+h2{ margin:0; width:96%; padding:10px 0 14px 4%; background:#333; position:absolute; bottom:0; left:0; z-index:999; filter:alpha(opacity:80); opacity:0.8; color:#fff; font-size:12px; line-height:20px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; }
+h2 strong { font-size:14px; }
+</style>
+<script src="js/miaovMove.js"></script>
+<script>
+window.onload=function()
+{
+	var oTimer=null;
+	var iLeft=0;
+	var iTop=0;
+	var iWidth=20;
+	var iHeight=20;
+	var oDiv=document.getElementsByTagName("div")[0];
+	
+	document.oncontextmenu=function()
+	{
+		return false;
+	};
+	
+	document.onmousedown=function(e)
+	{
+		var ev=e||event;
+		iLeft=ev.clientX;
+		iTop=ev.clientY;
+		if(oTimer)
+		{
+			clearInterval(oTimer);
+		}
+		oTimer=setInterval(function(){toAppend();},50);
+		return false;
+	}
+	document.onmousemove=function(e)
+	{
+		var ev=e||event;
+		iLeft=ev.clientX;
+		iTop=ev.clientY;
+		return false;
+	}
+	document.onmouseup=function()
+	{
+		clearInterval(oTimer);
+	}
+	function toAppend()
+	{
+		var oImg=new Image();
+		var sSrc="";
+		var iAngle=parseInt(Math.random()*1000)%360;
+		var iNubLeft=parseInt(Math.random()*100)%2?-parseInt(Math.random()*40):parseInt(Math.random()*40);
+		var iNubTop=parseInt(Math.random()*100)%2?-parseInt(Math.random()*40):parseInt(Math.random()*40);
+		var INub=parseInt(Math.random()*20);
+		var iNubW=INub+iWidth;
+		var iNubH=INub+iHeight;
+		iNubLeft+=iLeft-25;
+		iNubTop+=iTop-25;
+		sSrc="img/"+parseInt(Math.random()*100)%5+".gif";
+		oImg.src=sSrc;
+		oImg.onmousemove=function()
+		{
+			return false;
+		};
+		with(oImg.style)
+		{
+			width=iNubW+"px";
+			height=iNubH+"px";
+			position="absolute";
+			left=iLeft-(iNubW/2)+"px";
+			top=iTop-(iNubH/2)+"px";
+		}
+		css(oImg,"transform",iAngle);
+		document.body.appendChild(oImg);
+		starMove(oImg,{left:iNubLeft,top:iNubTop},1);
+	}	
+};
+</script>
+</head>
+<body>
+<h1 title="妙味课堂-www.miaov.com">
+	<strong>~ 满屏飘舞的小图标 ~</strong>
+	<a href="/">妙味课堂 - www.miaov.com</a>
+</h1>
+
+<h2><strong>2012-04-17:</strong><br />When we were small, happiness was a simple thing.<br />After we have grown up, simplicity is a very happy thing.</h2>
+
+</body>
+</html>

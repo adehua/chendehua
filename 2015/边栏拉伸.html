@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	body{margin:0px;padding:0px;}
+	.x{width: 300px;height: 300px;position:relative;margin-left: 100px;margin-top:100px;border: 1px solid red;}
+	.q{line-height: 30px;font-size: 16px;font-weight: bold;background: #eee;text-align: center;}
+	.w{width: 10px;height: 100%;position:absolute;right: 0px;top:0px;cursor:e-resize;}
+	.e{width: 10px;height: 10px;position:absolute;right: 0px;bottom:0px;cursor:nw-resize;}
+	.r{width: 100%;height: 10px;position:absolute;bottom: 0px;cursor:s-resize;}
+</style>
+</head>
+
+<body>
+	<div  id="xx" class="x">
+		<div class="q">q</div>	
+		<!--<div class="w"></div>
+		<div class="r"></div>
+		<div class="e"></div>-->	
+	</div>
+</body>
+<script type="text/javascript">
+	var m_p,m_c,m_t;
+	var moving =0,m_start_x=0,m_start_y=0,m_to_x=0,m_to_y=0;
+	function on_mousedown(e,panel,ctrl,type){
+		var e= e||window.event;
+		m_start_x = e.pageX-ctrl.offsetLeft;
+		m_start_y = e.pageY-ctrl.offsetTop;
+		m_p = panel;
+		m_c = ctrl;
+		m_t = type;
+		moving = setInterval(on_move,10);
+
+	}
+	function on_move(){
+		if(moving){
+			var min_left = m_p.offsetLeft;
+			var min_top = m_p.offsetTop;
+			var to_x = m_to_x - m_start_x;
+			var to_y = m_to_y - m_start_y;
+			to_x = 	Math.max(to_x,min_left);
+			to_y = 	Math.max(to_y,min_top);
+			switch(m_t){
+				case 'ww':
+					m_c.style.left = to_x + 'px';
+					m_p.style.width = to_x + 10 + 'px';
+				break;
+				case 'rr':
+					m_c.style.top = to_y + 'px';
+					m_p.style.height = to_y + 10 + 'px';
+				break;
+				case 'ee':
+					m_c.style.left = to_x + 'px';
+					m_c.style.top = to_y + 'px';
+					m_p.style.width = to_x + 10 + 'px';
+					m_p.style.height = to_y + 10 + 'px';
+				break;
+			}
+			
+		}
+	}
+	document.onmouseover = function(e){
+		var e =window.even||e;
+		m_to_y = e.pageY;
+		m_to_x = e.pageX;
+	}
+	document.onmouseup = function(e){
+		clearInterval(moving);
+		moving = 0;
+		if(document.getElementByClassName("t")){
+			var cls =document.getElementByClassName("t");
+			for(var i=o;i<cls.lenght;i++){
+				cls[i].style.left='';
+				cls[i].style.top='';
+			}
+		}
+	}
+	function re(p_id){
+		var panel = document.getElementById("xx");
+		var ww = document.createElement("div");
+		var ee = document.createElement("div");
+		var rr = document.createElement("div");
+		ww.class = ww.className="w t";
+		ee.class = ee.className="e t";
+		rr.class = rr.className="r t";
+		panel.appendChild(ww);
+		panel.appendChild(rr);
+		panel.appendChild(ee);
+		ww.addEventListener('mousedown',function(e){
+			on_mousedown(e,panel,ww,"ww")
+		});
+		rr.addEventListener('mousedown',function(e){
+			on_mousedown(e,panel,rr,"rr")
+		});
+		ee.addEventListener('mousedown',function(e){
+			on_mousedown(e,panel,ee,"ee")
+		});
+	}
+	re("xx");
+</script>
+</html>

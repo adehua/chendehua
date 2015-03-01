@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<style type="text/css">
+		#divs{width: 700px;height: 40px;margin:auto;border-radius: 3px;border:1px solid red;}
+		#divs dl{height:32px;line-height:40px;padding-left:15px;}
+		#divs dl dt{float: left}
+		#divs dl dd{float: left;margin:0px 10px 0px 10px;position:relative;padding-left: 23px;}
+		#divs dl dd a{display:block;color: #000;text-decoration: none;}
+		#divs dl dd a:hover{color:#CC0000;text-decoration:underline;}
+		#divs dl dd a b {width: 20px;height: 20px;background:url(./images/radiobutton.gif) no-repeat -15px -18px;display: block;position: absolute;top:10px;left: 0px;}
+		#divs dl dd a:hover b{background-position: -15px -118px;}
+		#divs dl .show a b,#divs dl .show a:hover b{background-position: -15px -218px;} 
+	</style>
+</head>
+<body>
+	<div id="divs">
+		<dl>
+			<dt><b></b>请选择</dt>
+			<dd class="show"><a href="#"><b></b>我是第一个</a></dd>
+			<dd><a href="#"><b></b>我才是第一个</a></dd>
+			<dd><a href="#"><b></b>别吵反正我不是第一个</a></dd>
+			<dd><a href="#"><b></b>我也不是第一个<a></dd>
+		</dl>
+	</div>
+</body>
+<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+	function d_event(e,t,f){
+		if(e.addEventlistener){
+			e.addEventlistener(e,t,f);
+		}else if(e.attachEvent){
+			e.attachEvent("on" + t,f);
+		}else{
+			e['on'+t] = f;
+		}
+	}
+	window.onload=function(){
+		var divs_dd = $("divs").getElementsByTagName("dl")[0].getElementsByTagName("dd");
+		for (var i = 0; i < divs_dd.length; i++) {
+			d_event(divs_dd[i],'click',function(e){
+				var e = e || window.event;
+				var ev = e.target || e.srcElement;
+				//console(ev.parentNode);
+				for (var j = 0; j < divs_dd.length; j++) {
+					divs_dd[j].className = '';
+				};
+				ev.parentNode.className= 'show';
+			});
+		};
+		
+	}
+
+</script>
+</html>
