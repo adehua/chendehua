@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		background: #333;
+	}
+	div{
+		position: absolute;
+		top: 0;bottom: 0;left: 0;right: 0;
+		margin: auto;
+	}
+	.one{
+		width: 150px;
+		height: 150px;
+		background: linear-gradient(135deg,#a957c1 0%,#de556e 50%,#fed598 100%);
+		border-radius: 24px;
+		box-shadow: 0 0 8px rgba(0,0,0,.5);
+	}
+	.one .two{
+		background: #fff;
+		height: 110px;
+		width: 110px;
+		border-radius: 50%;
+		box-shadow: 0 0 8px rgba(0,0,0.2);
+	}
+	.two .three{
+		background: red;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		box-shadow: 0 0 8px rgba(0,0,0.2);
+	}
+	.three .four{
+		background: #eee;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		box-shadow: 0 0 8px rgba(0,0,0.2);
+	}
+</style>
+<body>
+<div class="one">
+	<div class="two">
+		<div class="three">
+			<div class="four"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
