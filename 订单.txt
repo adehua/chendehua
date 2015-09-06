@@ -1,0 +1,11 @@
+<div class="lineTime"> <!--{if $order.finished_time}-->
+                    <span>{$lang.finished_time}&nbsp;:&nbsp;{$order.finished_time|date:complete}</span>
+                <!--{/if}-->
+                    <!--{if $order.ship_time}-->
+                    <span>{$lang.ship_time}&nbsp;:&nbsp;{$order.ship_time|date:complete}</span>
+                 <!--{/if}-->
+                    <!--{if $order.pay_time}-->
+                    <span>{$lang.pay_time}&nbsp;:&nbsp;{$order.pay_time|date:complete}</span>
+                 <!--{/if}-->
+
+                    <span>下单时间&nbsp;:&nbsp;{$order.order_add_time|date:complete}</span></div>
