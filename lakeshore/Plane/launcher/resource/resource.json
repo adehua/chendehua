@@ -1,0 +1,9 @@
+{
+    "groups": [
+        {"name":"explosionEffect","keys":"explosion,scoreBmp"}
+    ],
+    "resources": [
+        { "name": "explosion", "type": "sheet", "url": "explosion.json" },
+        { "name": "scoreBmp", "type": "font", "url": "scoreBmp.fnt" }
+    ]
+}

@@ -1,0 +1,660 @@
+<keys>
+	<item key="Menu.EgretWing" value="Egret Wing"/>
+	<item key="Menu.EgretWing.Quit" value="Exit"/>
+	<item key="Menu.File" value="File"/>
+	<item key="Menu.File.NewProject" value="New Project"/>
+	<item key="Menu.File.ImportProject" value="Import Project"/>
+	<item key="Menu.File.NewExml" value="New EXML Skin"/>
+	<item key="Menu.File.Save" value="Save"/>
+	<item key="Menu.File.SaveAll" value="Save All"/>
+	<item key="Menu.Edit" value="Edit"/>
+	<item key="Menu.Edit.Updo" value="Undo"/>
+	<item key="Menu.Edit.Redo" value="Redo"/>
+	<item key="Menu.Edit.Align" value="Align"/>
+	<item key="Menu.Edit.Align.Top" value="Top"/>
+	<item key="Menu.Edit.Align.VMiddle" value="Center Vertically"/>
+	<item key="Menu.Edit.Align.Bottom" value="Bottom"/>
+	<item key="Menu.Edit.Align.Left" value="Left"/>
+	<item key="Menu.Edit.Align.HCenter" value="Center Horizontally"/>
+	<item key="Menu.Edit.Align.Right" value="Right"/>
+	<item key="Menu.Edit.Spread" value="Spread"/>
+	<item key="Menu.Edit.Spread.Top" value="Top"/>
+	<item key="Menu.Edit.Spread.VMiddle" value="Center Vertically"/>
+	<item key="Menu.Edit.Spread.Bottom" value="Bottom"/>
+	<item key="Menu.Edit.Spread.Left" value="Left"/>
+	<item key="Menu.Edit.Spread.HCenter" value="Center Horizontally"/>
+	<item key="Menu.Edit.Spread.Right" value="Right"/>
+	<item key="Menu.Edit.Arrange" value="Arrange"/>
+	<item key="Menu.Edit.Arrange.BringToFront" value="Bring to Front"/>
+	<item key="Menu.Edit.Arrange.BringForward" value="Bring Forward"/>
+	<item key="Menu.Edit.Arrange.SendBackward" value="Send Backward"/>
+	<item key="Menu.Edit.Arrange.SendToBack" value="Send to Back"/>
+	<item key="Menu.Resource" value="Resource"/>
+	<item key="Menu.Resource.AddResource" value="Add Resource"/>
+	<item key="Menu.Resource.AddResourceFolder" value="Add Resource Folder"/>
+	<item key="Menu.Project" value="Project"/>
+	<item key="Menu.Project.Run" value="Run"/>
+	<item key="Menu.Project.Property" value="Project Property"/>
+	<item key="Menu.Window" value="Window"/>
+	<item key="Menu.Window.WindowComponent" value="Component"/>
+	<item key="Menu.Window.WindowLayer" value="Layer"/>
+	<item key="Menu.Window.WindowState" value="State"/>
+	<item key="Menu.Window.WindowProperty" value="Property"/>
+	<item key="Menu.Window.WindowResource" value="Repository"/>
+	<item key="Menu.Window.WindowPackage" value="Package Explorer"/>
+	<item key="Menu.Window.WindowConsole" value="Console"/>
+	<item key="Menu.Window.WindowProgress" value="Progress"/>
+	<item key="Menu.Window.WindowAnimate" value="Animation"/>
+	<item key="Menu.Window.WindowData" value="Data"/>
+	<item key="Menu.Window.Preference" value="Preference"/>
+	<item key="Menu.Window.Preference.Mac" value="Preference Setting"/>
+	<item key="Menu.Help" value="Help"/>
+	<item key="Menu.Help.Tutorials" value="User Manual"/>
+	<item key="Menu.Help.Doc" value="Document Center"/>
+	<item key="Menu.Help.Welcome" value="Egret Wing Welcome Screen"/>
+	<item key="Menu.Help.JoinPlan" value="Join the developers program"/>
+	<item key="Menu.Help.Website" value="Official Website"/>
+	<item key="Menu.Help.Bug" value="Submit Bug"/>
+	<item key="Menu.Help.BBS" value="Official Forum"/>
+	<item key="Menu.Help.About" value="About Egret Wing"/>
+	<item key="MainView.TitleBar.ImportProject" value="Import Project"/>
+	<item key="MainView.TitleBar.NewProject" value="New Project"/>
+	<item key="MainView.TitleBar.NewExml" value="New EXML Skin"/>
+	<item key="MainView.TitleBar.Save" value="Save（Ctrl/Command+S）"/>
+	<item key="MainView.TitleBar.SaveAll" value="Save All"/>
+	<item key="MainView.TitleBar.Undo" value="Undo"/>
+	<item key="MainView.TitleBar.Redo" value="Redo"/>
+	<item key="MainView.TitleBar.Run" value="Run"/>
+	<item key="MainView.TitleBar.AddResource" value="Add Resource"/>
+	<item key="MainView.TitleBar.AddResourceFolder" value="Add Resource Folder"/>
+	<item key="MainView.TitleBar.Align.Top" value="Align Top"/>
+	<item key="MainView.TitleBar.Align.VMiddle" value="Align Center Vertically"/>
+	<item key="MainView.TitleBar.Align.Bottom" value="Align Bottom"/>
+	<item key="MainView.TitleBar.Align.Left" value="Align Left"/>
+	<item key="MainView.TitleBar.Align.HCenter" value="Align Center Horizontally"/>
+	<item key="MainView.TitleBar.Align.Right" value="Align Right"/>
+	<item key="MainView.TitleBar.Spread.Top" value="Spread Top"/>
+	<item key="MainView.TitleBar.Spread.VMiddle" value="Spread Center Vertically"/>
+	<item key="MainView.TitleBar.Spread.Bottom" value="Spread Bottom"/>
+	<item key="MainView.TitleBar.Spread.Left" value="Spread Left"/>
+	<item key="MainView.TitleBar.Spread.HCenter" value="Spread Center Horizontally"/>
+	<item key="MainView.TitleBar.Spread.Right" value="Spread Right"/>
+	<item key="MainView.TitleBar.Arrange.BringToFront" value="Bring to Front"/>
+	<item key="MainView.TitleBar.Arrange.BringForward" value="Bring Forward"/>
+	<item key="MainView.TitleBar.Arrange.SendBackward" value="Send Backward"/>
+	<item key="MainView.TitleBar.Arrange.SendToBack" value="Send to Back"/>
+	<item key="MainView.WorkSpace.Programmer" value="Programmer"/>
+	<item key="MainView.WorkSpace.Designer" value="Designer"/>
+	<item key="MainView.WorkSpace.Debug" value="Debug"/>
+	<item key="MainView.WorkSpace.New" value="New Workspace"/>
+	<item key="MainView.WorkSpace.Delete" value="Delete Workspace"/>
+	<item key="MainView.WorkSpace.Reset" value="Reset&quot;{0}&quot;"/>
+	<item key="MainView.WorkSpace.NewPanelTitle" value="New Workspace"/>
+	<item key="MainView.WorkSpace.NewPanelLabel" value="Name :"/>
+	<item key="MainView.WorkSpace.NewPanelInput" value="Unnamed Workspace"/>
+	<item key="MainView.WorkSpace.PromptSameName" value="The workspace named as &quot;{0}&quot; has already existed. Want to replace &quot;{1}&quot;？"/>
+	<item key="MainView.WorkSpace.DeletePanelTitle" value="Delete Workspace"/>
+	<item key="MainView.WorkSpace.DeletePrompt" value="Cannot undo deleting a workspace. Really want to continue？"/>
+	<item key="MainView.WorkSpace.PromptReset" value="Really want to reset &quot;{0}&quot; to the original layout？"/>
+	<item key="MainView.WorkSpace.PromptResetTitle" value="Reset workspace"/>
+	<item key="MainView.PromptSaveTitle" value="Save resources"/>
+	<item key="MainView.PromptSaveExml" value="&quot;{0}&quot; has been modified. Do you want to save the modification?"/>
+	<item key="MainView.PromptSaveExmls" value="{1} files including &quot;{0}&quot; have been modified. Want to save the modification？"/>
+	<item key="Components.Title" value="Component"/>
+	<item key="Components.Component" value="Control"/>
+	<item key="Components.Container" value="Layout"/>
+	<item key="Components.Custom" value="Custom"/>
+	<item key="Layer.Title" value="Layer"/>
+	<item key="Layer.Delete" value="Delete Layer"/>
+	<item key="Material.Title" value="Library"/>
+	<item key="Material.GoToFirstFrame" value="Go to the First Frame"/>
+	<item key="Material.BackwardFrame" value="Step Backward One Frame"/>
+	<item key="Material.Play" value="Play"/>
+	<item key="Material.ForwardFrame" value="Step Forward One Frame"/>
+	<item key="Material.GoToLastFrame" value="Go to the Last Frame"/>
+	<item key="Material.FrameState" value="Current Frame/Total Frame"/>
+	<item key="Material.DeleteResource" value="Delete Resources"/>
+	<item key="Material.Refresh" value="Refresh Library"/>
+	<item key="Material.NormalView" value="Predefined Group View"/>
+	<item key="Material.CustomView" value="Custom Group View"/>
+	<item key="Material.Rename" value="Rename"/>
+	<item key="Material.CopyName" value="Copy Resource Name"/>
+	<item key="Material.NewFolder" value="New Folder"/>
+	<item key="Material.NewFolderFromRes" value="New Folder from the Selected Resources"/>
+	<item key="Material.Delete" value="Delete"/>
+	<item key="Material.PromptSameName" value="The name &quot;{0}&quot; already exists. Please use a different name."/>
+	<item key="Material.DefaultFolderName" value="Unnamed Folder "/>
+	<item key="Material.PromptDragSameName" value="One or more items with same name exist in the destination folder. "/>
+	<item key="Material.PromptDelete" value="Want to delete the following resources：\n{0} ？"/>
+	<item key="Material.PromptDeleteTitle" value="Delete Confirmation"/>
+	<item key="Material.PromptDeleteInSheet" value="Unable to delete the resources in the resource package."/>
+	<item key="Material.Scale9GridButton" value="Scale9gird"/>
+	<item key="Material.Scale9Grid.Descript" value="Wheel: Zoom | Drag picture: Move pictures | Drag dotted lines: Scale 9 grid"/>
+	<item key="Material.Scale9Grid.Zoom" value="Zoom In"/>
+	<item key="Material.Scale9Grid.Narrow" value="Zoom Out"/>
+	<item key="Material.Scale9Grid.RealSize" value="Actual Size"/>
+	<item key="Material.Scale9Grid.Open" value="Enable Scale9grid"/>
+	<item key="Material.Scale9Grid.FixSize" value="Display All"/>
+	<item key="Property.Title" value="Attribute"/>
+	<item key="Property.SelectedNone" value="No item selected"/>
+	<item key="Property.SelectedNodes" value="({0} items are selected)"/>
+	<item key="Property.NormalView" value="Standard View"/>
+	<item key="Property.AllAttributes" value="All Attributes"/>
+	<item key="Property.All.Attribute" value="Attribute"/>
+	<item key="Property.All.Value" value="Value"/>
+	<item key="Property.All.EditorTips" value="The node with the input ID does not exist，please enter again"/>
+	<item key="Property.Common.Name" value="Common"/>
+	<item key="Property.Common.ID" value="ID :"/>
+	<item key="Property.Common.State" value="State :"/>
+	<item key="Property.Common.AllState" value="All states"/>
+	<item key="Property.Common.Text" value="Text :"/>
+	<item key="Property.Common.Label" value="Label :"/>
+	<item key="Property.Common.Enable" value="Enable :"/>
+	<item key="Property.Common.IDFormatError" value="ID must start with a letter or underscore!"/>
+	<item key="Property.Common.IDExistError" value="The ID already exists, please set another name!"/>
+	<item key="Property.Layout.Name" value="Layout"/>
+	<item key="Property.Layout.Layout" value="Layout :"/>
+	<item key="Property.Layout.Orientation" value="Direction :"/>
+	<item key="Property.Layout.Gap" value="Space"/>
+	<item key="Property.Layout.Horizontal" value="Horizontal :"/>
+	<item key="Property.Layout.Vertical" value="Vertical :"/>
+	<item key="Property.Layout.Row" value="Row"/>
+	<item key="Property.Layout.Row.Height" value="Height :"/>
+	<item key="Property.Layout.Row.Number" value="Number :"/>
+	<item key="Property.Layout.Column" value="Column"/>
+	<item key="Property.Layout.Column.Width" value="Width :"/>
+	<item key="Property.Layout.Column.Number" value="Number :"/>
+	<item key="Property.Layout.Align" value="Justify"/>
+	<item key="Property.Layout.Align.Row" value="Row :"/>
+	<item key="Property.Layout.Align.Column" value="Column :"/>
+	<item key="Property.Layout.InsideGap" value="Padding"/>
+	<item key="Property.Layout.InsideGap.Left" value="Left :"/>
+	<item key="Property.Layout.InsideGap.Right" value="Right :"/>
+	<item key="Property.Layout.InsideGap.Top" value="Up :"/>
+	<item key="Property.Layout.InsideGap.Bottom" value="Down:"/>
+	<item key="Property.SizeAndPos.Name" value="Size and Position"/>
+	<item key="Property.SizeAndPos.Width" value="Width:"/>
+	<item key="Property.SizeAndPos.Height" value="Height:"/>
+	<item key="Property.SizeAndPos.Restrict" value="Constraint"/>
+	<item key="Property.SizeAndPos.Align" value="Align"/>
+	<item key="Property.SizeAndPos.Align.Left" value="Align Left"/>
+	<item key="Property.SizeAndPos.Align.HorizontalCenter" value="Horizontal center"/>
+	<item key="Property.SizeAndPos.Align.Right" value="Align Right"/>
+	<item key="Property.SizeAndPos.Align.Top" value="Align Top"/>
+	<item key="Property.SizeAndPos.Align.VerticalCenter" value="Vertical Center"/>
+	<item key="Property.SizeAndPos.Align.Bottom" value="Align Down"/>
+	<item key="Property.SizeAndPos.Align.LeftAndRight" value="Padding Left and Right"/>
+	<item key="Property.SizeAndPos.Align.TopAndBottom" value="Padding Top and Bottom"/>
+	<item key="Property.SizeAndPos.Align.All" value="Padding all"/>
+	<item key="Property.Style.Name" value="Style"/>
+	<item key="Property.Style.Skin" value="Skin"/>
+	<item key="Property.Style.Skin.Skin" value="Skin:"/>
+	<item key="Property.Style.Skin.ItemSkin" value="Item Skin :"/>
+	<item key="Property.Style.Skin.OpenSkin" value="Open Skin"/>
+	<item key="Property.Style.Skin.CreateSkin" value="Create Skin"/>
+	<item key="Property.Style.ButtonSkin" value="Skin Shortcut Panel"/>
+	<item key="Property.Style.ButtonSkin.Up" value="Normal"/>
+	<item key="Property.Style.ButtonSkin.Up.Prompt" value="Normal Status of Resource Name"/>
+	<item key="Property.Style.ButtonSkin.Up.ToolTip" value="Drag the resource here from the resource library, or input the resource file name manually."/>
+	<item key="Property.Style.ButtonSkin.Down" value="Press Down :"/>
+	<item key="Property.Style.ButtonSkin.Down.Prompt" value="Resource Name with Press down Status"/>
+	<item key="Property.Style.ButtonSkin.Down.ToolTip" value="Drag the resource here from the resource library, or input the resource file name manually."/>
+	<item key="Property.Style.ButtonSkin.Disabled" value="Disabled :"/>
+	<item key="Property.Style.ButtonSkin.Disabled.Prompt" value="Resource Name with Disabled Status"/>
+	<item key="Property.Style.ButtonSkin.Disabled.ToolTip" value="Drag the resource here from the resource library, or input the resource file name manually."/>
+	<item key="Property.Style.ResName" value="Resource Name :"/>
+	<item key="Property.Style.AutoScale" value="Auto Scale :"/>
+	<item key="Property.Style.FillMode" value="Filling Mode :"/>
+	<item key="Property.Style.Scale" value="Stretch"/>
+	<item key="Property.Style.Repeat" value="Repeat"/>
+	<item key="Property.Style.Text" value="Text"/>
+	<item key="Property.Style.Text.FontFamily" value="Font name"/>
+	<item key="Property.Style.Text.FontColor" value="Font color"/>
+	<item key="Property.Style.Text.FontSize" value="Font size"/>
+	<item key="Property.Style.Text.Bold" value="Bold"/>
+	<item key="Property.Style.Text.Italic" value="Italic"/>
+	<item key="Property.Style.Text.Color" value="Color :"/>
+	<item key="Property.Style.Text.Top" value="Top"/>
+	<item key="Property.Style.Text.Middle" value="Middle"/>
+	<item key="Property.Style.Text.Bottom" value="Bottom"/>
+	<item key="Property.Style.Text.Justify" value="Vertical Justification"/>
+	<item key="Property.Style.Text.Left" value="Align Left"/>
+	<item key="Property.Style.Text.Center" value="Align Center"/>
+	<item key="Property.Style.Text.Right" value="Align Right"/>
+	<item key="Property.Style.Button.EditDataProvider" value="Edit Data Source"/>
+	<item key="Property.Style.Rect.Fill" value="Filling"/>
+	<item key="Property.Style.Rect.Stroke" value="Line"/>
+	<item key="Property.Style.Rect.Color" value="Color :"/>
+	<item key="Property.Style.Rect.Alpha" value="Opacity :"/>
+	<item key="Property.Style.Rect.StrokeWeight" value="Stroke :"/>
+	<item key="Property.Style.BitmapLabel" value="Bitmap Text"/>
+	<item key="Property.Style.BitmapLabel.Font" value="Bitmap font :"/>
+	<item key="Property.Style.DataProvider.AddAttribute" value="Add Attribute"/>
+	<item key="Property.Style.DataProvider.AddItem" value="Add an Item"/>
+	<item key="Property.Style.DataProvider.DeleteRow" value="Delete the selected line"/>
+	<item key="Property.Style.DataProvider.DeleteColmun" value="Delete the selected column"/>
+	<item key="Property.Style.DataProvider.PromptSameTitle" value="Add Attribute"/>
+	<item key="Property.Style.DataProvider.PromptSameContent" value="Attribute{0} already exists."/>
+	<item key="Property.Style.DataProvider.PromptDeleteTitle" value="Delete Confirmation"/>
+	<item key="Property.Style.DataProvider.PromptDeleteContent" value="Confirm to delete these data？"/>
+	<item key="Property.Style.DataProvider.DefaultData" value="Data"/>
+	<item key="Property.Style.DataProvider.AddAttributeTitle" value="Add Attribute"/>
+	<item key="Property.Style.DataProvider.AttributeName" value="Attribute Name:"/>
+	<item key="Property.SkinWindow.SelectNone" value="No skin has been selected!"/>
+	<item key="Property.SkinWindow.Search" value="Search："/>
+	<item key="Property.SkinWindow.HostComponent" value="Host Component："/>
+	<item key="Property.SkinWindow.SkinTitle" value="Select Skin"/>
+	<item key="Property.SkinWindow.ItemRendererSkinTitle" value="Select Item Skin"/>
+	<item key="ExmlPanel.SelectMode" value="Selection Mode"/>
+	<item key="ExmlPanel.MoveMode" value="Translation Mode"/>
+	<item key="ExmlPanel.NarrowMode" value="Zoom out Mode"/>
+	<item key="ExmlPanel.ZoomMode" value="Zoom in Mode"/>
+	<item key="ExmlPanel.AdaptiveWindow" value="Display All"/>
+	<item key="ExmlPanel.OriginalSize" value="Original Size"/>
+	<item key="ExmlPanel.Source" value="Source Code"/>
+	<item key="ExmlPanel.Design" value="Design"/>
+	<item key="ExmlPanel.Preview" value="Preview"/>
+	<item key="ExmlPanel.SavePrompt" value="'{0}' has been changed. Want to save the change?"/>
+	<item key="Package.Title" value="Package Explorer"/>
+	<item key="Package.ShowAll" value="Display All Files"/>
+	<item key="Package.OnlyShowExml" value="Only Display EXML Files"/>
+	<item key="Package.OnlyShowTs" value="Only Display TS Files"/>
+	<item key="Package.Refresh" value="Refresh"/>
+	<item key="Package.New" value="New"/>
+	<item key="Package.NewExml" value="EXML files"/>
+	<item key="Package.NewPackage" value="Package"/>
+	<item key="Package.NewFolder" value="Folder"/>
+	<item key="Package.Delete" value="Delete"/>
+	<item key="Package.Open" value="Open"/>
+	<item key="Package.Copy" value="Copy"/>
+	<item key="Package.Paste" value="Paste"/>
+	<item key="Package.Cut" value="Cut"/>
+	<item key="Package.Rename" value="Rename"/>
+	<item key="Package.OpenProject" value="Open Project"/>
+	<item key="Package.CloseProject" value="Close Project"/>
+	<item key="Package.ProjectPropty" value="Project Attribute"/>
+	<item key="Package.DeletePrompt" value="Are you sure that you want to delete '{0}'from the file system?"/>
+	<item key="Package.DeleteMultiPrompt" value="Are you sure that you want to delete the '{0}' resources from the file system?"/>
+	<item key="Package.DeletePromptTitle" value="Confirm to delete the resources"/>
+	<item key="Package.DeleteProject" value="Are you sure that you want to delete the project'{0}'? The operation will not delete any project content."/>
+	<item key="Package.DeleteProjectTitle" value="Confirm to delete the project"/>
+	<item key="Package.MoveErrorPrompt" value="Error occurs when moving resources. '{0}' does not exist!"/>
+	<item key="Package.CopyErrorPrompt" value="Error occurs when copying resources. '{0}' does not exist!"/>
+	<item key="Package.PastePrompt" value="Destination path '{0}' already exists. Do you want to override the original files?"/>
+	<item key="Package.Overwrite" value="Override"/>
+	<item key="Package.AllOverwrite" value="Override All"/>
+	<item key="Package.AllCancel" value="Cancel All"/>
+	<item key="Package.RenameErrorPrompt" value="Unable to rename the resource as the resource '{0}' does not sync with the file system!"/>
+	<item key="Package.DefaultPackage" value="(default package)"/>
+	<item key="Convert.Title" value="Transform"/>
+	<item key="Convert.Edit" value="Edit:"/>
+	<item key="Convert.Convert" value="Transform:"/>
+	<item key="Convert.SelectComponent" value="Choose Component"/>
+	<item key="Convert.Id" value="id"/>
+	<item key="Convert.HostComponent" value="Host Component："/>
+	<item key="Convert.Matching" value="Match:"/>
+	<item key="Convert.SelectSkinPart" value="Select Skin Component"/>
+	<item key="Convert.SelectNum" value="({0} items are selected)"/>
+	<item key="Convert.SelectNone" value="No item selected"/>
+	<item key="RenameWindow.Title" value="Rename Resource"/>
+	<item key="RenameWindow.NewName" value="New Name :"/>
+	<item key="OpenSourceWindow.Title" value="Open Resource"/>
+	<item key="OpenSourceWindow.SelectOpenItem" value="Select the item to be opened"/>
+	<item key="Progress.Wait" value="Waiting: "/>
+	<item key="Progress.Running" value="In progress: "/>
+	<item key="Progress.Failure" value="Failure: "/>
+	<item key="Console.Clear" value="Clear"/>
+	<item key="StatePanel.Name" value="State"/>
+	<item key="StatePanel.AllState" value="All States"/>
+	<item key="StatePanel.NewState" value="New State"/>
+	<item key="StatePanel.EditStateProperty" value="Edit State Attribute"/>
+	<item key="StatePanel.DeleteState" value="Delete State"/>
+	<item key="StatePanel.Start" value="Initial"/>
+	<item key="StatePanel.ToolTip" value="The base class of the skin does not support ViewState function"/>
+	<item key="EditState.Title" value="Edit State Attribute"/>
+	<item key="EditState.TypeInNewStateName" value="Please enter the name of the new state."/>
+	<item key="EditState.NoStateName" value="No State Name"/>
+	<item key="EditState.SetToStartState" value="Set as Initial State"/>
+	<item key="EditState.Name" value="Name:"/>
+	<item key="EditState.StartState" value="Initial State:"/>
+	<item key="NewState.Title" value="New State"/>
+	<item key="NewState.AllState" value="All States"/>
+	<item key="NewState.PleaseTypeInNewStateName" value="Please enter the name of the new state."/>
+	<item key="NewState.InvalidStateName" value="Invalid State Name"/>
+	<item key="NewState.StateNameInvalid1" value="Invalid State Name"/>
+	<item key="NewState.StateNameInvalid2" value="Invalid State Name"/>
+	<item key="NewState.SameNamePrompt" value="The state named &quot;{0}&quot; already exists，please enter other names."/>
+	<item key="NewState.SameNamePromptTitle" value="Duplicate State Names "/>
+	<item key="NewState.ContentCopy" value="Copy of the below content :"/>
+	<item key="NewState.SetToStartState" value="Set as initial state"/>
+	<item key="NewState.EmptyState" value="Blank State"/>
+	<item key="NewState.Name" value="Name :"/>
+	<item key="NewState.CreateAs" value="Create as"/>
+	<item key="NewState.StartState" value="Initial State :"/>
+	<item key="NewExml.Title" value="New EXML Skin"/>
+	<item key="NewExml.Browse" value="Browse"/>
+	<item key="NewExml.Package" value="Package :"/>
+	<item key="NewExml.SelectPackage" value="Select Package"/>
+	<item key="NewExml.Name" value="Name :"/>
+	<item key="NewExml.HostComponent" value="Host Component:"/>
+	<item key="NewExml.SelectHostComponent" value="Select host component"/>
+	<item key="NewExml.BaseClass" value="Base Class :"/>
+	<item key="NewExml.NameTips" value="Please enter the name first!"/>
+	<item key="NewExml.HostComponentTips" value="Please enter the host component!"/>
+	<item key="NewExml.CreateErrorPrompt" value="The file to be created already exists，please enter other names!"/>
+	<item key="NewExml.Width" value="Width :"/>
+	<item key="NewExml.Height" value="Height :"/>
+	<item key="Project.Title" value="Attribute of {0}"/>
+	<item key="Project.BasePageTitle" value="Basic attribute"/>
+	<item key="Project.Browse" value="Browse"/>
+	<item key="Project.ProjectPath" value="Project path :"/>
+	<item key="Project.TargetPath" value="Target TypeScript project path"/>
+	<item key="Project.Prompt.PathError" value="The project path to be imported does not exist or is incorrect."/>
+	<item key="Project.Prompt.Same" value="A project of the same name already exists. Please rename or delete the existing project."/>
+	<item key="Project.ThemePageTitle" value="Topic"/>
+	<item key="Project.Error" value="The project configuration file TargetProperties.json does not exist or is broken"/>
+	<item key="Project.Res.LoadType" value="Loading method:"/>
+	<item key="Project.Res.DefaultLoadType" value="No load library"/>
+	<item key="Project.Res.PluginLoadType" value="Custom load library"/>
+	<item key="Project.Res.PluginType" value="Resource Plugin:"/>
+	<item key="Project.Res.ConfigPath" value="Configuration File:"/>
+	<item key="Project.Res.RelativePath" value="Root Path:"/>
+	<item key="Project.Res.Title" value="Resource"/>
+	<item key="Project.Res.AddTitle" value="Add Resource Configuration"/>
+	<item key="Project.Res.EditTitle" value="Edit Resource Configuration"/>
+	<item key="Project.Res.Add" value="Add"/>
+	<item key="Project.Res.Edit" value="Edit"/>
+	<item key="Project.Res.Delete" value="Delete"/>
+	<item key="NewProjectWindow.Title" value="New project"/>
+	<item key="NewProjectWindow.Title2" value="Create an Egret project."/>
+	<item key="NewProjectWindow.TitleDescription" value="Select project name and location."/>
+	<item key="NewProjectWindow.ProjectName" value="Project name :"/>
+	<item key="NewProjectWindow.ProjectPath" value="Folder :"/>
+	<item key="NewProjectWindow.BorrowButton" value="Browse..."/>
+	<item key="NewProjectWindow.SameName" value="The project name cannot be the same to another project (case-insensitive)."/>
+	<item key="NewProjectWindow.SameFolder" value="{0} is duplicate with the location of another project: &quot;{1}&quot;"/>
+	<item key="NewProjectWindow.PathError" value="Unable to create directory: {0}"/>
+	<item key="NewProjectWindow.NodeNotFind" value="Could not find the executable node file under Egret Engine installation Directory."/>
+	<item key="NewProjectWindow.ProjectPathNull" value="A project path must be specified"/>
+	<item key="ImportProjectWindow.Title" value="Import Project"/>
+	<item key="ImportProjectWindow.LastStep" value="Last step"/>
+	<item key="ImportProjectWindow.NextStep" value="Next step"/>
+	<item key="ImportProjectWindow.compileComplete" value="The engine of the {0} project compilation completes."/>
+	<item key="ImportProjectWindow.compileError" value="The engine of the {0} project compilation fails."/>
+	<item key="ImportProjectWindow.compiling" value="The project engine is being compiled..."/>
+	<item key="BasePage.SelectProjectPath" value="Select project path"/>
+	<item key="ResourcePage.SelectInside" value="Please select the files or folders in the project"/>
+	<item key="ResourcePage.SelectConfigPath" value="Select the configuration file of the resource load library"/>
+	<item key="ResourcePage.SelectRelativePath" value="Select the relative path of the resource load library"/>
+	<item key="JoinPlanWindow.Title" value="Join the Developer Program"/>
+	<item key="JoinPlanWindow.Commit" value="Submit"/>
+	<item key="JoinPlanWindow.ProjectDescription" value="For instance, 'Yugong moved mountain' is a casual game to create babies by continually clicking the screen."/>
+	<item key="JoinPlanWindow.QQWeiXinTip" value="One item at least for QQ or Wechat"/>
+	<item key="JoinPlanWindow.BBSEmail" value="BBS registered e-mail"/>
+	<item key="JoinPlanWindow.Optional" value="Optional"/>
+	<item key="JoinPlanWindow.ValidateTip" value="Please fill in complete information"/>
+	<item key="ColorWindow.Title" value="Color selector"/>
+	<item key="ColorWindow.SelectColor" value="Select color :"/>
+	<item key="ColorWindow.NewColor" value="New"/>
+	<item key="ColorWindow.CurrentColor" value="Current"/>
+	<item key="ColorWindow.UseDefault" value="Use Default Value"/>
+	<item key="Alert.Confirm" value="OK"/>
+	<item key="Alert.Cancel" value="Cancel"/>
+	<item key="Alert.Yes" value="Yes"/>
+	<item key="Alert.No" value="No"/>
+	<item key="Alert.Warn" value="Warning"/>
+	<item key="Alert.Error" value="Error"/>
+	<item key="Alert.Tips" value="Tips"/>
+	<item key="Alert.Complete" value="Complete"/>
+	<item key="Alert.Apply" value="Apply"/>
+	<item key="StatuBar.EditArea" value="Editing Area"/>
+	<item key="StatuBar.Restore" value="Restore"/>
+	<item key="TabGroup.Close" value="Close"/>
+	<item key="TabGroup.Minimum" value="Minimize"/>
+	<item key="TabGroup.CloseTab" value="Close Tab Group"/>
+	<item key="CloseTabButton.Close" value="Close"/>
+	<item key="CloseTabButton.CloseOther" value="Close Others"/>
+	<item key="CloseTabButton.CloseAll" value="Close All"/>
+	<item key="0000" value="Unable to find the installation directory of Egret Engine.\n Please go to the official website to download and install Egret Engine"/>
+	<item key="0001" value="Unable to parse egret-manifest.xml, please check whether the format of {0} is correct"/>
+	<item key="0002" value="Unable to parse properties.json, please check whether the format of {0} is correct"/>
+	<item key="0003" value="Unable to parse package.json, please check whether the format of {0} is correct"/>
+	<item key="0004" value="The minimum version of the engine required by Egret Wing is {0}，your current engine version is {1}，please update the engine to the version later than {2} or {3} before attempting to launch Egret Wing"/>
+	<item key="0005" value="Unable to parse exml.xsd, please check whether the format of {0} is correct"/>
+	<item key="0006" value="Egret Engine installation exception, please try to reset the engine or reinstall the program"/>
+	<item key="2001" value="{0}: error cannot find EXML file"/>
+	<item key="2002" value="{0}: error Invalid EXML file"/>
+	<item key="2003" value="{0}: error Cannot find the corresponding class definition to the node\n{1}"/>
+	<item key="2004" value="{0}: error The node cannot contain any id attribute of the same name\n{1}"/>
+	<item key="2005" value="{0}: error Attribute or style in the name of '{1}' does not exist on the node:\n{2}"/>
+	<item key="2006" value="{0}: error Undefined view state name :'{1}'\n{2}"/>
+	<item key="2007" value="{0}: error Only the egret.IVisualElement object in the container can use includeIn  and excludeFrom attribute \n{1}"/>
+	<item key="2008" value="{0}: error Cannot assign the '{1}' type value to the attribute:'{2}'\n{3}"/>
+	<item key="2009" value="{0}: error Only one ID can be referenced in the node attribute value label ‘{}’, and complex expression is not allowed \n{1}"/>
+	<item key="2010" value="{0}: error Attribute: ID referenced by '{1}':  '{2}' does not exist \n{3}"/>
+	<item key="2011" value="{0}: error Cannot assign multiple node values to the same pattribute:'{1}'\n{2}"/>
+	<item key="2012" value="{0}: error Default attribute does not exist on the node, must explicitly declare the attribute name that the child node is assigned to \n{1}"/>
+	<item key="2013" value="{0}: error View state syntax is not allowed to use on the attribute node in the type of 'Array' \n{1}"/>
+	<item key="2014" value="{0}: error Skin class in itself is not allowed to assign value to the node attribute \n{1}"/>
+	<item key="2015" value="{0}: error The class definition referenced by the node :{1} does not exist \n{2}"/>
+	<item key="2016" value="{0}: error Format error in the 'scale9Grid' attribute value on the node :{1}"/>
+	<item key="2017" value="{0}: error Namespace prefix is missing on the node :{1}"/>
+	<item key="2018" value="{0}: error Format error in the 'skinName' attribute value on the node :{{1}"/>
+	<item key="2019" value="{0}: error The child item of the container must be a visible node :{1}"/>
+	<item key="2101" value="{0}: warning The attributes includeIn and excludeFrom are not allowed to use for the child nodes in the w: Declarations\n{1}"/>
+	<item key="2102" value="{0}: warning cannot find any child node on the attribute node \n{1}"/>
+	<item key="2103" value="{0}: warning The same property '{1}' on the node is assigned value for many times\n{2}"/>
+	<item key="Error.Download" value="Download" />
+	
+	<item key="Upgrade.Alert" value="\n  Find the Egret Wing update files, \n\n do you want to restart to install the update？\n\n"/>
+	<item key="Upgrade.AlertTitle" value="Update notification"/>
+	<item key="Upgrade.AlertUpdateRightNow" value="Update now"/>
+	<item key="Upgrade.AlertUpdateLater" value="Update later"/>
+	<item key="Upgrade.AlertCompleteTitle" value="Update content this time"/>
+	<item key="ExmlRightMenu.Copy" value="Copy"/>
+	<item key="ExmlRightMenu.Cut" value="Cut"/>
+	<item key="ExmlRightMenu.Paste" value="Paste"/>
+	<item key="ExmlRightMenu.CopyProperty" value="Copy the attribute value"/>
+	<item key="ExmlRightMenu.PasteSize" value="Paste Size"/>
+	<item key="ExmlRightMenu.PastePos" value="Paste Position"/>
+	<item key="ExmlRightMenu.PasteRestrict" value="Paste Constraint"/>
+	<item key="ExmlRightMenu.AdsorbToObject" value="Attach to the object..."/>
+	<item key="ExmlRightMenu.AdsorbStatus" value="Right click to detach"/>
+	<item key="Preference.Title" value="Preferences"/>
+	<item key="Preference.Title.Mac" value="Preferences Settings"/>
+	<item key="Preference.CommonPage.Title" value="Common"/>
+	<item key="Preference.BrowserPage.Title" value="Web browser"/>
+	<item key="Preference.BrowserPage.Default" value="Default system Web browser"/>
+	<item key="Preference.BrowserPage.Describe" value="Add, delete or edit the installed Web browser.\n When running the Egret project, the selected Web Browser will be selected."/>
+	<item key="Preference.BrowserPage.New" value="New..."/>
+	<item key="Preference.BrowserPage.Edit" value="Edit..."/>
+	<item key="Preference.BrowserPage.Remove" value="Remove"/>
+	<item key="Preference.BrowserPage.EditTitle" value="Edit Web browser"/>
+	<item key="Preference.BrowserPage.NewTitle" value="Add Web browser"/>
+	<item key="Preference.BrowserPage.NewTitle" value="Add Web browser"/>
+	<item key="Preference.BrowserPage.BrowserName" value="Name :"/>
+	<item key="Preference.BrowserPage.BrowserPath" value="Path :"/>
+	<item key="Preference.BrowserPage.BrowserWindowTitle" value="Specify the location of the Web Browser exe file"/>
+	<item key="Preference.ShortcutPage.Title" value="Shortcut Key"/>
+	<item key="AutoSave.PromptContent" value="Do you want to restore the last unsaved files {0}?"/>
+	<item key="AutoSave.PromptTitle" value="Restore file notification"/>
+	<item key="AutoSave.PromptYes" value="Restore"/>
+	<item key="AutoSave.PromptNo" value="Cancel"/>
+	<item key="Shortcut.Save" value="Save"/>
+	<item key="Shortcut.Copy" value="Copy"/>
+	<item key="Shortcut.Paste" value="Paste"/>
+	<item key="Shortcut.Delete" value="Delete"/>
+	<item key="Shortcut.Cut" value="Cut"/>
+	<item key="Shortcut.Refresh" value="Refresh"/>
+	<item key="Shortcut.Undo" value="Undo"/>
+	<item key="Shortcut.Redo" value="Redo"/>
+	<item key="Shortcut.Select_all" value="Select all"/>
+	<item key="Shortcut.Layer_up" value="Move up one layer"/>
+	<item key="Shortcut.Layer_down" value="Move down one layer"/>
+	<item key="Shortcut.Group" value="Group"/>
+	<item key="Shortcut.Ungroup" value="Cancel group"/>
+	<item key="Shortcut.Format_indent" value="Format the code indent value"/>
+	<item key="Shortcut.Zoom_out" value="Zoom in"/>
+	<item key="Shortcut.Zoom_in" value="Zoom out"/>
+	<item key="Shortcut.Drag_mode" value="Toggle to the drag-and-drop mode"/>
+	<item key="Shortcut.Open_source" value="Open the resources window"/>
+	<item key="Shortcut.Create_exml" value="New EXML Skin"/>
+	<item key="Shortcut.Exit" value="Exit"/>
+	<item key="Shortcut.Delete_line" value="Delete rows"/>
+	<item key="Shortcut.Note_swap" value="Toggle comments"/>
+	<item key="Shortcut.Close_doc" value="Close the current file"/>
+	<item key="Shortcut.Auto_complete_content" value="Content completion"/>
+	<item key="Shortcut.Switch_tab" value="Toggle tabs"/>
+	<item key="Shortcut.Run_project" value="Project Run"/>
+	<item key="UserMenu.Logout" value="Log out"/>
+	<item key="LoginWindow.Title" value="Log in"/>
+	<item key="LoginWindow.Email" value="Egret ID :"/>
+	<item key="LoginWindow.Passwrod" value="Password :"/>
+	<item key="LoginWindow.Login" value="Log in"/>
+	<item key="LoginWindow.Register" value="Register"/>
+	<item key="LoginWindow.Loading" value="Logging in..."/>
+	<item key="LoginWindow.ErrorNoUser" value="User does not exist"/>
+	<item key="LoginWindow.ErrorPassword" value="Password error"/>
+	<item key="LoginWindow.ErrorLogin" value="Login failure"/>
+	<item key="LoginWindow.ErrorEmail" value="Please use the email associated with your Egret BBS id to login"/>
+	<item key="LoginWindow.ErrorBadNet" value="Network connection error"/>
+	<item key="LoginWindow.CloseContent" value="Closing the window will close Egret Wing，do you want to continue？"/>
+	<item key="LoginWindow.CloseTitle" value="Confirmation Close"/>
+	<item key="LoginWindow.AlertErrorTitle" value="Login"/>
+	<item key="LoginWindow.AlertLoading" value="Trying to login..."/>
+	<item key="LoginWindow.AlertErrorContent" value="Your account has been logged in from another location. If that is not operated by yourself please change your password.\n\n Closing the window will close Egret Wing，do you want to continue？"/>
+	<item key="LoginWindow.ReLogin" value="Login again"/>
+	<item key="LoginWindow.ChangePassword" value="Change Password"/>
+	<item key="LoginWindow.RemeberPassword" value="Remember me"/>
+	<item key="LoginWindow.FindPassword" value="Retrieve password"/>
+	<item key="LoginWindow.NoQualification" value="The account does not have qualification for closed beta test"/>
+	<item key="LoginWindow.PromptApplyContent" value="Your account has not acquired qualification for closed beta test, and cannot be used temporarily."/>
+	<item key="LoginWindow.PromptApplyTitle" value="Login prompt"/>
+	<item key="LoginWindow.Apply" value="Apply for closed beta test"/>
+	<item key="AboutWindow.Title" value="About Egret Wing"/>
+	<item key="AboutWindow.AppTitle" value="Egret Wing"/>
+	<item key="AboutWindow.Version" value="Version: {0}"/>
+	<item key="Dialog.ok" value="OK"/>
+	<item key="Dialog.cancel" value="Cancel"/>
+	<item key="Dialog.defaults" value="Restore to default"/>
+	<item key="Dialog.apply" value="Apply"/>
+	<item key="Dialog.finish" value="Finish"/>
+	<item key="Dialog.back" value="Back"/>
+	<item key="Dialog.next" value="Next"/>
+	<item key="Wizard.ClosingTitle" value="Wizard is closing"/>
+	<item key="Wizard.ClosingErrorTip" value="The Wizard cannot be close with active action, please cancel the action before close Wizard."/>
+	<item key="RightMenu.cut" value="Cut"/>
+	<item key="RightMenu.copy" value="Copy"/>
+	<item key="RightMenu.paste" value="Paste"/>
+	<item key="RightMenu.selectAll" value="Select all"/>
+	<item key="RightMenu.clear" value="Delete"/>
+	<item key="TagGroup.dropDown.tooltip" value="Tab Menu"/>
+	<item key="ThemePage.FileFilter" value="Egret Theme"/>
+	<item key="ThemePage.Add.Title" value="Add default Skin"/>
+	<item key="ThemePage.Edit.Title" value="Edit Default Skin"/>
+	<item key="ThemePage.Content.Title" value="Theme Path :"/>
+	<item key="ThemePage.HeaderText.Comp" value="Component"/>
+	<item key="ThemePage.HeaderText.SkinName" value="Skin Name"/>
+	<item key="ThemePage.Button.Add" value="Add"/>
+	<item key="ThemePage.Button.Edit" value="Edit"/>
+	<item key="ThemePage.Button.Delete" value="Delete"/>
+	<item key="Progress.Title" value="Progress"/>
+	<item key="Shortcut.HeaderText.Command" value="Command"/>
+	<item key="Shortcut.HeaderText.ShortKey" value="Shortcut Key"/>
+	<item key="Shortcut.Button.RestoreSelected" value="Restore Selected Item"/>
+	<item key="Welcome.Title" value="Welcome"/>
+	<item key="Welcome.Teach.One" value="Egret Wing User Guide"/>
+	<item key="Welcome.Teach.Two" value="Egret Wing Case Tutorial"/>
+	<item key="Welcome.Teach.Three" value="GUI Basic Tutorial"/>
+	<item key="Welcome.Teach.Four" value="Egret GUI Advanced Tutorial"/>
+	<item key="Welcome.Teach.Five" value="Egret Learning Center"/>
+	<item key="Welcome.Source.One" value="Egret Website"/>
+	<item key="Welcome.Source.Two" value="Official Forum"/>
+	<item key="Welcome.Source.Three" value="Document Center"/>
+	<item key="Welcome.CreateGroup" value="Create"/>
+	<item key="Welcome.LastFile" value="Recent Files"/>
+	<item key="Welcome.OpenMore" value="Open more..."/>
+	<item key="Welcome.Teach" value="Tutorial"/>
+	<item key="PreferencePage.showWelcome" value="Welcome Screen Load on Startup"/>
+	<item key="scale9GridEdit.title" value="Scale9Grid Edit"/>
+	<item key="scale9GridEdit.content" value="Scale9Grid Edit {0}"/>
+	<item key="SourceSelect.file" value="Add Resource"/>
+	<item key="SourceSelect.folder" value="Add Resource Folder"/>
+	<item key="compDragDefaultText.view" value="View"/>
+	<item key="compDragDefaultText.label" value="Label"/>
+	<item key="compDragDefaultText.button" value="Bottom"/>
+	<item key="compDragDefaultText.checkBox" value="Checkbox"/>
+	<item key="compDragDefaultText.radioButton" value="Radio Button"/>
+	<item key="compDragDefaultText.toggleButton" value="Toggle Button"/>
+	<item key="compDragDefaultText.toggleSwitch" value="Switch button"/>
+	<item key="PackageController.nameclashes" value="Name Conflict"/>
+	<item key="PackageController.nameclashes.tips" value="Add New Name for '{0}'"/>
+	<item key="PackageController.nameclashes.value" value="Copy-{0}"/>
+	<item key="PackageController.nameclashes.rename" value="Please enter a new name"/>
+	<item key="PackageController.nameclashes.hasfile" value="File already exist"/>
+	<item key="BrowseWindowSkin.title" value="Select Package Folder"/>
+	<item key="BrowseWindowSkin.ok" value="OK"/>
+	<item key="BrowseWindowSkin.cancle" value="Cancel"/>
+	<item key="NewFolderWindow.title" value="New Folder"/>
+	<item key="NewFolderWindow.parentFolder" value="Select Folder"/>
+	<item key="NewFolderWindow.folder" value="Folder Name :"/>
+	<item key="NewPackageWindow.title" value="New Package"/>
+	<item key="NewPackageWindow.sourceFolder" value="Select Source Folder"/>
+	<item key="NewPackageWindow.packagePath" value="Package Path"/>
+	<item key="ThemeConfigWindow.title" value="Select Skin"/>
+	<item key="ThemeConfigWindow.label.comp" value="Component Name:"/>
+	<item key="ThemeConfigWindow.label.skinName" value="Skin Name:"/>
+	<item key="AllPropertyPanel.data.value" value="&lt; Edit in Code &gt;"/>
+	<item key="ProperyGridItemEditor.alert" value="The property format you entered is incorrect, and it cannot be saved"/>
+	<item key="SkinWindow.firstData.hostComponent" value="No Limited"/>
+	<item key="Animation.Title" value="Animation"/>
+	<item key="Animation.AddAction" value="Add Effects"/>
+	<item key="Animation.AddAction.Fade" value="Fade in and out"/>
+	<item key="Animation.AddAction.Move" value="Move"/>
+	<item key="Animation.AddAction.Scale" value="Scale"/>
+	<item key="Animation.AddAction.Rotate" value="Rotate"/>
+	<item key="Animation.DeleteEffets" value="Delete Effects"/>
+	<item key="Animation.PlayEffets" value="Preview"/>
+	<item key="Animation.Tip1" value="English version does not support the animation function"/>
+	<item key="Animation.Tip2" value="Current engine version {0} does not support the animation function，and the minimum version is 1.6.1."/>
+	<item key="Animation.Attribute.PosAndProcess" value="Position and Process"/>
+	<item key="Animation.Attribute.ScaleAndProcess" value="Scale and Process"/>
+	<item key="Animation.Attribute.AngleAndRotation" value="Angle and Process"/>
+	<item key="Animation.Attribute.Fade" value="Fade in and out"/>
+	<item key="Animation.Attribute.Center" value="Center"/>
+	<item key="Animation.Attribute.CommonParameters" value="Basic Parameters"/>
+	<item key="Animation.Attribute.Move.XFrom" value="X From:"/>
+	<item key="Animation.Attribute.Move.XTo" value="X To:"/>
+	<item key="Animation.Attribute.Move.XBy" value="X By:"/>
+	<item key="Animation.Attribute.Move.YFrom" value="Y From:"/>
+	<item key="Animation.Attribute.Move.YTo" value="Y To:"/>
+	<item key="Animation.Attribute.Move.YBy" value="Y By:"/>
+	<item key="Animation.Attribute.Scale.XFrom" value="X From:"/>
+	<item key="Animation.Attribute.Scale.XTo" value="X To:"/>
+	<item key="Animation.Attribute.Scale.XBy" value="X By:"/>
+	<item key="Animation.Attribute.Scale.YFrom" value="Y From:"/>
+	<item key="Animation.Attribute.Scale.YTo" value="Y To:"/>
+	<item key="Animation.Attribute.Scale.YBy" value="Y By:"/>
+	<item key="Animation.Attribute.Rotate.From" value="From:"/>
+	<item key="Animation.Attribute.Rotate.To" value="To:"/>
+	<item key="Animation.Attribute.Rotate.By" value="By:"/>
+	<item key="Animation.Attribute.Fade.From" value="From:"/>
+	<item key="Animation.Attribute.Fade.To" value="To:"/>
+	<item key="Animation.Attribute.Center.AutoCenterTransform" value="Auto Center Transform"/>
+	<item key="Animation.Attribute.Center.TransformX" value="Transfrom X:"/>
+	<item key="Animation.Attribute.Center.TransformY" value="Transfrom Y:"/>
+	<item key="Animation.Attribute.Common.DisableLayout" value="Disable Layout"/>
+	<item key="Animation.Attribute.Common.Druation" value="Druation:"/>
+	<item key="Animation.Attribute.Common.RepeatCount" value="Repeat Count:"/>
+	<item key="Animation.Attribute.Common.RepeatDelay" value="Repeat Delay:"/>
+	<item key="Animation.Attribute.Common.StartDelay" value="Start Delay:"/>
+	<item key="Animation.Attribute.Common.Easer" value="Easer:"/>
+	<item key="Animation.Attribute.Common.RepeatBehavior" value="Start Repeat Behavior:"/>
+	<item key="Transition.Attribute.InterruptionAppearance" value="Interruption Appearance:"/>
+	<item key="Transition.Attribute.AutomaticReverse" value="Automatic Reverse"/>
+	<item key="Transition.Attribute.NoSelectedInfo" value="This transition has no duration. Create at least one effect with a duration or start delay befor editing the transition's properties."/>
+	<item key="Progress.Complete" value="Complete: "/>
+	<item key="BuildAndRun.PromptSave" value="File is not saved,Save before compilation?\n{0}"/>
+	<item key="BuildAndRun.BrowserError" value="Unable to open the specified browser:{0}"/>
+	<item key="BuildAndRun.Title" value="Start Project {0}"/>
+</keys>

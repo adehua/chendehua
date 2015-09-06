@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout id="0" sceneSize="511,762" next="" previous="GameOverScene" eventSheet="MainSceneEventSheet">
+<item UID="6" plugin="AISprite" name="背景" isVirtual="false">
+<item name="x" value="0" valueDataType="number" />
+<item name="y" value="0" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="511" valueDataType="number" />
+<item name="height" value="762" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="url" value="resource/image/bgGrey.png" valueDataType="string" />
+<item name="collision" value="false" valueDataType="boolean" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="12" plugin="AIButton" name="开始游戏" isVirtual="false">
+<item name="x" value="168" valueDataType="number" />
+<item name="y" value="400" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="177" valueDataType="number" />
+<item name="height" value="59" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="upSkin" value="resource/image/start.png" valueDataType="string" />
+<item name="downSkin" value="resource/image/start.png" valueDataType="string" />
+<item name="disableSkin" value="resource/image/start.png" valueDataType="string" />
+<item name="text" value="" valueDataType="string" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="85" plugin="AIButton" name="排行榜" isVirtual="false">
+<item name="x" value="168" valueDataType="number" />
+<item name="y" value="548" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="177" valueDataType="number" />
+<item name="height" value="59" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="upSkin" value="resource/image/ranking.png" valueDataType="string" />
+<item name="downSkin" value="resource/image/ranking.png" valueDataType="string" />
+<item name="disableSkin" value="resource/image/ranking.png" valueDataType="string" />
+<item name="text" value="" valueDataType="string" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="10" plugin="AISprite" name="AISprite9" isVirtual="false">
+<item name="x" value="25.567128463476084" valueDataType="number" />
+<item name="y" value="54.42090680100758" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="451.0797930412778" valueDataType="number" />
+<item name="height" value="154.63277756869374" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="url" value="resource/image/title.png" valueDataType="string" />
+<item name="collision" value="false" valueDataType="boolean" />
+<item name="layer" value="1" valueDataType="number" />
+</item>
+</layout>

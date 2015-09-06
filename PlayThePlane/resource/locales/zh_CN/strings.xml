@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keys>
+	<!-- 菜单项 -->
+	<item key="Menu.EgretWing" value="Egret Wing" />
+	<item key="Menu.EgretWing.Quit" value="退出" />
+
+	<item key="Menu.File" value="文件" />
+	<item key="Menu.File.NewProject" value="新建项目" />
+	<item key="Menu.File.ImportProject" value="导入项目" />
+	<item key="Menu.File.NewExml" value="新建EXML皮肤" />
+	<item key="Menu.File.Save" value="保存" />
+	<item key="Menu.File.SaveAll" value="保存全部" />
+
+
+	<item key="Menu.Edit" value="编辑" />
+	<item key="Menu.Edit.Updo" value="撤销" />
+	<item key="Menu.Edit.Redo" value="重做" />
+	<item key="Menu.Edit.Align" value="对齐" />
+	<item key="Menu.Edit.Align.Top" value="顶对齐" />
+	<item key="Menu.Edit.Align.VMiddle" value="垂直居中对齐" />
+	<item key="Menu.Edit.Align.Bottom" value="底对齐" />
+	<item key="Menu.Edit.Align.Left" value="左对齐" />
+	<item key="Menu.Edit.Align.HCenter" value="水平居中对齐" />
+	<item key="Menu.Edit.Align.Right" value="右对齐" />
+	<item key="Menu.Edit.Spread" value="分布" />
+	<item key="Menu.Edit.Spread.Top" value="按顶分布" />
+	<item key="Menu.Edit.Spread.VMiddle" value="垂直居中分布" />
+	<item key="Menu.Edit.Spread.Bottom" value="按底分布" />
+	<item key="Menu.Edit.Spread.Left" value="按左分布" />
+	<item key="Menu.Edit.Spread.HCenter" value="水平居中分布" />
+	<item key="Menu.Edit.Spread.Right" value="按右分布" />
+	<item key="Menu.Edit.Arrange" value="排列" />
+	<item key="Menu.Edit.Arrange.BringToFront" value="移至顶层" />
+	<item key="Menu.Edit.Arrange.BringForward" value="上移一层" />
+	<item key="Menu.Edit.Arrange.SendBackward" value="下移一层" />
+	<item key="Menu.Edit.Arrange.SendToBack" value="移至底层" />
+
+
+	<item key="Menu.Resource" value="资源" />
+	<item key="Menu.Resource.AddResource" value="添加资源" />
+	<item key="Menu.Resource.AddResourceFolder" value="添加资源文件夹" />
+
+	<item key="Menu.Project" value="项目" />
+	<item key="Menu.Project.Run" value="运行" />
+	<item key="Menu.Project.Property" value="项目属性" />
+
+	<item key="Menu.Window" value="窗口" />
+	<item key="Menu.Window.WindowComponent" value="组件" />
+	<item key="Menu.Window.WindowLayer" value="图层" />
+	<item key="Menu.Window.WindowState" value="状态" />
+	<item key="Menu.Window.WindowProperty" value="属性" />
+	<item key="Menu.Window.WindowResource" value="资源库" />
+	<item key="Menu.Window.WindowPackage" value="包资源管理器" />
+	<item key="Menu.Window.WindowConsole" value="控制台" />
+	<item key="Menu.Window.WindowProgress" value="进度" />
+	<item key="Menu.Window.WindowAnimate" value="动画" />
+	<item key="Menu.Window.WindowData" value="数据" />
+	<item key="Menu.Window.Preference" value="首选项" />
+	<item key="Menu.Window.Preference.Mac" value="偏好设置" />
+
+	<item key="Menu.Help" value="帮助" />
+	<item key="Menu.Help.Tutorials" value="使用手册" />
+	<item key="Menu.Help.Doc" value="文档中心" />
+	<item key="Menu.Help.Welcome" value="Egret Wing欢迎屏幕" />
+	<item key="Menu.Help.JoinPlan" value="加入开发者计划" />
+	<item key="Menu.Help.Website" value="官网" />
+	<item key="Menu.Help.Bug" value="提交Bug" />
+	<item key="Menu.Help.BBS" value="官方论坛" />
+	<item key="Menu.Help.About" value="关于 Egret Wing" />
+	<!-- 主界面 -->
+	<item key="MainView.TitleBar.ImportProject" value="导入项目" />
+	<item key="MainView.TitleBar.NewProject" value="新建项目" />
+	<item key="MainView.TitleBar.NewExml" value="新建EXML皮肤" />
+	<item key="MainView.TitleBar.Save" value="保存（Ctrl/Command+S）" />
+	<item key="MainView.TitleBar.SaveAll" value="全部保存" />
+	<item key="MainView.TitleBar.Undo" value="撤销" />
+	<item key="MainView.TitleBar.Redo" value="重做" />
+	<item key="MainView.TitleBar.Run" value="运行" />
+	<item key="MainView.TitleBar.AddResource" value="添加资源" />
+	<item key="MainView.TitleBar.AddResourceFolder" value="添加资源文件夹" />
+	<item key="MainView.TitleBar.Align.Top" value="顶对齐" />
+	<item key="MainView.TitleBar.Align.VMiddle" value="垂直居中对齐" />
+	<item key="MainView.TitleBar.Align.Bottom" value="底对齐" />
+	<item key="MainView.TitleBar.Align.Left" value="左对齐" />
+	<item key="MainView.TitleBar.Align.HCenter" value="水平居中对齐" />
+	<item key="MainView.TitleBar.Align.Right" value="右对齐" />
+	<item key="MainView.TitleBar.Spread.Top" value="按顶分布" />
+	<item key="MainView.TitleBar.Spread.VMiddle" value="垂直居中分布" />
+	<item key="MainView.TitleBar.Spread.Bottom" value="按底分布" />
+	<item key="MainView.TitleBar.Spread.Left" value="按左分布" />
+	<item key="MainView.TitleBar.Spread.HCenter" value="水平居中分布" />
+	<item key="MainView.TitleBar.Spread.Right" value="按右分布" />
+	<item key="MainView.TitleBar.Arrange.BringToFront" value="移至顶层" />
+	<item key="MainView.TitleBar.Arrange.BringForward" value="上移一层" />
+	<item key="MainView.TitleBar.Arrange.SendBackward" value="下移一层" />
+	<item key="MainView.TitleBar.Arrange.SendToBack" value="移至底层" />
+
+	<item key="MainView.WorkSpace.Programmer" value="程序猿" />
+	<item key="MainView.WorkSpace.Designer" value="设计狮" />
+	<item key="MainView.WorkSpace.Debug" value="调试" />
+	<item key="MainView.WorkSpace.New" value='新建工作区' />
+	<item key="MainView.WorkSpace.Delete" value='删除工作区' />
+	<item key="MainView.WorkSpace.Reset" value='重置"{0}"' />
+	<item key="MainView.WorkSpace.NewPanelTitle" value="新建工作区" />
+	<item key="MainView.WorkSpace.NewPanelLabel" value="名称:" />
+	<item key="MainView.WorkSpace.NewPanelInput" value="未命名工作区" />
+	<item key="MainView.WorkSpace.PromptSameName" value='名为 "{0}"的工作区已存在。是否要替换"{1}"？' />
+	<item key="MainView.WorkSpace.DeletePanelTitle" value="删除工作区" />
+	<item key="MainView.WorkSpace.DeletePrompt" value="删除工作区不可撤销。是否确实要继续？" />
+	<item key="MainView.WorkSpace.PromptReset" value='是否确实要将"{0}"重置为其原始布局？' />
+	<item key="MainView.WorkSpace.PromptResetTitle" value='重置工作区' />
+
+	<item key="MainView.PromptSaveTitle" value="保存资源" />
+	<item key="MainView.PromptSaveExml" value='已经修改了"{0}"。要保存更改吗？' />
+	<item key="MainView.PromptSaveExmls" value='已经修改了"{0}"等{1}个文件。要保存更改吗？' />
+
+	<!-- 属性面板 -->
+	<item key="Components.Title" value="组件" />
+	<item key="Components.Component" value="控件" />
+	<item key="Components.Container" value="布局" />
+	<item key="Components.Custom" value="自定义" />
+
+
+	<item key="Layer.Title" value="图层" />
+	<item key="Layer.Delete" value="删除图层" />
+
+	<item key="Material.Title" value="资源库" />
+	<item key="Material.GoToFirstFrame" value="转到第一帧" />
+	<item key="Material.BackwardFrame" value="后退一帧" />
+	<item key="Material.Play" value="播放" />
+	<item key="Material.ForwardFrame" value="前进一帧" />
+	<item key="Material.GoToLastFrame" value="转到最后一帧" />
+	<item key="Material.FrameState" value="当前帧/总帧数" />
+	<item key="Material.DeleteResource" value="删除资源" />
+	<item key="Material.Refresh" value="刷新资源库" />
+	<item key="Material.NormalView" value="资源表分组" />
+	<item key="Material.CustomView" value="自定义分组" />
+	<item key="Material.Rename" value="修改别名" />
+	<item key="Material.CopyName" value="复制资源名" />
+	<item key="Material.NewFolder" value="新建文件夹" />
+	<item key="Material.NewFolderFromRes" value="从选中资源新建文件夹" />
+	<item key="Material.Delete" value="删除" />
+	<item key="Material.PromptSameName" value='名称 "{0}"已存在。请使用一个不同的名字。' />
+	<item key="Material.DefaultFolderName" value="未命名文件夹 " />
+	<item key="Material.PromptDragSameName" value="目标文件夹中存在一个或多个重名项。 " />
+	<item key="Material.PromptDelete" value="是否要删除如下资源:\n{0} ？" />
+	<item key="Material.PromptDeleteTitle" value="删除提示" />
+	<item key="Material.PromptDeleteInSheet" value="无法删除资源包内的资源。" />
+	<item key="Material.Scale9GridButton" value="编辑九宫格" />
+	<item key="Material.Scale9Grid.Descript" value="滚轮:缩放 | 拖拽图片:挪动图片 | 拖拽虚线:编辑九宫格" />
+	<item key="Material.Scale9Grid.Zoom" value="放大" />
+	<item key="Material.Scale9Grid.Narrow" value="缩小" />
+	<item key="Material.Scale9Grid.RealSize" value="实际大小" />
+	<item key="Material.Scale9Grid.Open" value="开启九宫格" />
+	<item key="Material.Scale9Grid.FixSize" value="显示全部" />
+
+
+	<item key="Property.Title" value="属性" />
+	<item key="Property.SelectedNone" value="未选择任何项" />
+	<item key="Property.SelectedNodes" value="({0}个项被选定)" />
+	<item key="Property.NormalView" value="标准视图" />
+	<item key="Property.AllAttributes" value="所有属性" />
+	<item key="Property.All.Attribute" value="属性" />
+	<item key="Property.All.Value" value="值" />
+	<item key="Property.All.EditorTips" value="不存在输入的id节点，请重新输入" />
+
+	<item key="Property.Common.Name" value="常用" />
+	<item key="Property.Common.ID" value="ID:" />
+	<item key="Property.Common.State" value="状态:" />
+	<item key="Property.Common.AllState" value="所有状态" />
+	<item key="Property.Common.Text" value="文本:" />
+	<item key="Property.Common.Label" value="标签:" />
+	<item key="Property.Common.Enable" value="启用:" />
+	<item key="Property.Common.IDFormatError" value="ID必须以字母或者下划线开头!" />
+	<item key="Property.Common.IDExistError" value="此ID已存在，请设置其他的名称!" />
+
+	<item key="Property.Layout.Name" value="布局" />
+	<item key="Property.Layout.Layout" value="布局:" />
+	<item key="Property.Layout.Orientation" value="方向:" />
+	<item key="Property.Layout.Gap" value="间隙" />
+	<item key="Property.Layout.Horizontal" value="水平:" />
+	<item key="Property.Layout.Vertical" value="垂直:" />
+	<item key="Property.Layout.Row" value="行" />
+	<item key="Property.Layout.Row.Height" value="高度:" />
+	<item key="Property.Layout.Row.Number" value="计数:" />
+	<item key="Property.Layout.Column" value="列" />
+	<item key="Property.Layout.Column.Width" value="宽度:" />
+	<item key="Property.Layout.Column.Number" value="计数:" />
+	<item key="Property.Layout.Align" value="两端对齐" />
+	<item key="Property.Layout.Align.Row" value="行:" />
+	<item key="Property.Layout.Align.Column" value="列:" />
+	<item key="Property.Layout.InsideGap" value="内边距" />
+	<item key="Property.Layout.InsideGap.Left" value="左:" />
+	<item key="Property.Layout.InsideGap.Right" value="右:" />
+	<item key="Property.Layout.InsideGap.Top" value="上:" />
+	<item key="Property.Layout.InsideGap.Bottom" value="下:" />
+	<item key="Property.SizeAndPos.Name" value="大小和位置" />
+	<item key="Property.SizeAndPos.Width" value="宽度:" />
+	<item key="Property.SizeAndPos.Height" value="高度:" />
+	<item key="Property.SizeAndPos.Restrict" value="约束" />
+
+	<item key="Property.SizeAndPos.Align" value="对齐" />
+	<item key="Property.SizeAndPos.Align.Left" value="左对齐" />
+	<item key="Property.SizeAndPos.Align.HorizontalCenter" value="水平居中" />
+	<item key="Property.SizeAndPos.Align.Right" value="右对齐" />
+	<item key="Property.SizeAndPos.Align.Top" value="上对齐" />
+	<item key="Property.SizeAndPos.Align.VerticalCenter" value="垂直居中" />
+	<item key="Property.SizeAndPos.Align.Bottom" value="下对齐" />
+	<item key="Property.SizeAndPos.Align.LeftAndRight" value="左右填充" />
+	<item key="Property.SizeAndPos.Align.TopAndBottom" value="上下填充" />
+	<item key="Property.SizeAndPos.Align.All" value="上下左右填充" />
+
+
+	<item key="Property.Style.Name" value="样式" />
+
+	<item key="Property.Style.Skin" value="皮肤" />
+	<item key="Property.Style.Skin.Skin" value="皮肤:" />
+	<item key="Property.Style.Skin.ItemSkin" value="条目皮肤:" />
+	<item key="Property.Style.Skin.OpenSkin" value="选择皮肤" />
+	<item key="Property.Style.Skin.CreateSkin" value="创建皮肤" />
+	<item key="Property.Style.ButtonSkin" value="皮肤快捷模板" />
+	<item key="Property.Style.ButtonSkin.Up" value="正常:" />
+	<item key="Property.Style.ButtonSkin.Up.Prompt" value="正常状态资源名" />
+	<item key="Property.Style.ButtonSkin.Up.ToolTip" value="从资源库拖拽资源到此处，或手动键入资源名称。" />
+	<item key="Property.Style.ButtonSkin.Down" value="按下:" />
+	<item key="Property.Style.ButtonSkin.Down.Prompt" value="按下状态资源名" />
+	<item key="Property.Style.ButtonSkin.Down.ToolTip" value="从资源库拖拽资源到此处，或手动键入资源名称。" />
+	<item key="Property.Style.ButtonSkin.Disabled" value="禁用:" />
+	<item key="Property.Style.ButtonSkin.Disabled.Prompt" value="禁用状态资源名" />
+	<item key="Property.Style.ButtonSkin.Disabled.ToolTip" value="从资源库拖拽资源到此处，或手动键入资源名称。" />
+
+
+	<item key="Property.Style.ResName" value="资源名:" />
+	<item key="Property.Style.AutoScale" value="自动缩放:" />
+
+	<item key="Property.Style.FillMode" value="填充模式:" />
+	<item key="Property.Style.Scale" value="拉伸" />
+	<item key="Property.Style.Repeat" value="重复" />
+
+	<item key="Property.Style.Text" value="文本" />
+	<item key="Property.Style.Text.FontFamily" value="字体名称" />
+	<item key="Property.Style.Text.FontColor" value="字体颜色" />
+	<item key="Property.Style.Text.FontSize" value="字体大小" />
+	<item key="Property.Style.Text.Bold" value="粗体" />
+	<item key="Property.Style.Text.Italic" value="斜体" />
+	<item key="Property.Style.Text.Color" value="颜色:" />
+	<item key="Property.Style.Text.Top" value="靠上" />
+	<item key="Property.Style.Text.Middle" value="居中" />
+	<item key="Property.Style.Text.Bottom" value="靠下" />
+	<item key="Property.Style.Text.Justify" value="垂直两端对齐" />
+	<item key="Property.Style.Text.Left" value="左对齐" />
+	<item key="Property.Style.Text.Center" value="居中对齐" />
+	<item key="Property.Style.Text.Right" value="右对齐" />
+	<item key="Property.Style.Button.EditDataProvider" value="编辑数据源" />
+	<item key="Property.Style.Rect.Fill" value="填充" />
+	<item key="Property.Style.Rect.Stroke" value="线条" />
+	<item key="Property.Style.Rect.Color" value="颜色:" />
+	<item key="Property.Style.Rect.Alpha" value="不透明度:" />
+	<item key="Property.Style.Rect.StrokeWeight" value="笔触:" />
+
+	<item key="Property.Style.BitmapLabel" value="位图文本" />
+	<item key="Property.Style.BitmapLabel.Font" value="位图字体:" />
+
+
+	<item key="Property.Style.DataProvider.AddAttribute" value="添加属性" />
+	<item key="Property.Style.DataProvider.AddItem" value="添加一条数据" />
+	<item key="Property.Style.DataProvider.DeleteRow" value="删除选中行" />
+	<item key="Property.Style.DataProvider.DeleteColmun" value="删除选中列" />
+	<item key="Property.Style.DataProvider.PromptSameTitle" value="添加提示" />
+	<item key="Property.Style.DataProvider.PromptSameContent" value="已存在属性 {0} 。" />
+	<item key="Property.Style.DataProvider.PromptDeleteTitle" value="删除提示" />
+	<item key="Property.Style.DataProvider.PromptDeleteContent" value="确认删除这些数据么？" />
+	<item key="Property.Style.DataProvider.DefaultData" value="数据" />
+
+	<item key="Property.Style.DataProvider.AddAttributeTitle" value="添加属性" />
+	<item key="Property.Style.DataProvider.AttributeName" value="属性名" />
+
+	<item key="Property.SkinWindow.SelectNone" value="还未选择任何皮肤!" />
+	<item key="Property.SkinWindow.Search" value="搜索:" />
+	<item key="Property.SkinWindow.HostComponent" value="主机组件:" />
+	<item key="Property.SkinWindow.SkinTitle" value="选取皮肤" />
+	<item key="Property.SkinWindow.ItemRendererSkinTitle" value="选取条目皮肤" />
+
+	<item key="ExmlPanel.SelectMode" value="选择模式" />
+	<item key="ExmlPanel.MoveMode" value="平移模式" />
+	<item key="ExmlPanel.NarrowMode" value="缩小模式" />
+	<item key="ExmlPanel.ZoomMode" value="放大模式" />
+	<item key="ExmlPanel.AdaptiveWindow" value="显示全部" />
+	<item key="ExmlPanel.OriginalSize" value="原始大小" />
+	<item key="ExmlPanel.Source" value="源代码" />
+	<item key="ExmlPanel.Design" value="设计" />
+	<item key="ExmlPanel.Preview" value="预览" />
+	<item key="ExmlPanel.SavePrompt" value="已经修改了'{0}'。要保存更改吗？" />
+
+	<item key="Package.Title" value="包资源管理器" />
+	<item key="Package.ShowAll" value="显示所有文件" />
+	<item key="Package.OnlyShowExml" value="仅显示EXML文件" />
+	<item key="Package.OnlyShowTs" value="仅显示TS文件" />
+	<item key="Package.Refresh" value="刷新" />
+	<item key="Package.New" value="新建" />
+	<item key="Package.NewExml" value="EXML文件" />
+	<item key="Package.NewPackage" value="包" />
+	<item key="Package.NewFolder" value="文件夹" />
+	<item key="Package.Delete" value="删除" />
+	<item key="Package.Open" value="打开" />
+	<item key="Package.Copy" value="复制" />
+	<item key="Package.Paste" value="粘贴" />
+	<item key="Package.Cut" value="剪切" />
+	<item key="Package.Rename" value="重命名" />
+	<item key="Package.OpenProject" value="打开项目" />
+	<item key="Package.CloseProject" value="关闭项目" />
+	<item key="Package.ProjectPropty" value="项目属性" />
+	<item key="Package.DeletePrompt" value="确实想要从文件系统中删除'{0}'吗?" />
+	<item key="Package.DeleteMultiPrompt" value="确实想要从文件系统中删除这 {0} 个资源吗?" />
+	<item key="Package.DeletePromptTitle" value="确认资源删除" />
+	<item key="Package.DeleteProject" value="确实想要删除项目'{0}'吗?该操作不会删除项目内容。" />
+	<item key="Package.DeleteProjectTitle" value="确认项目删除" />
+	<item key="Package.MoveErrorPrompt" value="移动资源时出现问题'{0}'不存在!" />
+	<item key="Package.CopyErrorPrompt" value="复制资源时出现问题'{0}'不存在!" />
+	<item key="Package.PastePrompt" value="目标路径'{0}'已存在,是否覆盖原文件?" />
+	<item key="Package.Overwrite" value="覆盖" />
+	<item key="Package.AllOverwrite" value="全部覆盖" />
+	<item key="Package.AllCancel" value="全部取消" />
+	<item key="Package.RenameErrorPrompt" value="资源'{0}'与文件系统不同步,无法重命名!" />
+	<item key="Package.DefaultPackage" value="(默认包)" />
+
+	<item key="Convert.Title" value="转换" />
+	<item key="Convert.Edit" value="编辑:" />
+	<item key="Convert.Convert" value="转换:" />
+	<item key="Convert.SelectComponent" value="选择组件" />
+	<item key="Convert.Id" value="id" />
+	<item key="Convert.HostComponent" value="主机组件:" />
+	<item key="Convert.Matching" value="匹配:" />
+	<item key="Convert.SelectSkinPart" value="选择皮肤部件" />
+	<item key="Convert.SelectNum" value="({0}个项被选定)" />
+	<item key="Convert.SelectNone" value="未选择任何项" />
+
+	<item key="RenameWindow.Title" value="重命名资源" />
+	<item key="RenameWindow.NewName" value="新名称:" />
+
+	<item key="OpenSourceWindow.Title" value="打开资源" />
+	<item key="OpenSourceWindow.SelectOpenItem" value="选择要打开的项" />
+
+	<item key="Progress.Wait" value="等待: " />
+	<item key="Progress.Running" value="正在执行: " />
+	<item key="Progress.Complete" value="完成: " />
+	<item key="Progress.Failure" value="失败: " />
+
+	<item key="Console.Clear" value="清空" />
+
+	<!-- 弹出框 -->
+	<item key="StatePanel.Name" value="状态" />
+	<item key="StatePanel.AllState" value="所有状态" />
+	<item key="StatePanel.NewState" value="新建状态" />
+	<item key="StatePanel.EditStateProperty" value="编辑状态属性" />
+	<item key="StatePanel.DeleteState" value="删除状态" />
+	<item key="StatePanel.Start" value="起始" />
+	<item key="StatePanel.ToolTip" value="该皮肤的基类不支持视图状态功能" />
+
+	<!-- 动画 -->
+	<item key="Animation.Title" value="动画" />
+	<item key="Animation.AddAction" value="添加效果" />
+	<item key="Animation.AddAction.Fade" value="渐隐渐显" />
+	<item key="Animation.AddAction.Move" value="平移" />
+	<item key="Animation.AddAction.Scale" value="缩放" />
+	<item key="Animation.AddAction.Rotate" value="旋转" />
+	<item key="Animation.DeleteEffets" value="删除效果" />
+	<item key="Animation.PlayEffets" value="预览效果" />
+	<item key="Animation.Tip1" value="英文版暂不支持动画功能" />
+	<item key="Animation.Tip2" value="当前引擎版本{0}不支持动画功能，最低版本1.6.1" />
+
+
+	<item key="Animation.Attribute.PosAndProcess" value="位置与过程" />
+	<item key="Animation.Attribute.Move.XFrom" value="X起始:" />
+	<item key="Animation.Attribute.Move.XTo" value="X终止:" />
+	<item key="Animation.Attribute.Move.XBy" value="X变化量:" />
+	<item key="Animation.Attribute.Move.YFrom" value="Y起始:" />
+	<item key="Animation.Attribute.Move.YTo" value="Y终止:" />
+	<item key="Animation.Attribute.Move.YBy" value="Y变化量:" />
+	<item key="Animation.Attribute.ScaleAndProcess" value="缩放与过程" />
+	<item key="Animation.Attribute.Scale.XFrom" value="X起始:" />
+	<item key="Animation.Attribute.Scale.XTo" value="X终止:" />
+	<item key="Animation.Attribute.Scale.XBy" value="X变化量:" />
+	<item key="Animation.Attribute.Scale.YFrom" value="Y起始:" />
+	<item key="Animation.Attribute.Scale.YTo" value="Y终止:" />
+	<item key="Animation.Attribute.Scale.YBy" value="Y变化量:" />
+	<item key="Animation.Attribute.AngleAndRotation" value="角度与旋转" />
+	<item key="Animation.Attribute.Rotate.From" value="起始角度:" />
+	<item key="Animation.Attribute.Rotate.To" value="终止角度:" />
+	<item key="Animation.Attribute.Rotate.By" value="角度变化量:" />
+	<item key="Animation.Attribute.Fade" value="渐隐渐显" />
+	<item key="Animation.Attribute.Fade.From" value="起始透明度:" />
+	<item key="Animation.Attribute.Fade.To" value="结束透明度:" />
+	<item key="Animation.Attribute.Center" value="中心" />
+	<item key="Animation.Attribute.Center.AutoCenterTransform" value="自动获取中心" />
+	<item key="Animation.Attribute.Center.TransformX" value="中心X:" />
+	<item key="Animation.Attribute.Center.TransformY" value="中心Y:" />
+	<item key="Animation.Attribute.CommonParameters" value="基础参数" />
+	<item key="Animation.Attribute.Common.DisableLayout" value="禁用布局" />
+	<item key="Animation.Attribute.Common.Druation" value="时长:" />
+	<item key="Animation.Attribute.Common.RepeatCount" value="重复次数:" />
+	<item key="Animation.Attribute.Common.RepeatDelay" value="重复间隔:" />
+	<item key="Animation.Attribute.Common.StartDelay" value="起始延时:" />
+	<item key="Animation.Attribute.Common.Easer" value="缓动函数:" />
+	<item key="Animation.Attribute.Common.RepeatBehavior" value="重复行为:" />
+	<item key="Transition.Attribute.InterruptionAppearance" value="中断效果:" />
+	<item key="Transition.Attribute.AutomaticReverse" value="自动反向" />
+	<item key="Transition.Attribute.NoSelectedInfo" value="此过渡没有持续时间。 在编辑过渡属性之前，请至少创建一个有“持续时间”或“起始延时”的效果。" />
+
+
+
+
+	<item key="EditState.Title" value="编辑状态属性" />
+	<item key="EditState.TypeInNewStateName" value="请输入新状态的名称。" />
+	<item key="EditState.NoStateName" value="无状态名称" />
+	<item key="EditState.SetToStartState" value="设置为起始状态" />
+	<item key="EditState.Name" value="名称:" />
+	<item key="EditState.StartState" value="起始状态:" />
+
+	<item key="NewState.Title" value="新建状态" />
+	<item key="NewState.AllState" value="所有状态" />
+	<item key="NewState.PleaseTypeInNewStateName" value="请输入新状态的名称。" />
+	<item key="NewState.InvalidStateName" value="无效状态名称" />
+	<item key="NewState.StateNameInvalid1" value="状态名称无效。" />
+	<item key="NewState.StateNameInvalid2" value="无效状态名称" />
+	<item key="NewState.SameNamePrompt" value='已有一个名为"{0}"的状态，请输入其它名称。' />
+	<item key="NewState.SameNamePromptTitle" value="状态名称重复" />
+	<item key="NewState.ContentCopy" value="以下内容的副本:" />
+	<item key="NewState.SetToStartState" value="设置为起始状态" />
+	<item key="NewState.EmptyState" value="空白状态" />
+	<item key="NewState.Name" value="名称:" />
+	<item key="NewState.CreateAs" value="创建为" />
+	<item key="NewState.StartState" value="起始状态:" />
+
+	<item key="NewExml.Title" value="新建EXML皮肤" />
+	<item key="NewExml.Browse" value="浏览" />
+	<item key="NewExml.Package" value="包:" />
+	<item key="NewExml.SelectPackage" value="选择包" />
+	<item key="NewExml.Name" value="名称:" />
+	<item key="NewExml.HostComponent" value="主机组件:" />
+	<item key="NewExml.SelectHostComponent" value="选择主机组件" />
+	<item key="NewExml.BaseClass" value="基类:" />
+	<item key="NewExml.NameTips" value="请先输入名称!" />
+	<item key="NewExml.HostComponentTips" value="请先输入主机组件!" />
+	<item key="NewExml.CreateErrorPrompt" value="要创建的文件已经存在，请输入其他名称!" />
+	<item key="NewExml.Width" value="宽度:" />
+	<item key="NewExml.Height" value="高度:" />
+
+	<item key="Project.Title" value="{0}的属性" />
+	<item key="Project.BasePageTitle" value="基本属性" />
+	<item key="Project.Browse" value="浏览" />
+	<item key="Project.ProjectPath" value="工程路径:" />
+	<item key="Project.TargetPath" value="目标TypeScript工程路径" />
+	<item key="Project.Prompt.PathError" value="要导入的项目路径不存在或不正确。" />
+	<item key="Project.Prompt.Same" value="已存在一个同名项目。请重命名或删除现有项目。" />
+
+	<item key="Project.ThemePageTitle" value="主题" />
+	<item key="Project.Error" value="项目配置文件egretProperties.json不存在或已损坏" />
+
+	<item key="Project.Res.LoadType" value="加载方式:" />
+	<item key="Project.Res.DefaultLoadType" value="不使用加载库" />
+	<item key="Project.Res.PluginLoadType" value="自定义加载库" />
+	<item key="Project.Res.PluginType" value="资源插件:" />
+	<item key="Project.Res.ConfigPath" value="配置文件:" />
+	<item key="Project.Res.RelativePath" value="资源根路径:" />
+	<item key="Project.Res.Title" value="资源" />
+	<item key="Project.Res.AddTitle" value="添加资源配置" />
+	<item key="Project.Res.EditTitle" value="编辑资源配置" />
+	<item key="Project.Res.Add" value="添加" />
+	<item key="Project.Res.Edit" value="编辑" />
+	<item key="Project.Res.Delete" value="删除" />
+
+
+	<item key="NewProjectWindow.Title" value="新建项目" />
+	<item key="NewProjectWindow.Title2" value="创建Egret项目。" />
+	<item key="NewProjectWindow.TitleDescription" value="选择项目名称和位置。" />
+	<item key="NewProjectWindow.ProjectName" value="项目名:" />
+	<item key="NewProjectWindow.ProjectPath" value="文件夹:" />
+	<item key="NewProjectWindow.BorrowButton" value="浏览..." />
+	<item key="NewProjectWindow.SameName" value="该项目名不能与另一个项目名相同（不区分大小写）。" />
+	<item key="NewProjectWindow.SameFolder" value='{0}与另一个项目的位置重叠:"{1}"' />
+	<item key="NewProjectWindow.PathError" value='"{0}"不是有效的位置' />
+	<item key="NewProjectWindow.NodeNotFind" value="无法找到EgretEngine安装目录下的node可执行文件" />
+	<item key="NewProjectWindow.ProjectPathNull" value="必须指定一个项目位置" />
+
+
+	<item key="ImportProjectWindow.Title" value="导入项目" />
+	<item key="ImportProjectWindow.LastStep" value="上一步" />
+	<item key="ImportProjectWindow.NextStep" value="下一步" />
+	<item key="ImportProjectWindow.compileComplete" value="{0} 项目引擎编译完毕。" />
+	<item key="ImportProjectWindow.compileError" value="{0} 项目引擎编译失败。" />
+	<item key="ImportProjectWindow.compiling" value="正在编译项目引擎..." />
+
+	<item key="BasePage.SelectProjectPath" value="选择项目路径" />
+	<item key="ResourcePage.SelectInside" value="请选择项目内的文件或者文件夹" />
+	<item key="ResourcePage.SelectConfigPath" value="选择资源加载库配置文件" />
+	<item key="ResourcePage.SelectRelativePath" value="选择资源加载库相对路径" />
+
+	<!-- 加入开发者计划页 -->
+	<item key="JoinPlanWindow.Title" value="加入开发者计划" />
+	<item key="JoinPlanWindow.Commit" value="提交" />
+	<item key="JoinPlanWindow.ProjectDescription" value="如:《愚公移山》这是一款不停点击屏幕来生孩子的休闲游戏" />
+	<item key="JoinPlanWindow.QQWeiXinTip" value="QQ微信至少填一项" />
+	<item key="JoinPlanWindow.BBSEmail" value="论坛注册邮箱" />
+	<item key="JoinPlanWindow.Optional" value="可选" />
+	<item key="JoinPlanWindow.ValidateTip" value="请将信息填写完整" />
+
+
+	<!-- 其他 -->
+	<item key="ColorWindow.Title" value="颜色选择器" />
+	<item key="ColorWindow.SelectColor" value="选择颜色:" />
+	<item key="ColorWindow.NewColor" value="新的" />
+	<item key="ColorWindow.CurrentColor" value="当前" />
+	<item key="ColorWindow.UseDefault" value="使用默认值" />
+
+	<item key="Alert.Confirm" value="确定" />
+	<item key="Alert.Cancel" value="取消" />
+	<item key="Alert.Yes" value="是" />
+	<item key="Alert.No" value="否" />
+	<item key="Alert.Warn" value="警告" />
+	<item key="Alert.Error" value="错误" />
+	<item key="Alert.Tips" value="提示" />
+	<item key="Alert.Complete" value="完成" />
+	<item key="Alert.Apply" value="应用" />
+
+	<item key="StatuBar.EditArea" value="编辑区" />
+	<item key="StatuBar.Restore" value="复原" />
+
+	<item key="TabGroup.Close" value="关闭" />
+	<item key="TabGroup.Minimum" value="最小化" />
+	<item key="TabGroup.CloseTab" value="关闭选项卡组" />
+
+	<item key="CloseTabButton.Close" value="关闭" />
+	<item key="CloseTabButton.CloseOther" value="关闭其他" />
+	<item key="CloseTabButton.CloseAll" value="关闭全部" />
+
+	<!-- 系统异常错误 -->
+	<item key="0000"
+		value="Egret Engine读取异常，无法找到Egret Engine安装目录。\n请前往官方网站下载Egret Engine并安装" />
+	<item key="0001"
+		value="Egret Engine中，egret-manifest.xml文件读取异常。请尝试重置引擎或重新安装引擎以解决此问题。\n\n问题文件路径：\n{0}" />
+	<item key="0002"
+		value="Egret Engine中，properties.json文件读取异常。请尝试重置引擎或重新安装引擎以解决此问题。\n\n问题文件路径：\n{0}" />
+	<item key="0003"
+		value="Egret Engine中，package.json文件读取异常。请尝试重置引擎或重新安装引擎以解决此问题。\n\n问题文件路径：\n{0}" />
+	<item key="0004"
+		value="Egret Wing所需的引擎最小版本为{0}，您当前的引擎版本为{1}，请将引擎更新至{2}或{3}以上版本之后，再尝试启动Egret Wing" />
+	<item key="0005"
+		value="Egret Engine中，exml.xsd文件读取异常。请尝试重置引擎或重新安装引擎以解决此问题。\n\n问题文件路径：\n{0}" />
+	<item key="0006" value="Egret Engine安装异常，请尝试重置引擎或重新安装引擎以解决此问题。" />
+
+	<!-- Exml编译报错 -->
+	<item key="2001" value="{0}: error 找不到EXML文件。" />
+	<item key="2002" value="{0}: error 不是有效的XML文件" />
+	<item key="2003" value="{0}: error 无法找到节点所对应的类定义\n{1}" />
+	<item key="2004" value="{0}: error 节点不能含有同名的id属性\n{1}" />
+	<item key="2005" value="{0}: error 节点上不存在名为'{1}'的属性或样式名:\n{2}" />
+	<item key="2006" value="{0}: error 未定义的视图状态名称:'{1}'\n{2}" />
+	<item key="2007"
+		value="{0}: error 只有处于容器内的egret.IVisualElement对象可以使用includeIn和excludeFrom属性\n{1}" />
+	<item key="2008" value="{0}: error 无法将'{1}'类型的值赋给属性:'{2}'\n{3}" />
+	<item key="2009" value="{0}: error 在节点属性值的‘{}’标签内只能引用一个ID，不允许使用复杂表达式\n{1}" />
+	<item key="2010" value="{0}: error 属性:'{1}'所引用的ID: '{2}'不存在\n{3}" />
+	<item key="2011" value="{0}: error 无法将多个子节点赋值给同一个属性:'{1}'\n{2}" />
+	<item key="2012" value="{0}: error 节点上不存在默认属性，必须显式声明子节点要赋值到的属性名\n{1}" />
+	<item key="2013" value="{0}: error 类型为Array的属性节点上不允许使用视图状态语法\n{1}" />
+	<item key="2014" value="{0}: error 不允许将皮肤类自身赋值给节点属性\n{1}" />
+	<item key="2015" value="{0}: error 节点引用的类定义:{1}不存在\n{2}" />
+	<item key="2016" value="{0}: error 节点上'scale9Grid'属性值的格式错误:{1}" />
+	<item key="2017" value="{0}: error 节点上缺少命名空间前缀:{1}" />
+	<item key="2018" value="{0}: error 节点上'skinName'属性值的格式错误:{1}" />
+	<item key="2019" value="{0}: error 容器的子项必须是可视节点:{1}" />
+	<item key="2101"
+		value="{0}: warning 在w:Declarations内的子节点，不允许使用includeIn和excludeFrom属性\n{1}" />
+	<item key="2102" value="{0}: warning 在属性节点上找不到任何子节点\n{1}" />
+	<item key="2103" value="{0}: warning 节点上的同一个属性'{1}'被多次赋值\n{2}" />
+	<item key="Error.Download" value="下载" />
+
+	<!-- 更新提示 -->
+	<item key="Upgrade.Alert" value="\n发现 Egret Wing 更新文件，\n\n是否立即重启安装此更新？\n\n" />
+	<item key="Upgrade.AlertTitle" value="更新提示" />
+	<item key="Upgrade.AlertUpdateRightNow" value="立即更新" />
+	<item key="Upgrade.AlertUpdateLater" value="以后更新" />
+	<item key="Upgrade.AlertCompleteTitle" value="本次更新内容" />
+
+	<!-- Exml右键菜单 -->
+	<item key="ExmlRightMenu.Copy" value="复制" />
+	<item key="ExmlRightMenu.Cut" value="剪切" />
+	<item key="ExmlRightMenu.Paste" value="粘贴" />
+	<item key="ExmlRightMenu.CopyProperty" value="复制属性值" />
+	<item key="ExmlRightMenu.PasteSize" value="粘贴大小" />
+	<item key="ExmlRightMenu.PastePos" value="粘贴位置" />
+	<item key="ExmlRightMenu.PasteRestrict" value="粘贴约束" />
+	<item key="ExmlRightMenu.AdsorbToObject" value="吸附到对象..." />
+	<item key="ExmlRightMenu.AdsorbStatus" value="右键可取消吸附" />
+
+
+	<!-- 首选项 -->
+	<item key="Preference.Title" value="首选项" />
+	<item key="Preference.Title.Mac" value="偏好设置" />
+
+	<item key="Preference.CommonPage.Title" value="常规" />
+
+
+	<item key="Preference.BrowserPage.Title" value="Web 浏览器" />
+	<item key="Preference.BrowserPage.Default" value="默认系统 Web 浏览器" />
+	<item key="Preference.BrowserPage.Describe" value="添加、删除或编辑已安装的Web浏览器。\n在运行Egret项目时，将使用所选的Web浏览器。" />
+	<item key="Preference.BrowserPage.New" value="新建..." />
+	<item key="Preference.BrowserPage.Edit" value="编辑..." />
+	<item key="Preference.BrowserPage.Remove" value="移除" />
+	<item key="Preference.BrowserPage.EditTitle" value="编辑Web浏览器" />
+	<item key="Preference.BrowserPage.NewTitle" value="添加Web浏览器" />
+	<item key="Preference.BrowserPage.NewTitle" value="添加Web浏览器" />
+	<item key="Preference.BrowserPage.BrowserName" value="名称:" />
+	<item key="Preference.BrowserPage.BrowserPath" value="路径:" />
+	<item key="Preference.BrowserPage.BrowserWindowTitle" value="指定Web浏览器可执行文件的位置" />
+
+	<item key="Preference.ShortcutPage.Title" value="快捷键" />
+
+	<!-- 自动保存 -->
+	<item key="AutoSave.PromptContent" value="是否恢复上次未保存文件 {0} ?" />
+	<item key="AutoSave.PromptTitle" value="恢复文件提示" />
+	<item key="AutoSave.PromptYes" value="恢复" />
+	<item key="AutoSave.PromptNo" value="放弃" />
+
+	<!-- 快捷键 -->
+	<item key="Shortcut.Save" value="保存" />
+	<item key="Shortcut.Copy" value="复制" />
+	<item key="Shortcut.Paste" value="粘贴" />
+	<item key="Shortcut.Delete" value="删除" />
+	<item key="Shortcut.Cut" value="剪切" />
+	<item key="Shortcut.Refresh" value="刷新" />
+	<item key="Shortcut.Undo" value="撤销" />
+	<item key="Shortcut.Redo" value="重做" />
+	<item key="Shortcut.Select_all" value="全选" />
+	<item key="Shortcut.Layer_up" value="上移一层" />
+	<item key="Shortcut.Layer_down" value="下移一层" />
+	<item key="Shortcut.Group" value="组合" />
+	<item key="Shortcut.Ungroup" value="解除组合" />
+	<item key="Shortcut.Format_indent" value="格式化代码缩进值" />
+	<item key="Shortcut.Zoom_out" value="放大" />
+	<item key="Shortcut.Zoom_in" value="缩小" />
+	<item key="Shortcut.Drag_mode" value="切换拖拽模式" />
+	<item key="Shortcut.Open_source" value="打开资源窗口" />
+	<item key="Shortcut.Create_exml" value="新建EXML皮肤" />
+	<item key="Shortcut.Exit" value="退出程序" />
+	<item key="Shortcut.Delete_line" value="删除行" />
+	<item key="Shortcut.Note_swap" value="切换注释" />
+	<item key="Shortcut.Close_doc" value="关闭当前文档" />
+	<item key="Shortcut.Auto_complete_content" value="内容补全" />
+	<item key="Shortcut.Switch_tab" value="切换标签页" />
+	<item key="Shortcut.Run_project" value="运行项目" />
+
+	<!--登录和统计相关 -->
+	<item key="UserMenu.Logout" value="退出登录" />
+	<item key="LoginWindow.Title" value="登录" />
+	<item key="LoginWindow.Email" value="Egret ID:" />
+	<item key="LoginWindow.Passwrod" value="密码:" />
+	<item key="LoginWindow.Login" value="登录" />
+	<item key="LoginWindow.Register" value="注册" />
+	<item key="LoginWindow.Loading" value="登录中..." />
+	<item key="LoginWindow.ErrorNoUser" value="用户不存在" />
+	<item key="LoginWindow.ErrorPassword" value="密码错误" />
+	<item key="LoginWindow.ErrorLogin" value="登录失败" />
+	<item key="LoginWindow.ErrorEmail" value="请使用论坛账号对应的邮箱登录" />
+	<item key="LoginWindow.ErrorBadNet" value="网络连接错误" />
+	<item key="LoginWindow.CloseContent" value="关闭本窗体将会关闭Egret Wing，是否继续？" />
+	<item key="LoginWindow.CloseTitle" value="关闭提示" />
+	<item key="LoginWindow.AlertErrorTitle" value="登录提示" />
+	<item key="LoginWindow.AlertLoading" value="正在尝试登录..." />
+	<item key="LoginWindow.AlertErrorContent" value="您的账号已在其他地点登录，如非本人操作，请修改密码。\n\n关闭本窗体将关闭Egret Wing。" />
+	<item key="LoginWindow.ReLogin" value="重新登录" />
+	<item key="LoginWindow.ChangePassword" value="修改密码" />
+	<item key="LoginWindow.RemeberPassword" value="记住密码" />
+	<item key="LoginWindow.FindPassword" value="找回密码" />
+	<item key="LoginWindow.NoQualification" value="该账号没有内测资格" />
+	<item key="LoginWindow.PromptApplyContent" value="您的账号尚未获得内测资格，暂时无法试用。" />
+	<item key="LoginWindow.PromptApplyTitle" value="登录提示" />
+	<item key="LoginWindow.Apply" value="申请内测" />
+
+	<!--关于窗体 -->
+	<item key="AboutWindow.Title" value="关于 Egret Wing" />
+	<item key="AboutWindow.AppTitle" value="Egret Wing" />
+	<item key="AboutWindow.Version" value="版本:{0}" />
+
+	<!-- 对话框 -->
+	<item key="Dialog.ok" value="确定" />
+	<item key="Dialog.cancel" value="取消" />
+	<item key="Dialog.defaults" value="恢复默认值" />
+	<item key="Dialog.apply" value="应用" />
+	<item key="Dialog.finish" value="完成" />
+	<item key="Dialog.back" value="上一步" />
+	<item key="Dialog.next" value="下一步" />
+
+	<!-- 向导 -->
+	<item key="Wizard.ClosingTitle" value="向导正在关闭" />
+	<item key="Wizard.ClosingErrorTip" value="由于活动的操作导致向导不能关闭,必须先取消该操作才能关闭向导。" />
+
+	<!-- 默认右键菜单 -->
+	<item key="RightMenu.cut" value="剪切" />
+	<item key="RightMenu.copy" value="复制" />
+	<item key="RightMenu.paste" value="粘贴" />
+	<item key="RightMenu.selectAll" value="全选" />
+	<item key="RightMenu.clear" value="删除" />
+
+
+
+
+
+
+
+
+
+	<!-- 选项卡菜单 -->
+	<item key="TagGroup.dropDown.tooltip" value="选项卡菜单" />
+	<!-- 主题页 -->
+	<item key="ThemePage.FileFilter" value="Egret主题配置" />
+	<item key="ThemePage.Add.Title" value="添加默认皮肤" />
+	<item key="ThemePage.Edit.Title" value="编辑默认皮肤" />
+	<item key="ThemePage.Content.Title" value="主题路径:" />
+	<item key="ThemePage.HeaderText.Comp" value="组件" />
+	<item key="ThemePage.HeaderText.SkinName" value="皮肤名" />
+	<item key="ThemePage.Button.Add" value="添加" />
+	<item key="ThemePage.Button.Edit" value="编辑" />
+	<item key="ThemePage.Button.Delete" value="删除" />
+
+	<!-- 进度条 -->
+	<item key="Progress.Title" value="进度" />
+	<!-- 快捷键 -->
+	<item key="Shortcut.HeaderText.Command" value="命令" />
+	<item key="Shortcut.HeaderText.ShortKey" value="快捷键" />
+	<item key="Shortcut.Button.RestoreSelected" value="还原选中项" />
+	<!-- 欢迎页 -->
+	<item key="Welcome.Title" value="欢迎" />
+
+	<item key="Welcome.Teach.One" value="5分钟Egret Wing开发流程" />
+	<item key="Welcome.Teach.Two" value="Egret Wing实战教程系列" />
+	<item key="Welcome.Teach.Three" value="GUI基础教程" />
+	<item key="Welcome.Teach.Four" value="深入浅出EGRET GUI系列" />
+	<item key="Welcome.Teach.Five" value="Egret引擎大教程" />
+
+	<item key="Welcome.Source.One" value="Egret官网" />
+	<item key="Welcome.Source.Two" value="官方论坛" />
+	<item key="Welcome.Source.Three" value="文档中心" />
+
+	<item key="Welcome.CreateGroup" value="创建" />
+	<item key="Welcome.LastFile" value="最近打开的文件" />
+	<item key="Welcome.OpenMore" value="打开更多资源..." />
+	<item key="Welcome.Teach" value="教程" />
+	<!-- 首选项 -->
+	<item key="PreferencePage.showWelcome" value="启动时显示欢迎屏幕" />
+	<!-- 编辑九宫格 -->
+	<item key="scale9GridEdit.title" value="编辑九宫格" />
+	<item key="scale9GridEdit.content" value="九宫格编辑{0}" />
+	<!-- 资源选择对话框标题 -->
+	<item key="SourceSelect.file" value="添加资源" />
+	<item key="SourceSelect.folder" value="添加资源文件夹" />
+	<!--将组建添加到舞台后的默认文本描述 -->
+	<item key="compDragDefaultText.view" value="视图" />
+	<item key="compDragDefaultText.label" value="标签" />
+	<item key="compDragDefaultText.button" value="按钮" />
+	<item key="compDragDefaultText.checkBox" value="复选框" />
+	<item key="compDragDefaultText.radioButton" value="单选框" />
+	<item key="compDragDefaultText.toggleButton" value="切换按钮" />
+	<item key="compDragDefaultText.toggleSwitch" value="开关按钮" />
+
+	<!--根据类定义的不明确分类文本内容 -->
+	<item key="PackageController.nameclashes" value="命名冲突" />
+	<item key="PackageController.nameclashes.tips" value="对'{0}'输入新名称" />
+	<item key="PackageController.nameclashes.value" value="副本-{0}" />
+	<item key="PackageController.nameclashes.rename" value="请输入新名称" />
+	<item key="PackageController.nameclashes.hasfile" value="文件已存在" />
+
+	<item key="BrowseWindowSkin.title" value="选择包文件夹" />
+	<item key="BrowseWindowSkin.ok" value="确定" />
+	<item key="BrowseWindowSkin.cancle" value="取消" />
+
+	<item key="NewFolderWindow.title" value="新建文件夹" />
+	<item key="NewFolderWindow.parentFolder" value="选择父文件夹" />
+	<item key="NewFolderWindow.folder" value="文件夹名:" />
+
+	<item key="NewPackageWindow.title" value="新建包" />
+	<item key="NewPackageWindow.sourceFolder" value="选择源文件夹" />
+	<item key="NewPackageWindow.packagePath" value="包路径" />
+
+	<item key="ThemeConfigWindow.title" value="选择皮肤" />
+	<item key="ThemeConfigWindow.label.comp" value="组件名" />
+	<item key="ThemeConfigWindow.label.skinName" value="皮肤名" />
+
+	<item key="AllPropertyPanel.data.value" value="&lt;在代码中编辑&gt;" />
+
+	<item key="ProperyGridItemEditor.alert" value="输入的属性格式不正确，无法保存" />
+
+	<item key="SkinWindow.firstData.hostComponent" value="不限" />
+
+
+	<item key="BuildAndRun.PromptSave" value="如下文件未保存，是否在编译前保存？\n{0}" />
+	<item key="BuildAndRun.BrowserError" value="无法打开指定的浏览器:{0}" />
+	<item key="BuildAndRun.Title" value="启动项目 {0}" />
+</keys>

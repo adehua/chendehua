@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="RankingScene" previous="" next="">
+<item type="instance" UID="79">
+</item>
+<item type="instance" UID="81">
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareTwoValuesEvent" callName="compareTwoValue" isTrigger="false" target="System" >
+<item valueDataType="any" value="1" name="value1"/>
+<item valueDataType="any" value="greaterThan" name="operationType"/>
+<item valueDataType="any" value="0" name="value2"/>
+</item>
+<item type="action" callTarget="instance" callName="appendText" isTrigger="true"  target="分数" >
+<item valueDataType="any" value="10" name="38"/>
+</item>
+</item>
+</eventSheets>

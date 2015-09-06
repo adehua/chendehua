@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="GameScene" previous="" next="">
+<item type="instance" UID="18">
+<item type="behavior" behaviorType="ScrollBehaivor" name="滚屏行为">
+<item valueDataType="any" value="scrollDown" name="scrollDirectionType"/>
+<item valueDataType="any" value="180" name="speed"/>
+</item>
+</item>
+<item type="instance" UID="17">
+<item type="behavior" behaviorType="ScrollBehaivor" name="滚屏行为">
+<item valueDataType="any" value="scrollDown" name="scrollDirectionType"/>
+<item valueDataType="any" value="180" name="speed"/>
+</item>
+</item>
+<item type="instance" UID="74">
+</item>
+<item type="instance" UID="22">
+<item initValue="100" variableType="number" variableName="score" type="variable"/>
+<item initValue="5" variableType="number" variableName="HP" type="variable"/>
+<item type="behavior" behaviorType="DragDropBehaivor" name="拖拽行为">
+</item>
+</item>
+<item type="instance" UID="24">
+<item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出边界销毁行为">
+</item>
+<item type="behavior" behaviorType="BulletBehaivor" name="子弹行为">
+<item valueDataType="any" value="600" name="speed"/>
+<item valueDataType="any" value="0" name="acceleration"/>
+<item valueDataType="any" value="0" name="gravity"/>
+<item valueDataType="any" value="1" name="SetAngle"/>
+<item valueDataType="any" value="-90" name="angle"/>
+</item>
+</item>
+<item type="instance" UID="26">
+</item>
+<item type="instance" UID="28">
+<item initValue="10" variableType="number" variableName="HP" type="variable"/>
+<item type="behavior" behaviorType="BulletBehaivor" name="子弹行为">
+<item valueDataType="any" value="100" name="speed"/>
+<item valueDataType="any" value="0" name="acceleration"/>
+<item valueDataType="any" value="0" name="gravity"/>
+<item valueDataType="any" value="1" name="SetAngle"/>
+<item valueDataType="any" value="90" name="angle"/>
+</item>
+</item>
+<item type="instance" UID="30">
+<item type="behavior" behaviorType="BulletBehaivor" name="子弹行为">
+<item valueDataType="any" value="400" name="speed"/>
+<item valueDataType="any" value="0" name="acceleration"/>
+<item valueDataType="any" value="0" name="gravity"/>
+<item valueDataType="any" value="1" name="SetAngle"/>
+<item valueDataType="any" value="90" name="angle"/>
+</item>
+<item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出边界销毁行为">
+</item>
+</item>
+<item type="instance" UID="32">
+<item initValue="100" variableType="number" variableName="HP" type="variable"/>
+<item initValue="0" variableType="number" variableName="alive" type="variable"/>
+<item initValue="0" variableType="number" variableName="movetage" type="variable"/>
+</item>
+<item type="instance" UID="34">
+<item type="behavior" behaviorType="BulletBehaivor" name="子弹行为">
+<item valueDataType="any" value="400" name="speed"/>
+<item valueDataType="any" value="0" name="acceleration"/>
+<item valueDataType="any" value="0" name="gravity"/>
+<item valueDataType="any" value="1" name="SetAngle"/>
+<item valueDataType="any" value="90" name="angle"/>
+</item>
+<item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出边界销毁行为">
+</item>
+</item>
+<item type="instance" UID="36">
+</item>
+<item type="instance" UID="38">
+</item>
+<item type="instance" UID="40">
+</item>
+<item type="instance" UID="42">
+</item>
+<item type="instance" UID="61">
+</item>
+<item type="instance" UID="63">
+</item>
+<item type="instance" UID="65">
+</item>
+<item type="instance" UID="71">
+<item type="behavior" behaviorType="BulletBehaivor" name="子弹行为">
+<item valueDataType="any" value="300" name="speed"/>
+<item valueDataType="any" value="0" name="acceleration"/>
+<item valueDataType="any" value="0" name="gravity"/>
+<item valueDataType="any" value="1" name="SetAngle"/>
+<item valueDataType="any" value="90" name="angle"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System" >
+<item valueDataType="any" value="0.2" name="interval"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="英雄" >
+<item valueDataType="string" value="英雄子弹" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="0" name="12"/>
+<item valueDataType="any" value="-30" name="13"/>
+</item>
+<item type="action" callTarget="instance" callName="play" isTrigger="true"  target="英雄开火音效" >
+<item valueDataType="any" value="resource/sound/bullet.mp3" name="1"/>
+<item valueDataType="any" value="1" name="2"/>
+<item valueDataType="any" value="1" name="3"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="EveryTickEvent" callName="everyTick" isTrigger="false" target="System" >
+</item>
+<item type="action" callTarget="instance" callName="setText" isTrigger="true"  target="分数" >
+<item valueDataType="any" value="'得分:'+英雄.score" name="42"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="EveryTickEvent" callName="everyTick" isTrigger="false" target="System" >
+</item>
+<item type="action" callTarget="instance" callName="setText" isTrigger="true"  target="英雄生命" >
+<item valueDataType="any" value="':'+英雄.HP" name="42"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="英雄子弹" >
+<item valueDataType="string" value="敌人" name="object"/>
+</item>
+<item type="action" callTarget="instance" callName="subtractFrom" isTrigger="true"  target="敌人" >
+<item valueDataType="string" value="HP" name="7"/>
+<item valueDataType="any" value="10" name="8"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="英雄子弹" >
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="敌人" >
+<item valueDataType="string" value="HP" name="instanceVariable"/>
+<item valueDataType="any" value="lessOrEqual" name="operationType"/>
+<item valueDataType="any" value="0" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="play" isTrigger="true"  target="敌人死亡音效" >
+<item valueDataType="any" value="resource/sound/bigplane_bomb.mp3" name="1"/>
+<item valueDataType="any" value="1" name="2"/>
+<item valueDataType="any" value="1" name="3"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="敌人" >
+</item>
+<item type="action" callTarget="instance" callName="addTo" isTrigger="true"  target="英雄" >
+<item valueDataType="string" value="score" name="1"/>
+<item valueDataType="any" value="100" name="2"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="敌人子弹" >
+<item valueDataType="string" value="英雄" name="object"/>
+</item>
+<item type="action" callTarget="instance" callName="subtractFrom" isTrigger="true"  target="英雄" >
+<item valueDataType="string" value="HP" name="7"/>
+<item valueDataType="any" value="1" name="8"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="敌人子弹" >
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="英雄" >
+<item valueDataType="string" value="HP" name="instanceVariable"/>
+<item valueDataType="any" value="lessOrEqual" name="operationType"/>
+<item valueDataType="any" value="0" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="英雄" >
+</item>
+<item type="action" callTarget="instance" callName="gotoScene" isTrigger="true"  target="System" >
+<item valueDataType="any" value="GameOverScene" name="49"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System" >
+<item valueDataType="any" value="1" name="interval"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="敌人" >
+<item valueDataType="string" value="敌人子弹" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="0" name="12"/>
+<item valueDataType="any" value="0" name="13"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System" >
+<item valueDataType="any" value="1" name="interval"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="上方物体生产基地" >
+<item valueDataType="string" value="敌人" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="Math.random()*400-200" name="12"/>
+<item valueDataType="any" value="0" name="13"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="英雄" >
+<item valueDataType="string" value="score" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="15" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="上方物体生产基地" >
+<item valueDataType="string" value="BOSS" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="0" name="12"/>
+<item valueDataType="any" value="0" name="13"/>
+</item>
+<item type="action" callTarget="instance" callName="setValue" isTrigger="true"  target="BOSS" >
+<item valueDataType="string" value="alive" name="5"/>
+<item valueDataType="any" value="1" name="6"/>
+</item>
+<item type="action" callTarget="instance" callName="addTo" isTrigger="true"  target="英雄" >
+<item valueDataType="string" value="score" name="1"/>
+<item valueDataType="any" value="1" name="2"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareYPosEvent" callName="compareY" isTrigger="false" target="BOSS" >
+<item valueDataType="any" value="lessThan" name="operationType"/>
+<item valueDataType="any" value="100" name="y"/>
+</item>
+<item type="action" callTarget="instance" callName="moveAtAngle" isTrigger="true"  target="BOSS" >
+<item valueDataType="any" value="90" name="14"/>
+<item valueDataType="any" value="3" name="15"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareYPosEvent" callName="compareY" isTrigger="false" target="BOSS" >
+<item valueDataType="any" value="greaterOrEqual" name="operationType"/>
+<item valueDataType="any" value="100" name="y"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System" >
+<item valueDataType="any" value="0.5" name="interval"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="BOSS" >
+<item valueDataType="string" value="BOSS子弹" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="30" name="12"/>
+<item valueDataType="any" value="30" name="13"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="BOSS" >
+<item valueDataType="string" value="BOSS子弹" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="-30" name="12"/>
+<item valueDataType="any" value="30" name="13"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="英雄子弹" >
+<item valueDataType="string" value="BOSS" name="object"/>
+</item>
+<item type="action" callTarget="instance" callName="subtractFrom" isTrigger="true"  target="BOSS" >
+<item valueDataType="string" value="HP" name="7"/>
+<item valueDataType="any" value="5" name="8"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="英雄子弹" >
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareYPosEvent" callName="compareY" isTrigger="false" target="BOSS" >
+<item valueDataType="any" value="greaterOrEqual" name="operationType"/>
+<item valueDataType="any" value="500" name="y"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="BOSS" >
+<item valueDataType="string" value="movetage" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="0" name="value"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="BOSS" >
+<item valueDataType="string" value="alive" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="1" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="moveAtAngle" isTrigger="true"  target="BOSS" >
+<item valueDataType="any" value="180" name="14"/>
+<item valueDataType="any" value="3" name="15"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareXPosEvent" callName="compareX" isTrigger="false" target="BOSS" >
+<item valueDataType="any" value="lessOrEqual" name="operationType"/>
+<item valueDataType="any" value="100" name="x"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="BOSS" >
+<item valueDataType="string" value="alive" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="0" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="setValue" isTrigger="true"  target="BOSS" >
+<item valueDataType="string" value="movetage" name="5"/>
+<item valueDataType="any" value="1" name="6"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareYPosEvent" callName="compareY" isTrigger="false" target="BOSS" >
+<item valueDataType="any" value="greaterOrEqual" name="operationType"/>
+<item valueDataType="any" value="100" name="y"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="BOSS" >
+<item valueDataType="string" value="movetage" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="1" name="value"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="BOSS" >
+<item valueDataType="string" value="alive" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="1" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="moveAtAngle" isTrigger="true"  target="BOSS" >
+<item valueDataType="any" value="0" name="14"/>
+<item valueDataType="any" value="3" name="15"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="CompareXPosEvent" callName="compareX" isTrigger="false" target="BOSS" >
+<item valueDataType="any" value="greaterOrEqual" name="operationType"/>
+<item valueDataType="any" value="500" name="x"/>
+</item>
+<item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="BOSS" >
+<item valueDataType="string" value="movetage" name="instanceVariable"/>
+<item valueDataType="any" value="equalTo" name="operationType"/>
+<item valueDataType="any" value="1" name="value"/>
+</item>
+<item type="action" callTarget="instance" callName="setValue" isTrigger="true"  target="BOSS" >
+<item valueDataType="string" value="movetage" name="5"/>
+<item valueDataType="any" value="0" name="6"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="BOSS子弹" >
+<item valueDataType="string" value="英雄" name="object"/>
+</item>
+<item type="action" callTarget="instance" callName="subtractFrom" isTrigger="true"  target="英雄" >
+<item valueDataType="string" value="HP" name="7"/>
+<item valueDataType="any" value="2" name="8"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="BOSS子弹" >
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="血" >
+<item valueDataType="string" value="英雄" name="object"/>
+</item>
+<item type="action" callTarget="instance" callName="destory" isTrigger="true"  target="血" >
+</item>
+<item type="action" callTarget="instance" callName="addTo" isTrigger="true"  target="英雄" >
+<item valueDataType="string" value="HP" name="1"/>
+<item valueDataType="any" value="1" name="2"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System" >
+<item valueDataType="any" value="5" name="interval"/>
+</item>
+<item type="action" callTarget="instance" callName="spawn" isTrigger="true"  target="上方物体生产基地" >
+<item valueDataType="string" value="血" name="10"/>
+<item valueDataType="any" value="0" name="11"/>
+<item valueDataType="any" value="Math.random()*400-200" name="12"/>
+<item valueDataType="any" value="0" name="13"/>
+</item>
+</item>
+</eventSheets>

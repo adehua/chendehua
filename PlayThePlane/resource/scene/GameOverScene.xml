@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout id="43" sceneSize="511,762" next="MainScene" previous="GameScene" eventSheet="GameOverSceneEventSheet">
+<item UID="47" plugin="AISprite" name="游戏结束背景1" isVirtual="false">
+<item name="x" value="0" valueDataType="number" />
+<item name="y" value="0" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="512" valueDataType="number" />
+<item name="height" value="768" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="url" value="resource/image/bg.jpg" valueDataType="string" />
+<item name="collision" value="false" valueDataType="boolean" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="49" plugin="AISprite" name="游戏结束背景2" isVirtual="false">
+<item name="x" value="0" valueDataType="number" />
+<item name="y" value="0" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="512" valueDataType="number" />
+<item name="height" value="768" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="url" value="resource/image/resultBg.png" valueDataType="string" />
+<item name="collision" value="false" valueDataType="boolean" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="89" plugin="AIButton" name="返回菜单" isVirtual="false">
+<item name="x" value="168" valueDataType="number" />
+<item name="y" value="548" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="177" valueDataType="number" />
+<item name="height" value="58" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="upSkin" value="resource/image/remain.png" valueDataType="string" />
+<item name="downSkin" value="resource/image/remain.png" valueDataType="string" />
+<item name="disableSkin" value="resource/image/remain.png" valueDataType="string" />
+<item name="text" value="" valueDataType="string" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="53" plugin="AISprite" name="游戏结束标题" isVirtual="false">
+<item name="x" value="265.5" valueDataType="number" />
+<item name="y" value="134.5" valueDataType="number" />
+<item name="anchorX" value="0.5" valueDataType="number" />
+<item name="anchorY" value="0.5" valueDataType="number" />
+<item name="width" value="451" valueDataType="number" />
+<item name="height" value="113" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="url" value="resource/image/game-over.png" valueDataType="string" />
+<item name="collision" value="false" valueDataType="boolean" />
+<item name="layer" value="1" valueDataType="number" />
+</item>
+<item UID="72" plugin="AIButton" name="再来一次" isVirtual="false">
+<item name="x" value="168" valueDataType="number" />
+<item name="y" value="400" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="177" valueDataType="number" />
+<item name="height" value="58" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="upSkin" value="resource/image/restart.png" valueDataType="string" />
+<item name="downSkin" value="resource/image/restart.png" valueDataType="string" />
+<item name="disableSkin" value="resource/image/restart.png" valueDataType="string" />
+<item name="text" value="" valueDataType="string" />
+<item name="layer" value="1" valueDataType="number" />
+</item>
+</layout>

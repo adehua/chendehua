@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="MainScene" previous="" next="">
+<item type="instance" UID="6">
+</item>
+<item type="instance" UID="12">
+</item>
+<item type="instance" UID="85">
+</item>
+<item type="instance" UID="10">
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnButtonClickEvent" callName="onButtonClick" isTrigger="true" target="开始游戏" >
+</item>
+<item type="action" callTarget="instance" callName="gotoScene" isTrigger="true"  target="System" >
+<item valueDataType="any" value="GameScene" name="49"/>
+</item>
+</item>
+</eventSheets>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout id="75" sceneSize="511,762" next="GameOverScene" previous="GameScene" eventSheet="RankingSceneEventSheet">
+<item UID="79" plugin="AISprite" name="排行榜页面" isVirtual="false">
+<item name="x" value="256" valueDataType="number" />
+<item name="y" value="381" valueDataType="number" />
+<item name="anchorX" value="0.5" valueDataType="number" />
+<item name="anchorY" value="0.5" valueDataType="number" />
+<item name="width" value="511" valueDataType="number" />
+<item name="height" value="762" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="url" value="resource/image/bgGrey.png" valueDataType="string" />
+<item name="collision" value="false" valueDataType="boolean" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+<item UID="81" plugin="AITextField" name="排行榜的标题" isVirtual="false">
+<item name="x" value="192.5" valueDataType="number" />
+<item name="y" value="88" valueDataType="number" />
+<item name="anchorX" value="0" valueDataType="number" />
+<item name="anchorY" value="0" valueDataType="number" />
+<item name="width" value="119.95000000000007" valueDataType="number" />
+<item name="height" value="43.849999999999994" valueDataType="number" />
+<item name="angle" value="0" valueDataType="number" />
+<item name="alpha" value="1" valueDataType="number" />
+<item name="visible" value="true" valueDataType="boolean" />
+<item name="text" value="排行榜" valueDataType="string" />
+<item name="fontFamily" value="宋体" valueDataType="string" />
+<item name="size" value="36" valueDataType="number" />
+<item name="textColor" value="16777215" valueDataType="number" />
+<item name="bold" value="true" valueDataType="boolean" />
+<item name="enableInput" value="true" valueDataType="boolean" />
+<item name="layer" value="0" valueDataType="number" />
+</item>
+</layout>

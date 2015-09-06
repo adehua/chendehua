@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="GameOverScene" previous="" next="">
+<item type="instance" UID="47">
+</item>
+<item type="instance" UID="49">
+</item>
+<item type="instance" UID="89">
+</item>
+<item type="instance" UID="53">
+</item>
+<item type="instance" UID="72">
+</item>
+<item type="event" conditionRelationShip="false">
+<item type="condition" callTarget="instance" paramsClass="OnButtonClickEvent" callName="onButtonClick" isTrigger="true" target="再来一次" >
+</item>
+<item type="action" callTarget="instance" callName="gotoScene" isTrigger="true"  target="System" >
+<item valueDataType="any" value="GameScene" name="49"/>
+</item>
+<item type="action" callTarget="instance" callName="play" isTrigger="true"  target="英雄死亡音效" >
+<item valueDataType="any" value="resource/sound/bullet.mp3" name="1"/>
+<item valueDataType="any" value="0" name="2"/>
+<item valueDataType="any" value="2" name="3"/>
+</item>
+</item>
+<item type="event" conditionRelationShip="true">
+<item type="condition" callTarget="instance" paramsClass="OnButtonClickEvent" callName="onButtonClick" isTrigger="true" target="返回菜单" >
+</item>
+<item type="action" callTarget="instance" callName="gotoScene" isTrigger="true"  target="System" >
+<item valueDataType="any" value="MainScence" name="49"/>
+</item>
+</item>
+</eventSheets>
