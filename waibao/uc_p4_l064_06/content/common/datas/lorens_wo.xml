@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Lawrencium is a synthetic, radioactive metal, the last in the lanthanide series. It is a transuranic element. It was first produced in 1961 by Albert Ghiorso, T. Sikkeland, A. Larsh and R.Latimer by the bombardment of a mixture of californium isotopes with boron-10 and boron-11 ions. The most stable lawrencium isotope is </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">260</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Lr, with a half-life of 3 minutes. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">The properties of lawrencium have never been closely studied, because of the minute amounts of the element thet could be produced so far. The element was named after the American physicist Ernest O. Lawrence - the inventor of the cyclotron and founder of the laboratory of the University of California in Berkeley, USA.</text>
+   </par>
+</scrollbox>

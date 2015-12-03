@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Plutonium is a silvery-white, radioactive metal. It is a transuranic element - a synthetic, radioactive element, whose atomic number is higher than 92. Plutonium belongs to the actinide series. Its most stable isotope is plutonium-244, with a half-life of  8,2 · </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">10</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">7</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> years. The shortest-lived isotope is plutonium-235, whose half-life is found to be 26 minutes. Plutonium is a reactive element: on contact with air it becomes covered with a layer of yellow oxides; it slowly reacts with water. It also reacts with phosphorus, hydrogen, nitrogen and chlorine. Plutonium and its compounds are extremely poisonous. The element was discovered in 1941 by Glenn Seaborg and was named after the planet Pluto.</text>
+   </par>
+</scrollbox>

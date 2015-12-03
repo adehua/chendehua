@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Polonium is a silvery-grey metal. It is readily dissolved in most acids. At elevated temperatures polonium oxidises to polonium(IV) oxide </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">– Po</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">. </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">It reacts with halogens: the reaction with chlorine produces polonium(II) chloride </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">– PoC</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">l</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> - and with iodine, polonium(IV) iodide – Po</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">I</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">4</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">. Polonium is a very rare, naturally radioactive element. Polonium was discovered by Marie Sklodowska-Curie and Pierre Curie in 1898. It was named after Poland, the native country of Marie Sklodowska-Curie.</text>
+   </par>
+</scrollbox>

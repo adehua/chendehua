@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Carbon is a solid, non-metallic element. Carbon is the basic building block of the structure of all living organisms. Pure carbon occurs naturally in two allotropic forms: diamond and graphite. Diamond is extremely hard (the hardest of natural minerals), but brittle. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> Crystals of diamond are colourless and clear, but are sometimes tinted by impurities. Black diamonds have been found to exist as well. Graphite is soft and dark grey in colour. It is a good conductor of heat and electricity. An interesting form of carbon is fullerenes, which are spherical, hollow groups of carbon atoms with the number of atoms ranging between 32 and 600. </text>
+   </par>
+</scrollbox>

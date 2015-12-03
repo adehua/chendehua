@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page width="286" height="86" startup="_root.showURL(beep_01.mp3,false)" onResourcesLoaded="" afterPageTimeOut="" modal="false" service="pl_ydp_cms_page_container_resultviewer_ResultDialogHandler" controlVisibility="false" binaryCheck="false" doneAfterVisit="false" backgroundFeedbacks="false" background="00ffffff">
+  <properties>
+    <property name="hidewhenloading" type="boolean" value="true"/>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="textexportversion" type="integer" value="0"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderType="single" borderColor="666666" borderThickness="1" borderLeftMargin="3" borderTopMargin="0" borderRightMargin="3" borderBottomMargin="0"/>
+  </tooltipDecoration>
+  <button name="close" x="247" y="4" width="28" height="27" src="close03_icon.swf" href="script:_root.closeAllPopups@1000()" tipId="Przycisk-898735193" tip="close" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <movie name="PicturePlayer" x="0" y="0" width="100" height="100" src="confirm_reset_01.swf" alignment="5">
+    <progress name="ProgressBar" x="0" y="0" width="0" height="0" src="" type="progressbar" alignment="horizontal" frameColor="00000000" frameThickness="0" background="ffffffff" frameMargin="0" color="ffffffff" progressIndicator="continous" elementCount="20" elementDistance="2" elementSize="7" slider=""/>
+  </movie>
+  <shape name="player_header" x="152" y="12" width="80" height="8">
+    <gradient type="linear-horizontal" originX="0" originY="0" phase="0" length="84">
+      <node color="ffb0bdd2" pos="0"/>
+      <node color="ffffffff" pos="255"/>
+    </gradient>
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="move_panel" x="2" y="1" width="243" height="19">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <ac name="txt" x="1" y="0" width="497" height="380" initiallySolved="false" mouseOpaque="false" isActive="false" includeerrorsinresult="false" containerId="" presentationTime="0" rememberBlockade="false" enableALLOKafterError="false" showAttemptedAnswers="false">
+    <resultWindows/>
+    <acfeedbacks>
+      <group condition="ALL_OK" sequence="random"/>
+      <group condition="OK" sequence="random"/>
+      <group condition="WRONG" sequence="random"/>
+      <group condition="HELP" sequence="random"/>
+    </acfeedbacks>
+    <convertResults/>
+    <text name="Text Module" x="50" y="44" width="233" height="16" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Text Module2-1637879553">&lt;p align="left"&gt;This&amp;nbsp;activity&amp;nbsp;has&amp;nbsp;no&amp;nbsp;answers&amp;nbsp;to&amp;nbsp;reset!&lt;/p&gt;</text>
+  </ac>
+  <shape name="Shape2" x="0" y="0" width="282" height="82" border="true" borderWidth="1" borderColor="ff003366">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape" x="0" y="0" width="37" height="82" background="fffff5d9">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape1" x="0" y="0" width="282" height="82" border="true" borderWidth="1" borderColor="ff003366">
+    <gradient type="linear-vertical" originX="0" originY="0" phase="0" length="82">
+      <node color="ffffffff" pos="0"/>
+      <node color="fffff9ee" pos="255"/>
+    </gradient>
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shadow" x="4" y="4" width="282" height="82" background="32000000">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+</page>

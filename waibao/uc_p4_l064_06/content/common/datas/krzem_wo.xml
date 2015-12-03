@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Silicon was discovered and isolated by the Swedish chemist Jöns Jacob Berzelius in 1823. Silicon is a metalloid. There are two allotropic forms of silicon: amorphous and crystalline. Amorphous silicon is a brown powder. Crystalline silicon is very hard, but rather brittle, diamond-like in structure. Silicon is a semi-conductor. At room temperature the reactivity of silicon is rather low, but a fine powder of silicon is more reactive. Certain compounds of silicon are poisonous, for example, the salts of fluorosilicic acid  – </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">H</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Si</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">F</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">6</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">.</text>
+   </par>
+</scrollbox>

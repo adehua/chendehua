@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Americium is a silvery-white, malleable metal. It is one of the transuranic elements - the artificially prepared elements with atomic numbers higher than 92.  All its isotopes are radioactive. The most stable isotope is </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">243</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Am with </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">a </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">half-life of 7000 years. Americium was artificially obtained by a team of American researchers directed by Glenn T. Seaborg in1944. The name is derived from the name of the continent. Americium is a hazardous element, because of its high radioactivity and its ability to accumulate in bone tissue. Its most important compound is americium(IV) oxide  – Am</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">, used for the preparation of other americium compounds. </text>
+   </par>
+</scrollbox>

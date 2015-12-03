@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Bismuth</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> is a pinkish-grey, hard and brittle metal. It reacts with oxygen when heated to produce bismuth(III) oxide -  B</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">i</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">; it easily combines with the halogens. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">It is a semi-noble metal and does not react with dilute acids. However, it is rapidly dissolved by hot, concentrated sulphuric(VI) acid and by concentrated nitric(V) acid. The name is derived from the German word </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="0">Wismut</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">. The element was first by Basilius Valentinus in 1450. Until the 17th century, however, it was often confused with lead and tin. </text>
+   </par>
+</scrollbox>

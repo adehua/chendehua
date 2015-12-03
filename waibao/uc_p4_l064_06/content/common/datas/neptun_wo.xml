@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Neptunium is the first of the transuranic elements - synthetic, radioactive elements with an atomic number higher than 92. It is a heavy, silver-coloured metal. Similarly to uranium, it is chemically active: at elevated temperatures it reacts with oxygen to produce neptunium(IV) oxide – Np</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">; it reacts also with carbon, hydrogen and the halogens. All neptunium isotopes are radioactive. The longest-lived one -  </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">237</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Np - has a half-life of over 2 million years. Neptunium was discovered in 1940 by the American physicists, Edwin M. McMillian and Philip H. Abelson. It was named after the planet Neptune.</text>
+   </par>
+</scrollbox>

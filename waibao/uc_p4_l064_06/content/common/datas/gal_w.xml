@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Gallium occurs in minute quantities in the Earth's crust, </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">making up just </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">1.8 · </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">10</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">-3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">% of the Earth's crust by weight. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">In abundance it ranks 34th among the elements. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">The chief sources of gallium are zinc blende, ZnS, and bauxite.</text>
+   </par>
+</scrollbox>

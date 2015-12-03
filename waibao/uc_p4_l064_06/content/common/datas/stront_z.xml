@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="windows-1250"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.6 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Strontium compounds are used in the production of fireworks and paints. A radioactive isotope</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> – </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">90</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Sr – </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">is applied in medicine in the diagnosis of bone cancer. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"></text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="16" fc="0" fa="1" charset="238"></text>
+   </par>
+</scrollbox>

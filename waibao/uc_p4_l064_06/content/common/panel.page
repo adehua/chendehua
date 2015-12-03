@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page background="ffffffff" backgroundFeedbacks="true" binaryCheck="false" controlVisibility="false" doneAfterVisit="false" height="553" modal="true" onResourcesLoaded="_root.unchainPopups()" startup="grammar.hide();calculator.hide();biography.hide();periodic_but.hide();notepad_but.hide()" width="788">
+  <properties>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="moveLock" type="string" value="false"/>
+    <property name="textexportversion" type="integer" value="1"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderBottomMargin="0" borderColor="666666" borderLeftMargin="3" borderRightMargin="3" borderThickness="1" borderTopMargin="0" borderType="single"/>
+  </tooltipDecoration>
+  <movie alignment="5" height="35" name="pikto_top" src="pikto_top.swf" width="52" x="19" y="3">
+    <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="1" frameThickness="0" height="0" name="ProgressBar4" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+  </movie>
+  <movie alignment="5" height="30" name="pikto_bot" src="pikto_bot.swf" width="51" x="20" y="41">
+    <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="1" frameThickness="0" height="0" name="ProgressBar3" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+  </movie>
+  <ac containerId="" enableALLOKafterError="false" height="40" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="240" x="-1" y="500">
+    <resultWindows/>
+    <acfeedbacks>
+      <group condition="ALL_OK" sequence="random"/>
+      <group condition="OK" sequence="random"/>
+      <group condition="WRONG" sequence="random"/>
+      <group condition="HELP" sequence="random"/>
+    </acfeedbacks>
+    <convertResults/>
+    <ac containerId="" enableALLOKafterError="false" height="31" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="notepad_but" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="34" x="190" y="8">
+      <resultWindows/>
+      <acfeedbacks>
+        <group condition="ALL_OK" sequence="random"/>
+        <group condition="OK" sequence="random"/>
+        <group condition="WRONG" sequence="random"/>
+        <group condition="HELP" sequence="random"/>
+      </acfeedbacks>
+      <convertResults/>
+      <button height="27" href="script:_root.showURL(notepad.page?usePlayer\=false&amp;inner\=false&amp;x\=105&amp;y\=25,false)" name="notepad" src="note02_icon.swf" tip="notepad" tipId="Action Button3-1317737067" tooltipAlignment="over" width="32" x="0" y="0">
+        <onTurnOn command=""/>
+        <onTurnOff command=""/>
+      </button>
+      <shape background="ffffffff" height="30" name="Shape3" width="32" x="0" y="0">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+    </ac>
+    <ac containerId="" enableALLOKafterError="false" height="31" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="periodic_but" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="34" x="72" y="8">
+      <resultWindows/>
+      <acfeedbacks>
+        <group condition="ALL_OK" sequence="random"/>
+        <group condition="OK" sequence="random"/>
+        <group condition="WRONG" sequence="random"/>
+        <group condition="HELP" sequence="random"/>
+      </acfeedbacks>
+      <convertResults/>
+      <button height="27" href="uop.swf?usePlayer=false&amp;x=37&amp;y=0" name="periodic" src="element02_icon.swf" tip="periodic table" tipId="Action Button3-1283320681" tooltipAlignment="over" width="28" x="0" y="0">
+        <onTurnOn command=""/>
+        <onTurnOff command=""/>
+      </button>
+      <shape background="ffffffff" height="30" name="Shape2" width="32" x="0" y="0">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+    </ac>
+    <button height="27" href="htmlbiography.swf?usePlayer=false&amp;inner=true&amp;x=115&amp;y=90" name="biography" src="biography04_icon.swf" tip="biography" tipId="Action Button2-166323287" tooltipAlignment="over" width="28" x="152" y="8">
+      <onTurnOn command=""/>
+      <onTurnOff command=""/>
+    </button>
+    <button height="27" href="calculator.page" name="calculator" src="calculator04_icon.swf" tip="calculator" tipId="Action Button2-871294375" tooltipAlignment="over" width="28" x="112" y="8">
+      <onTurnOn command=""/>
+      <onTurnOff command=""/>
+    </button>
+    <button height="27" href="htmlglossary.swf?usePlayer=false&amp;inner=true&amp;x=169&amp;y=90" name="grammar" src="grammar04_icon.swf" tip="glossary" tipId="Action Button2-358250515" tooltipAlignment="over" width="28" x="32" y="8">
+      <onTurnOn command=""/>
+      <onTurnOff command=""/>
+    </button>
+    <movie alignment="5" height="36" name="PicturePlayer2" src="tools_panel.swf" width="232" x="20" y="4">
+      <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="0" frameThickness="0" height="0" name="ProgressBar2" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+    </movie>
+  </ac>
+  <shape background="ffffff" height="3" name="Shape1" width="51" x="18" y="39">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape background="ffffff" height="35" name="Shape" width="3" x="17" y="40">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <button height="27" href="script:_root.showURL(next.link?inPage=true)" name="Action Button1" src="next_btn.swf" tip="next page" tipId="Action Button-1318758669" tooltipAlignment="default" width="28" x="764" y="102">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <button height="27" href="script:_root.showURL(prev.link?inPage=true)" name="Action Button" src="prev_btn.swf" tip="previous page" tipId="Action Button-922128193" tooltipAlignment="default" width="28" x="-4" y="415">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <simplePageSwitch blockCompletePages="true" height="75" name="Simple page switcher" onAfterLoad="" onBeforeLoad="" onDataReady="" onUnitTimeout="" width="787" x="0" y="0">
+    <nextButton height="27" src="pagenext_icon.swf" tip="" width="48" x="729" y="8"/>
+    <prevButton height="27" src="pageprev_icon.swf" tip="" width="28" x="673" y="8"/>
+    <indicator height="30" width="50" x="692" y="6">
+      <format bold="true" color="ff3c4d68" font="HandelGothicPL" italic="false" size="17"/>
+    </indicator>
+    <unitTitle height="32" width="419" x="78" y="7">
+      <format bold="true" color="ff003366" font="Arial" italic="false" size="18"/>
+    </unitTitle>
+    <switch alignToNextButton="false" alwaysShowScrollers="false" blocked="false" buttonsXSpace="-1" buttonsYSpace="0" center="false" height="26" layout="horizontal" leftSrc="pageleft_icon.swf" markedSrc="" nextButtonMargin="0" normalColor="ff3c4d68" overColor="ff3c4d68" prevButtonMargin="0" rightSrc="pageright_icon.swf" selectedColor="ff3c4d68" src="" width="162" x="496" y="7">
+      <format bold="true" font="HandelGothicPL" italic="false" size="11"/>
+      <buttons>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="1" ranges="0" src="pagenumber_icon00.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="1" src="pagenumber_icon01.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="2" src="pagenumber_icon02.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="3" src="pagenumber_icon03.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="4" src="pagenumber_icon04.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="5" src="pagenumber_icon05.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="6" src="pagenumber_icon06_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="6" src="pagenumber_icon06.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="7" src="pagenumber_icon07_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="7" src="pagenumber_icon07.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="8" src="pagenumber_icon08_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="8" src="pagenumber_icon08.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="9" src="pagenumber_icon09_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="9" src="pagenumber_icon09.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="10" src="pagenumber_icon10_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="10" src="pagenumber_icon10.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="11" src="pagenumber_icon11_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="11" src="pagenumber_icon11.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="12" src="pagenumber_icon12_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="12" src="pagenumber_icon12.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="13" src="pagenumber_icon13_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="13" src="pagenumber_icon13.swf"/>
+        <button id_prefix="e" matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="14" src="pagenumber_icon14_e.swf"/>
+        <button matchRangeAndPrefix="true" number_op="hide" number_op_arg="" ranges="14" src="pagenumber_icon14.swf"/>
+      </buttons>
+    </switch>
+  </simplePageSwitch>
+  <pageInPage height="500" name="Page_in_Page" width="750" x="19" y="40"/>
+  <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="16" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module1" tooltipOnClick="true" translationID="Text Module1-378160148" width="296" x="475" y="539">&lt;p align="right"&gt;&lt;font size="10" color="#003366"&gt;Physics&amp;nbsp;Lower&amp;nbsp;Secondary&amp;nbsp;–&amp;nbsp;Universal&amp;nbsp;Curriculum&amp;nbsp;©&amp;nbsp;YDP&lt;/font&gt;&lt;/p&gt;</text>
+</page>

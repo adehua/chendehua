@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Radium is a silvery-white metal, a good conductor of heat and electricity. A freshly cut surface of the metal is lustrous, but soon becomes dull, covered by a thin layer of radium nitride  – R</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">a</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">3</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">N</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">.  Radium is a radioactive element, emitting a blue light in the dark. The metal is very reactive; it reacts violently with water to produce radium hydroxide </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> – Ra(OH</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">)</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">; in reactions with acids, salts are formed. Radium and its compounds impart a crimson colouring to a flame. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Radium was discovered in 1898 by Marie Sklodowska-Curie and Pierre Curie. Its name is derived from the Greek word </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">radius</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> - ray.</text>
+   </par>
+</scrollbox>

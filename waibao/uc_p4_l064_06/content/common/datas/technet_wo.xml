@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Technetium is a silvery-grey metal. It was obtained in 1937 by the Italian researchers Emilio Gino Sergé and Carlo Perrier by the deuteron bombardment of molybdenum-96. All isotopes of technetium are synthetic and radioactive. The mass numbers of the known isotopes range between 90 and 111, the most stable being </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">99</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Tc. When heated, technetium burns to produce technetium(VII) oxide - T</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">c</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">7</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">. Technetium is unaffected by hydrochloric acid, but reacts with nitric(V) acid and </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">aqua regia</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> (a mixture of 3 parts of concentrated hydrochloric acid and 1 part of concentrated nitric(V) acid by volume). It was the first artificially produced element. Its name is derived from the Greek word </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">technetos</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> - ”artificial”.</text>
+   </par>
+</scrollbox>

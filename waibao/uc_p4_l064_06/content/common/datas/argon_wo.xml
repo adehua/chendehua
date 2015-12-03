@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Argon is the most abundant noble gas. It is colourless and odourless. Discovered in 1904 by the English scientists William Ramsay and John Rayleigh, during the fractional distillation of liquid air. Argon is also a product of beta-decay of a radioactive potassium isotope:</text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">40</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">K. </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">The name of the element is derived from the Greek word </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="0">argos, </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">meaning ”inactive”.</text>
+   </par>
+</scrollbox>

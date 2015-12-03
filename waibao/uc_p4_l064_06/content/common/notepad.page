@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page width="545" height="45" startup="close.hide()" modal="false" controlVisibility="false" binaryCheck="false" doneAfterVisit="false" backgroundFeedbacks="false" background="00ffffff">
+  <properties>
+    <property name="hidewhenloading" type="boolean" value="true"/>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="moveLock" type="string" value="false"/>
+    <property name="textexportversion" type="integer" value="1"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderType="single" borderColor="666666" borderThickness="1" borderLeftMargin="3" borderTopMargin="0" borderRightMargin="3" borderBottomMargin="0"/>
+  </tooltipDecoration>
+  <pageTimeline name="closeShow" x="44" y="440" width="24" height="22" ignoreOnStopWhenFinished="false">
+    <step action="close.show()"/>
+  </pageTimeline>
+  <button name="close" x="505" y="7" width="28" height="27" src="close03_icon.swf" tipId="Przycisk-1439684365" tip="close" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <shape name="move_panel" x="12" y="1" width="459" height="24">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <movie name="PicturePlayer" x="0" y="0" width="100" height="100" src="notepad.swf" alignment="5"/>
+</page>

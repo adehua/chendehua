@@ -1,0 +1,355 @@
+<HTML>
+<HEAD>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<title>LEO</title>
+
+<script src="../common/recording/recording.js" type="text/javascript"></script>
+<script src="../common/util/languages.js"></script>
+
+<script>
+function doLog( msg, showAlert ) {
+	jLog( msg );
+	if (typeof(showAlert)=="undefined")
+		showAlert = false;
+	if (showAlert)
+		alert( msg );
+}
+</script>
+
+
+</HEAD>
+
+<script src="../common/util/video.js"></script>
+<script src="../common/util/util.js"></script>
+<!-- AICC support !-->
+<script src="../common/aicc/aicc.js"></script>
+
+<script>
+function doBeforePrint() {
+	//document.all.messageBox.style.display = "inline";
+}
+
+function doAfterPrint() {
+	//document.all.messageBox.style.display = "none";
+}
+
+initLanguages();
+window.lmscount = 0;
+</script>
+
+<BODY style="margin-top: 0; margin-left:0; margin-bottom:0; margin-right:0;" 
+	onbeforeprint="doBeforePrint();" 
+	onafterprint="doAfterPrint();" 
+	onBeforeUnload="saveState();"
+	onUnload="saveState();"
+	onLoad="setTimeout('appletLoadedCallback(\'timeout\')', 15000 )"
+>
+<!-- onload="checkFlashApplet()" -->
+<!-- start CHECK FOR FLASH AND JAVA !-->
+<div style="display:none" id="no_flash">
+<span style='color:red;font-weight:bold'>There is no Macromedia Flash Player installed. It is required to show content.</span><br> 
+You can download it from <a href='http://www.macromedia.com/go/getflashplayer'>Macromedia site</a>.  
+</div>
+<div style="display:none" id="no_applet">
+<span style='color:red;font-weight:bold'>There is no Java installed. It is required to store results.</span><br> 
+For Internet Explorer you can download and install it from <a href='http://www.microsoft.com/mscorp/java/default.mspx'>here</a>.<br>  
+For other browsers you can install Java Runtime Environment (JRE) 
+from <a href='http://www.java.com/en/download/manual.jsp'>here</a>.<br>
+After instalation please restart browser.  
+</div>
+<div style="display:none" id="no_refresh">
+<input type=button value=Recheck onclick='checkFlashApplet()'>
+</div>
+<SCRIPT LANGUAGE=JavaScript>
+window.isPageInitialized = false;
+function checkFlashApplet() {
+	var validFlash = isValidFlash('testPage');
+	var validApplet = isValidApplet('lmsImpl');
+	var ok = (validFlash && validApplet);
+	//getObj('no_flash').style.display = (validFlash?"none":"");
+	getObj('no_applet').style.display = (validApplet?"none":"");
+	getObj('no_refresh').style.display = (ok?"none":"");
+	if (ok && !window.isPageInitialized) {
+		var o = getObj("pageBox");
+		//alert("pageBox: "+o.tagName);
+		var s = getPlayerCode();
+		//alert("set code: "+s);
+		o.innerHTML = s;
+		window.isPageInitialized = true;
+	}
+}
+
+this.appletLoadedSignal = false;
+function appletLoadedCallback( stat ) {
+	if ( this.appletLoadedSignal!=true ) {
+		this.appletLoadedSignal = true;
+		if ( stat=='ok' )
+			setTimeout( 'checkFlashApplet()', 40 );
+		else {
+			getObj('no_applet').style.display = "";
+			getObj('no_refresh').style.display = "";
+		}
+	}
+}
+</SCRIPT>
+<!-- end CHECK FOR FLASH AND JAVA !-->
+<SCRIPT LANGUAGE=JavaScript>
+var bodyBackground = getParam( window.location, "bg" );
+if (bodyBackground!=null)
+	document.body.style.background = bodyBackground;
+
+// Handle all the the FSCommand messages in a Flash movie
+function page_DoFSCommand(command, args) {
+	jLog( "fs command: command '"+command+"' args '"+args+"'" );
+
+
+	if ( typeof(fs_handleRecording)!="undefined" )
+		if ( fs_handleRecording(command, args) )
+			return;
+
+
+	var pageObj = InternetExplorer ? window.page : window.document.page;
+	if ( command=="getPageURL" ) {
+		var lpix = args.lastIndexOf( '.' );
+		var target_mc = args.substr( 0, lpix );
+		this.target_mc = target_mc;
+		jLog( "target_mc: "+target_mc  );
+
+		window.lmscount++;
+		var page_xml_url = getPageXmlUrl();
+		if ( page_xml_url!=null ) {
+			jLog(target_mc+".pageURL="+page_xml_url);
+			pageObj.SetVariable( target_mc+".pageURL", page_xml_url );
+			var lang = getLanguageCode();
+
+			window.status = "Language: "+lang;
+			pageObj.SetVariable( target_mc+".localeName", lang );
+
+			var fsp = getParam( window.location, "floStartPage" );
+			if (fsp!=null)
+				pageObj.SetVariable( target_mc+".floStartPage", fsp );
+
+			startLMS();
+
+			var core = getLMSCore();
+			// if not aicc_url param sco is started without LMS set core to fail
+			var queryString = window.location.search;
+			queryString = (isEmpty(queryString)?"":queryString.toString());
+			if (queryString.toLowerCase().indexOf("aicc_url")==-1) {
+				core = "fail";
+			}
+
+			if (core!="fail" && core!="notready" ) {
+				pageObj.SetVariable( target_mc+".stateString", core );
+			}
+
+			jLog( "core: "+getStringPreview(core) );
+			jLog( "lmscount: "+window.lmscount );
+			if (core!="notready" || window.lmscount>120 ) {
+				try {
+					if (core=="notready" || core=="fail") {
+						getObj("cproblem").style.display = "block";
+						pageObj.SetVariable( target_mc+".stateString", "" );
+					}
+					var ms = getLMSMasteryScore();
+					if (ms!="") {
+						jLog( "masteryScore: "+ms );
+						pageObj.SetVariable( target_mc+".masteryScore", ms );
+					}
+					jLog( "prepared: true" );
+						pageObj.SetVariable( target_mc+".prepared", "true" );
+				}
+				catch( x ) {
+					jLog( "prepared: "+x.message );
+					pageObj.SetVariable( target_mc+".prepared", "true" );
+				}
+			}
+		}
+		else {
+			window.location = "about:blank";
+			alert( "Parameter 'sco' is required!" );
+		}
+	}
+	else if ( command=="showURL" ) {
+		var largs = args.toLowerCase();
+		if (largs.indexOf(".wav")!=-1 || largs.indexOf(".mp3")!=-1) {
+			mediaPlayer.FileName = args;
+		} /*else if (largs.indexOf(".avi")!=-1) {
+			showVideo( args );
+		}*/ else if (largs.indexOf(".swf")!=-1) {
+			showFlash( args );
+		} else if (largs.indexOf(".flo")!=-1) {
+			window.open( "aicc-flo.html?resize=true&sco="+encodeURI(args), "_blank", "width=560,height=480,toolbar=false" );
+		} else if (largs.indexOf(".page")!=-1) {
+			window.open( "aicc-flo.html?resize=true&sco="+encodeURI(args), "_blank", "width=560,height=480,toolbar=false" );
+		} else {
+			var w = getParam( args.toLowerCase(), "width" );
+			var h = getParam( args.toLowerCase(), "height" );
+
+			if ( w==null || h==null )
+				window.open( args, "_blank", "toolbar=false,resizable=1,scrollbars=1" );
+			else
+				window.open( args, "_blank", "width="+w+",height="+h+",toolbar=false" );
+		}
+	}
+	else if ( command=="sessionStarted" ) {
+		document.page_sessionStarted = true;
+
+		if ( typeof(document.stateTransferred)=="undefined" || document.stateTransferred!=true )
+			getObj("cproblem").style.display = "block";
+	} else if ( command=="stateAccepted" ) {
+		document.stateTransferred = true;
+	} else if ( command=="stateIgnored" ) {
+		document.stateTransferred = false;
+	}
+	else if ( command=="externalPrint" ) {
+		var time = (new Date()).getTime();
+
+		if ( typeof(window.lastPrintTime)=="undefined" || (window.lastPrintTime+1000)<time ) {
+			window.lastPrintTime = time;
+
+			window.print();
+		}
+	}
+	else if ( command=="sizeKnown" ) {
+		var ia = args.split( "," );
+		var nWidth = parseInt( ia[0] );
+		var nHeight = parseInt( ia[1] );
+
+
+		setSize( "playerbox", nWidth, nHeight );
+
+		var allow = getParam( window.location, "resize" )=="true";
+		if ( allow ) {
+			var diffW = 10;
+			var diffH = 30;
+			window.resizeTo( diffW+nWidth, diffH+nHeight );
+		}
+	}
+}
+// Hook for Internet Explorer
+if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 &&
+	  navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+
+	//document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+	//document.write('on error resume next \n');
+	//document.write('Sub page_FSCommand(ByVal command, ByVal args)\n');
+	//document.write('  call page_DoFSCommand(command, args)\n');
+	//document.write('end sub\n');
+	//document.write('</SCRIPT\> \n');
+}
+else {
+	document.write('<SCRIPT LANGUAGE=JavaScript\> \n');
+	document.write('function page_FSCommand( command, args) {\n' );
+	document.write('jLog("command "+command+" args "+args);\n' );
+	document.write('page_DoFSCommand(command, args);\n' );
+	document.write('}\n' );
+	document.write('</SCRIPT\> \n');
+}
+
+function doStop() {
+  var pageObj = InternetExplorer ? window.page : window.document.page;
+  var reswin = InternetExplorer ? result : document.result;
+  pageObj.TCallLabel( "_level0", "xstop" );
+
+  var res = pageObj.GetVariable( "_level0.result" );
+  var state = pageObj.GetVariable( "_level0.stateString" );
+  var time =  pageObj.GetVariable( "_level0.sessionTime" );
+
+  reswin.value = "rezultat: "+res+"%\nsession time: "+time+"s\nstate : "+state;
+}
+
+function getPlayerCode(id,url,w,h) {
+	if (typeof(id)=="undefined")
+		id = "page";
+	if (typeof(url)=="undefined")
+		url = "lplayer.swf";
+	if (typeof(w)=="undefined")
+		w = "100%";
+	if (typeof(h)=="undefined")
+		h = "100%";
+	var s = "";
+	s += '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"\n';
+	s += ' codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"\n';
+	s += ' ID="'+id+'" WIDTH="'+w+'" HEIGHT="'+h+'" ALIGN="" mayscript="true" scriptable="true"\>\n';
+	s += ' <PARAM NAME=movie VALUE="'+url+'"\>\n';
+	s += ' <PARAM NAME=loop VALUE=false\>\n';
+	s += ' <PARAM NAME=quality VALUE=high\>\n';
+	s += ' <PARAM NAME=bgcolor VALUE=#eFeFeF\>\n';
+	s += ' <PARAM NAME=scale VALUE=noscale\>\n';
+	s += ' <PARAM NAME=salign VALUE=LT\>\n';
+	s += ' <PARAM NAME=swLiveConnect VALUE=true\>\n';
+	s += '\t<EMBED \n';
+	s += '\tsrc="'+url+'" \n';
+	s += '\tloop=false\n';
+	s += '\tquality=high\n';
+	s += '\tbgcolor=#FFFFFF\n';
+	s += '\tWIDTH="'+w+'"\n';
+	s += '\tHEIGHT="'+h+'"\n';
+	s += '\tswLiveConnect="true" \n';
+	s += '\tID="'+id+'"\n';
+	s += '\tNAME="'+id+'"\n';
+	s += '\tsalign="LT"\n';
+	s += '\tmenu=false\n';
+	s += '\tTYPE="application/x-shockwave-flash"\n';
+	s += '\tPLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"\n';
+	s += '\t\></embed\>\n';
+	s += '</OBJECT>\n';
+	return s;
+}
+</SCRIPT>
+<div id="cproblem" style="display: none" align="right" width='100%'>
+	<img src="../common/res/cproblem.gif" align='middle'
+	/><font color=red size=-3>!!!</font>
+</div>
+
+<SCRIPT LANGUAGE=javascript FOR=page EVENT="FSCommand( command, args )">
+<!--
+	jLog("command "+command+" args "+args);
+	page_DoFSCommand(command, args)
+//-->
+</SCRIPT>
+
+
+<applet
+  codebase = "../common/aicc/"
+  code     = "pl.ydp.lms.simple2.CompoundLMS1"
+  name     = "lmsImpl"
+  width    = "0"
+  height   = "0"
+  hspace   = "0"
+  vspace   = "0"
+  align    = "top"
+  id	= "lmsImpl"
+  scriptable="true"
+  mayscript="true"
+  archive="lmsapi11a.jar"
+>
+	<param name="onload" value="appletLoadedCallback">
+	<PARAM NAME="scriptable" VALUE="true">
+	<PARAM NAME="mayscript" VALUE="true">
+
+	<PARAM NAME="cabbase" VALUE="lmsapi11a.cab">
+</applet>
+<script>
+var s = getPlayerCode("testPage","test.swf",1,1);
+document.write( s );
+</script>
+
+
+<!-- start PLAYER PLACEHOLDER -->
+<div align="center">
+<table id="playerbox" width="400" height="300" cellspacing=0 cellpadding=0>
+<tr><td id=pageBox name=pageBox></td></tr>
+</table>
+<div id="messageBox" style="display: none"><br>&nbsp;<br>&copy; Young Digital Poland</div>
+</div>
+<!-- end PLAYER PLACEHOLDER -->
+
+<!--
+// RECORDING ON
+-->
+<div style="display:none" id="recplaceholder">
+</div>
+</BODY>
+</HTML>

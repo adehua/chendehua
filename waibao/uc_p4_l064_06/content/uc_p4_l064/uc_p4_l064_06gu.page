@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page width="486" height="145" dictionary="-" startup="kropy.hide();txt.hide();close.hide();move_panel.hide()" onResourcesLoaded="PicturePlayer.executeAndWait@150(guideHeight,145)" modal="false" controlVisibility="false" binaryCheck="false" doneAfterVisit="false" backgroundFeedbacks="true" background="00ffffff">
+  <properties>
+    <property name="hidewhenloading" type="boolean" value="true"/>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="textexportversion" type="integer" value="1"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderType="single" borderColor="666666" borderThickness="1" borderLeftMargin="3" borderTopMargin="0" borderRightMargin="3" borderBottomMargin="0"/>
+  </tooltipDecoration>
+  <button name="close" x="448" y="4" width="28" height="27" src="../common/close03_icon.swf" tipId="Przycisk-1250104127" tip="close" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <ac name="txt" x="0" y="0" width="439" height="186" initiallySolved="false" mouseOpaque="false" isActive="true" includeerrorsinresult="true" containerId="" presentationTime="0" rememberBlockade="false" enableALLOKafterError="false" showAttemptedAnswers="false">
+    <resultWindows/>
+    <acfeedbacks>
+      <group condition="ALL_OK" sequence="random"/>
+      <group condition="OK" sequence="random"/>
+      <group condition="WRONG" sequence="random"/>
+      <group condition="HELP" sequence="random"/>
+    </acfeedbacks>
+    <convertResults/>
+    <text name="txt2_part_2" x="50" y="74" width="405" height="26" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" idDeselectFeedback="true" tooltipOnClick="true" translationID="txt2_part_1-705492397">&lt;p&gt;Study&amp;nbsp;the&amp;nbsp;text&amp;nbsp;to&amp;nbsp;learn&amp;nbsp;about&amp;nbsp;the&amp;nbsp;turns&amp;nbsp;ratio.&lt;/p&gt;</text>
+    <text name="txt2_part_3_part_1" x="50" y="104" width="443" height="32" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" idDeselectFeedback="true" tooltipOnClick="true" translationID="txt2_part_3_part_1-1070863071">&lt;p&gt;Solve&amp;nbsp;the&amp;nbsp;activity&amp;nbsp;by&amp;nbsp;calculating&amp;nbsp;the&amp;nbsp;missing&amp;nbsp;parameters&amp;nbsp;of&amp;nbsp;the&amp;nbsp;transformer.&lt;/p&gt;</text>
+    <text name="txt2_part_1" x="50" y="44" width="405" height="26" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" idDeselectFeedback="true" tooltipOnClick="true" translationID="txt2_part_1-478450233">&lt;p&gt;Run&amp;nbsp;the&amp;nbsp;simulation&amp;nbsp;to&amp;nbsp;learn&amp;nbsp;about&amp;nbsp;the&amp;nbsp;turns&amp;nbsp;ratio.&lt;/p&gt;</text>
+  </ac>
+  <shape name="move_panel" x="2" y="1" width="445" height="19">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <ac name="kropy" x="0" y="0" width="42" height="157" initiallySolved="false" mouseOpaque="false" isActive="true" includeerrorsinresult="true" containerId="" presentationTime="0" rememberBlockade="false" enableALLOKafterError="false" showAttemptedAnswers="false">
+    <resultWindows/>
+    <acfeedbacks>
+      <group condition="ALL_OK" sequence="random"/>
+      <group condition="OK" sequence="random"/>
+      <group condition="WRONG" sequence="random"/>
+      <group condition="HELP" sequence="random"/>
+    </acfeedbacks>
+    <convertResults/>
+    <shape name="Shape2" x="17" y="78" width="11" height="11" background="ff6584a2">
+      <moveTo x="4095.0" y="2047.0"/>
+      <cubicTo x1="4095.0" y1="3178.0" x2="3178.0" y2="4095.0" x3="2047.0" y3="4095.0"/>
+      <cubicTo x1="916.0" y1="4095.0" x2="0.0" y2="3178.0" x3="0.0" y3="2047.0"/>
+      <cubicTo x1="0.0" y1="916.0" x2="916.0" y2="0.0" x3="2047.0" y3="0.0"/>
+      <cubicTo x1="3178.0" y1="0.0" x2="4095.0" y2="916.0" x3="4095.0" y3="2047.0"/>
+    </shape>
+    <shape name="Shape1" x="17" y="108" width="11" height="11" background="ff6584a2">
+      <moveTo x="4095.0" y="2047.0"/>
+      <cubicTo x1="4095.0" y1="3178.0" x2="3178.0" y2="4095.0" x3="2047.0" y3="4095.0"/>
+      <cubicTo x1="916.0" y1="4095.0" x2="0.0" y2="3178.0" x3="0.0" y3="2047.0"/>
+      <cubicTo x1="0.0" y1="916.0" x2="916.0" y2="0.0" x3="2047.0" y3="0.0"/>
+      <cubicTo x1="3178.0" y1="0.0" x2="4095.0" y2="916.0" x3="4095.0" y3="2047.0"/>
+    </shape>
+    <shape name="Shape" x="17" y="48" width="11" height="11" background="ff6584a2">
+      <moveTo x="4095.0" y="2047.0"/>
+      <cubicTo x1="4095.0" y1="3178.0" x2="3178.0" y2="4095.0" x3="2047.0" y3="4095.0"/>
+      <cubicTo x1="916.0" y1="4095.0" x2="0.0" y2="3178.0" x3="0.0" y3="2047.0"/>
+      <cubicTo x1="0.0" y1="916.0" x2="916.0" y2="0.0" x3="2047.0" y3="0.0"/>
+      <cubicTo x1="3178.0" y1="0.0" x2="4095.0" y2="916.0" x3="4095.0" y3="2047.0"/>
+    </shape>
+  </ac>
+  <movie name="PicturePlayer" x="0" y="0" width="487" height="171" src="../common/guide_back.swf" alignment="5"/>
+</page>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page width="286" height="139" startup="_root.showURL(beep_01.mp3,false)" onResourcesLoaded="" modal="false" service="pl_ydp_cms_page_container_resultviewer_ResultDialogHandler" controlVisibility="false" binaryCheck="false" doneAfterVisit="false" backgroundFeedbacks="false" background="00ffffff">
+  <properties>
+    <property name="hidewhenloading" type="boolean" value="true"/>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="textexportversion" type="integer" value="1"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderType="single" borderColor="666666" borderThickness="1" borderLeftMargin="3" borderTopMargin="0" borderRightMargin="3" borderBottomMargin="0"/>
+  </tooltipDecoration>
+  <button name="close" x="247" y="4" width="28" height="27" src="close03_icon.swf" tipId="Przycisk-898735193" tip="close" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <ac name="txt" x="0" y="0" width="552" height="346" initiallySolved="false" mouseOpaque="false" isActive="false" includeerrorsinresult="false" containerId="" presentationTime="0" rememberBlockade="false" enableALLOKafterError="false" showAttemptedAnswers="false">
+    <resultWindows/>
+    <acfeedbacks>
+      <group condition="ALL_OK" sequence="random"/>
+      <group condition="OK" sequence="random"/>
+      <group condition="WRONG" sequence="random"/>
+      <group condition="HELP" sequence="random"/>
+    </acfeedbacks>
+    <convertResults/>
+    <text name="Tekst1" x="234" y="90" width="26" height="17" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst1-854653245">&lt;p&gt;no&lt;/p&gt;</text>
+    <text name="Tekst" x="118" y="90" width="20" height="21" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst-1757863806">&lt;p&gt;yes&lt;/p&gt;</text>
+    <text name="Text Module" x="50" y="44" width="233" height="16" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Text Module2-1637879553">&lt;p align="left"&gt;Do&amp;nbsp;you&amp;nbsp;really&amp;nbsp;want&amp;nbsp;to&amp;nbsp;reset&amp;nbsp;this&amp;nbsp;activity?&lt;/p&gt;</text>
+  </ac>
+  <shape name="player_header" x="152" y="12" width="80" height="8">
+    <gradient type="linear-horizontal" originX="0" originY="0" phase="0" length="84">
+      <node color="ffb0bdd2" pos="0"/>
+      <node color="ffffffff" pos="255"/>
+    </gradient>
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape6" x="227" y="105" width="28" height="1" background="ff9aa8bf">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape5" x="179" y="105" width="7" height="1" background="ff9aa8bf">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape4" x="62" y="105" width="7" height="1" background="ff9aa8bf">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <button name="resetbutton" x="66" y="84" width="43" height="27" src="yes_icon.swf" tipId="Przycisk-449794628" tip="yes" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <shape name="Shape3" x="110" y="105" width="34" height="1" background="ff9aa8bf">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <twoStateButton name="nobutton" x="183" y="84" width="43" height="27" src="no_icon02.swf" href="" tipId="Przycisk-1454861109" tip="no" tooltipAlignment="over">
+    <onTurnOn command="_root.closeMyPopup()"/>
+    <onTurnOff command=""/>
+  </twoStateButton>
+  <shape name="move_panel" x="2" y="1" width="243" height="19">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <movie name="PicturePlayer" x="0" y="0" width="100" height="100" src="confirm_reset_01.swf" alignment="5">
+    <progress name="ProgressBar" x="0" y="0" width="0" height="0" src="" type="progressbar" alignment="horizontal" frameColor="00000000" frameThickness="0" background="ffffffff" frameMargin="0" color="ffffffff" progressIndicator="continous" elementCount="20" elementDistance="2" elementSize="7" slider=""/>
+  </movie>
+  <shape name="Shape2" x="0" y="0" width="282" height="135" border="true" borderWidth="1" borderColor="ff003366">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape" x="0" y="0" width="37" height="135" background="fffff5d9">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shape1" x="0" y="0" width="282" height="135" border="true" borderWidth="1" borderColor="ff003366">
+    <gradient type="linear-vertical" originX="0" originY="0" phase="0" length="135">
+      <node color="ffffffff" pos="0"/>
+      <node color="fffff9ee" pos="255"/>
+    </gradient>
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <shape name="Shadow" x="4" y="4" width="282" height="135" background="32000000">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+</page>

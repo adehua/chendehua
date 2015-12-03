@@ -1,0 +1,721 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<meta http-equiv="Pragma" content="NoCache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>LEO</title>
+<script src="../common/recording/recording.js" type="text/javascript"></script>
+<script src="../common/util/languages.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+window.wasSaveState = false;
+function disableSave(){
+	window.wasSaveState = true;
+}
+function doLog( msg, showAlert ) {
+	jLog( msg );
+	if (typeof(showAlert)=="undefined")
+		showAlert = false;
+	if (showAlert)
+		alert( msg );
+}
+function setBodyMessage(msg) {
+	jLog(msg);
+	msg = "<font color='#FF0000'><b>"+msg+"<\/b><\/font>";
+	window.document.body.innerHTML = msg;
+}
+function setMessage(msg) {
+	_setMessage("messageBox2",msg);
+}
+function setTopMessage(msg) {
+	_setMessage("messageBox3",msg);
+}
+function _setMessage(id,msg) {
+	jLog("msg("+id+"): "+msg);
+	var o = getObj(id);
+	if (typeof(msg)=="undefined" || msg===null)
+		msg = "";
+	o.style.display = (msg==""?"none":"");
+	o.innerHTML = msg;
+}
+// %252F is a double encoded /
+// '=' always exists in not encoded url (at least 'sco=' is required), encoded url will contain '%3D' instead.
+var windowLocation = window.location.toString();
+if (windowLocation.indexOf('%252F') != -1 || windowLocation.indexOf('=') == -1)
+	windowLocation = unescape(windowLocation);
+
+</script>
+<script src="../common/util/video.js" type="text/javascript"></script>
+<script src="../common/util/util.js" type="text/javascript"></script>
+<script src="../common/util/write.js" type="text/javascript"></script>
+<!-- SCORM support !-->
+<script type="text/javascript">
+
+var useJava = toBool(getParam(windowLocation,"java",true));
+var useScormYdp = toBool(getParam(windowLocation,"scormydp",false));
+var showErrorMessage = toBool(getParam(windowLocation,"showerror",true));
+var useFinish = getParam(windowLocation,"finish",false);
+var useExit = getParam(windowLocation,"exit",false);
+var hgSwf = getParam(windowLocation,"hg","");
+var displayHg = (hgSwf.length > 0);
+var platform = getParam(windowLocation,"platform");
+
+var apiWrapperPath = "../common/scorm/APIWrapper";
+if (getParam(windowLocation,"api")=="13")
+	apiWrapperPath += "13";
+apiWrapperPath += ".js";
+document.write("<script src=\""+apiWrapperPath+"\" type=\"text/javascript\"\><\/script>");
+
+// platform-dependend script extensions
+if ( platform!=null ) {
+	var extScriptSrc = "../common/platform/" + platform + "/ext." + "js";
+	jLog("include script: "+extScriptSrc);
+	document.write("<script src=\""+extScriptSrc+"\" type=\"text/javascript\"\><\/script>");
+}
+</SCRIPT>
+
+
+<script type="text/javascript">
+var playerObj;
+var cachedResult;
+var cachedSessionTime;
+var cachedState;
+var cachedStatus;
+
+function prepareSCOState() {
+	playerObj = InternetExplorer ? window.page : window.document.page;
+	playerObj.TCallLabel( "_level0", "xstop" );
+}
+function getSCOResult() {
+	return (cachedResult != null) ? cachedResult : playerObj.GetVariable( "_level0.result" );
+}
+function getSCOSessionTime() {
+	return (cachedSessionTime != null) ? cachedSessionTime : playerObj.GetVariable( "_level0.sessionTime" );
+}
+function getSCOStateString() {
+	return (cachedState != null) ? cachedState : playerObj.GetVariable( "_level0.stateString" );
+}
+function getSCOObjectives() {
+	return playerObj.GetVariable( "_level0.cmiObjectivesString" );
+}
+function getSCOStatus() {
+	return (cachedStatus != null) ? cachedStatus : playerObj.GetVariable( "_level0.lessonStatus" );
+}
+function getSCOResultMax() {
+	var rv = null;
+	try {
+		rv = pageObj.GetVariable( "_level0.resultmax" );
+	} catch(e) {
+	}
+	return rv;
+}
+function getSCOMistakes() {
+	return playerObj.GetVariable( "_level0.mistakesCount" );
+}
+function getSCOHints() {
+	return playerObj.GetVariable( "_level0.hintsCount" );
+}
+function getSCOComments() {
+	return playerObj.GetVariable( "_level0.comments" );
+}
+function updateResults() {
+	jLog("updateResults");
+	var pl = InternetExplorer ? window.page : window.document.page;
+	cachedResult = pl.GetVariable( "_level0.result" );
+	cachedSessionTime = pl.GetVariable( "_level0.sessionTime" );
+	cachedStatus = pl.GetVariable( "_level0.lessonStatus" );
+	cachedState = pl.GetVariable( "_level0.stateString" );
+}
+</script>
+
+
+<script type="text/javascript">
+
+window._startLMSPending = false;
+function startLMS() {
+	try {
+		if (LMSIsInitialized()) {
+			jLog("(startLMS) is initialized");
+			window._startLMSPending = false;
+			return true;
+		} else if (window._startLMSPending) {
+			jLog("(startLMS) is pending");
+			return false;
+		} else {
+			jLog("(startLMS) is starting...");
+			window._startLMSPending = true;
+			doLMSInitialize();
+			return LMSIsInitialized();
+		}
+	} catch(e) {
+		doLog("exception "+e.message+" in startLMS",true);
+	}
+	return false;
+}
+
+function getLMSCore() {
+	if (!LMSIsInitialized())
+		return "fail";
+	var result = doLMSGetValue("cmi.suspend_data");
+	if (result===null)
+		result = "";
+	var intresult = parseInt(result);
+	if (isNaN(intresult))
+		return result;
+	if (result==_NotInitialized)
+		return "notready";
+	return "fail";
+}
+
+function saveState(saveOnly) {
+	if (typeof(saveOnly)=="undefined")
+		saveOnly = false;
+	var wasSaveState = window.wasSaveState;
+
+	saveStateImpl(saveOnly);
+
+	// check for finish action
+	if (!saveOnly && !wasSaveState && useFinish) {
+		window.wasSaveState = true;
+		switch(useFinish) {
+		case "close":
+			window.top.close();
+			window.close();
+			break;
+		case "back":
+			window.top.back();
+			break;
+		}
+	}
+}
+
+function splitOnString( src, delimiter_string ) {
+	var res = [];
+	var ix;
+	var delimiter_length = delimiter_string.length;
+	while( (ix=src.indexOf( delimiter_string ))>=0 ) {
+		res.push( src.substring(0,ix) );
+		src = src.substring( ix+delimiter_length );
+	}
+	if ( src.length>0 )
+		res.push( src );
+
+	return res;
+}
+
+function saveStateImpl(saveOnly) {
+	if (typeof(saveOnly)=="undefined")
+		saveOnly = false;
+	jLog("(saveState) started: saveOnly "+saveOnly+"");
+
+	// saveSate should be called once but on IE is called twice - from onBeforeUnload() and onUnload()
+	if (window.wasSaveState) {
+		jLog("(saveState) already called. ignore...");
+		return;
+	}
+
+	if (LMSIsInitialized()==false) {
+		jLog("(saveState) lms not initialized. ignore...");
+		return;
+	}
+	if (LMSCheckApiAlive()==false) {
+		jLog("(saveState) lms api is not alive (opener was closed?). exiting...");
+		return;
+	}
+	if ( typeof(document.stateTransferred)=="undefined" || document.stateTransferred!=true ) {
+		jLog("(saveState) state was not transfered. ignore...");
+		return;
+	}
+	if ( document.page_sessionStarted!=true ) {
+		jLog("(saveState) session was not started");
+		return;
+	}
+
+	var lesson_mode = doLMSGetMode();
+	if (lesson_mode!="browse") {
+		prepareSCOState();
+
+		// result & max result
+		var res = getSCOResult();
+		var max = null;
+		var lstatus = null;
+
+		if ( res=="none" )
+			res = 0;
+		if (res===null || res=="" || res==-1) {
+			res = -1;
+			lstatus = "completed";
+		} else {
+			max = getSCOResultMax();
+			lstatus = getSCOStatus();
+		}
+
+		// session time
+		var sessionTime =  getSCOSessionTime();
+		sessionTime = formatScormTime( Number(sessionTime) );
+		// state
+		var state = getSCOStateString();
+
+		if (useJava)
+			state = document.scormhlp.encode(state);
+		else
+			state = document.compressor.compress(state);
+
+		doLMSSetScore( res, max );
+		doLMSSetStatus( lstatus );
+		doLMSSetTime( sessionTime );
+		doLMSSetExit("");
+		doLMSSetValue("cmi.suspend_data",state);
+		jLog("(saveState) setting state");
+		if (useScormYdp) {
+			try {
+				var mistakes = getSCOMistakes();
+				var hints = getSCOHints();
+				doLMSSetValue("ydp.hints",hints);
+				doLMSSetValue("ydp.mistakes",mistakes);
+			} catch(e) {
+			}
+		}
+
+		try {
+			var objectives = getSCOObjectives();
+			var obj_array = splitOnString( objectives, "$$" );
+			var objective_ix = 0;
+			for( var n in obj_array ) {
+				var objectiveInfo = obj_array[n]
+				var objective_atoms = splitOnString( objectiveInfo, "##" );
+
+				doLMSSetValue("cmi.objectives."+objective_ix+".id",objective_atoms[0]);
+				doLMSSetValue("cmi.objectives."+objective_ix+".score.raw",objective_atoms[1]);
+				doLMSSetValue("cmi.objectives."+objective_ix+".score.min",objective_atoms[2]);
+				doLMSSetValue("cmi.objectives."+objective_ix+".score.max",objective_atoms[3]);
+				doLMSSetValue("cmi.objectives."+objective_ix+".status",objective_atoms[4]);
+				++objective_ix;
+			}
+		} catch(e) {
+		}
+
+		// comments
+		try {
+			var comments = getSCOComments();
+			doLMSSetComments(comments);
+		} catch(e) {
+		}
+	} else {
+		jLog("(saveState) mode is 'browse' so state will not be saved");
+	}
+	doLMSCommit();
+	if (saveOnly) {
+		jLog("(saveState) saveOnly LMSFinish() is not called, only LMSCommit");
+		return;
+	}
+	jLog("(saveState) LMSFinish...");
+	doLMSFinish();
+	window.wasSaveState = true;
+}
+function isLmsActive() {
+	return window.parent!=null || (window.opener!=null && typeof(window.opener)!="undefined");
+}
+
+</script>
+
+<script type="text/javascript">
+
+function doBeforePrint() {
+	document.all.messageBox.style.display = "inline";
+}
+
+function doAfterPrint() {
+	document.all.messageBox.style.display = "none";
+}
+
+initLanguages();
+window.lmscount = 0;
+window.maxlmscount = 10;
+
+
+</script>
+</HEAD>
+<BODY style="margin-top:0; margin-left:0; margin-bottom:0; margin-right:0;"
+	onBeforeUnload="saveState();"
+	onUnload="saveState();"
+	onLoad="onLoaded();"
+	>
+<div id="messageBox3" style="display:none;color:red;font-weight:bold;text-align:center;"></div>
+<SCRIPT type="text/javascript">
+// set BODY event from javascript to comply with validator.w3.org
+document.body.onbeforeunload = "saveState()";
+document.body.onbeforeprint = "doBeforePrint()";
+document.body.onafterprint = "doAfterPrint()";
+// insert html helper aplet from javascript to comply with validator.w3.org (problem with mayscript and scriptable)
+var html = '';
+if (useJava!=false) {
+	html += '<applet';
+	html += '  codebase = "../common/scorm/"';
+	html += '  archive  = "scormhlp.jar"';
+	html += '  code     = "pl.ydp.cms.scorm.ScormHelperApplet"';
+	html += '  name     = "scormhlp"';
+	html += '  id       = "scormhlp"';
+	html += '  width    = "0"';
+	html += '  height   = "0"';
+	html += '  hspace   = "0"';
+	html += '  vspace   = "0"';
+	html += '  align    = "top"';
+	html += '  scriptable="true"';
+	html += '  mayscript="true"';
+	html += '>';
+	html += '	<PARAM NAME="scriptable" VALUE="true">';
+	html += '	<PARAM NAME="mayscript" VALUE="true">';
+	html += '<\/applet>';
+	docWrite( html );
+}
+</SCRIPT>
+<SCRIPT type="text/javascript">
+document.page_sessionStarted = false;
+
+function initObjectives(pageObj) {
+	try {
+		var _count = doLMSGetValue("cmi.objectives._count");
+		if (_count===null)
+			return;
+		var _count = parseInt(_count);
+
+		var objectiveString = "";
+		for( var objective_ix=0; objective_ix<_count; ++objective_ix ) {
+			objectiveString += doLMSGetValue("cmi.objectives."+objective_ix+".id")+"##";
+			objectiveString += doLMSGetValue("cmi.objectives."+objective_ix+".score.raw")+"##";
+			objectiveString += doLMSGetValue("cmi.objectives."+objective_ix+".score.min")+"##";
+			objectiveString += doLMSGetValue("cmi.objectives."+objective_ix+".score.max")+"##";
+			objectiveString += doLMSGetValue("cmi.objectives."+objective_ix+".status");
+			if ( objective_ix<_count-1 )
+				objectiveString += "$$"
+		}
+
+		var objectives = pageObj.SetVariable( "_level0.cmiObjectivesString", objectiveString );
+	} catch( e ) {
+	}
+}
+
+// Handle all the the FSCommand messages in a Flash movie
+function page_DoFSCommand(command, args) {
+	//doLog( "page_DoFSCommand '"+command+"' args "+args );
+
+	try {
+	if ( fs_handleRecording(command, args) )
+		return;
+	} catch(e) {
+	}
+
+	var pageObj = InternetExplorer ? window.page : window.document.page;
+	if ( command=="getPageURL" ) {
+		if (displayHg)
+			showMask();
+		window.lmscount++;
+		var page_xml_url = getPageXmlUrl();
+		if ( page_xml_url!=null ) {
+			var lang = getLanguageCode();
+
+			startLMS();
+
+			var core = String(getLMSCore());
+			doLog( "getLMSCore lmscount "+window.lmscount+" returns '"+core+"'" );
+
+			var lmscountState = (window.lmscount<window.maxlmscount?(window.lmscount+1<window.maxlmscount?-1:0):1);
+			if ((core!="fail" && core!="notready") || lmscountState>0) {
+				// status
+				if (core!="fail" && core!="notready") {
+					doLog( "decoding and setting state" );
+					if (useJava) {
+						try {
+							var _core = document.scormhlp.decode(core);
+							if (core.length>0)
+								core = _core;
+						} catch(x) {
+							if (lmscountState==0)
+								setTopMessage('Required Java is not installed');
+							return;
+						}
+					} else
+						core = document.compressor.decompress(core);
+
+					pageObj.SetVariable( "_level0.stateString", ""+core );
+
+					initObjectives( pageObj );
+				} else { //lmscount
+					if (isLmsActive() && showErrorMessage)
+						setMessage( "Cannot find SCORM API (try count "+(window.lmscount+1)+")" );
+				}
+				// page url
+				doLog( "initialize '"+args+"' to '"+page_xml_url+"'" );
+				pageObj.SetVariable( args, page_xml_url );
+				// language
+				window.status = "Language: "+lang;
+				doLog( "initialize '_level0.localeName' to '"+lang+"'" );
+				pageObj.SetVariable( "_level0.localeName", lang );
+				// mastery score
+				var mastery = doLMSGetMasteryScore();
+				if (mastery!="") {
+					doLog( "initialize '_level0.masteryScore' to '"+mastery+"'" );
+					pageObj.SetVariable( "_level0.masteryScore", mastery );
+				}
+				// comments
+				// try/catch block is needed if _level0.comments doesn't exists
+				try {
+					var comments = doLMSGetComments();
+					if (comments!="")
+						pageObj.SetVariable( "_level0.comments", ""+comments );
+				} catch(x) {
+				}
+				// prepared
+				doLog( "initialize '_level0.prepared' to 'true'" );
+				pageObj.SetVariable( "_level0.prepared", "true" );
+			}
+
+
+		}
+		else {
+			if ( showErrorMessage ) {
+				var msg = "Parameter 'sco' is required!";
+				setMessage(msg);
+			}
+		}
+	} else if ( command=="stateAccepted" ) {
+		document.stateTransferred = true;
+		doLog("stateAccepted");
+	} else if ( command=="stateIgnored" ) {
+		document.stateTransferred = false;
+		doLog("stateIgnored");
+	} else if ( command=="saveState" ) {
+		saveState(args==true || args=="true");
+	} else if ( command=="updateResults" ) {
+		updateResults();
+	} else if ( command=="showURL" ) {
+		var largs = args.toLowerCase();
+		if (largs.indexOf(".wav")!=-1 || largs.indexOf(".mp3")!=-1) {
+			mediaPlayer.FileName = args;
+		} /*else if (largs.indexOf(".avi")!=-1) {
+			showVideo( args );
+		}*/ else if (largs.indexOf(".swf")!=-1) {
+			showFlash( args );
+		} else if (largs.indexOf(".flo")!=-1) {
+			window.open( "aicc-page.html?resize=true&sco="+encodeURI(args), "_blank", "width=560,height=480,toolbar=false" );
+		} else if (largs.indexOf(".page")!=-1) {
+			window.open( "aicc-page.html?resize=true&sco="+encodeURI(args), "_blank", "width=560,height=480,toolbar=false" );
+		} else {
+			var w = getParam( args.toLowerCase(), "width" );
+			var h = getParam( args.toLowerCase(), "height" );
+
+			if ( w==null || h==null )
+				window.open( args, "_blank", "toolbar=false,resizable=1,scrollbars=1" );
+			else
+				window.open( args, "_blank", "width="+w+",height="+h+",toolbar=false" );
+		}
+	}
+	else if ( command=="externalPrint" ) {
+		var time = (new Date()).getTime();
+
+		if ( typeof(window.lastPrintTime)=="undefined" || (window.lastPrintTime+1000)<time ) {
+			window.lastPrintTime = time;
+
+			window.print();
+		}
+	}
+	else if ( command=="sizeKnown" ) {
+		var ia = args.split( "," );
+		var nWidth = parseInt( ia[0] );
+		var nHeight = parseInt( ia[1] );
+
+		setSize( "page", nWidth, nHeight );
+		setSize( "playerbox", nWidth, nHeight );
+
+		var allow = getParam( windowLocation, "resize" )=="true";
+		if ( allow ) {
+			var diffW = 10;
+			var diffH = 30;
+			window.resizeTo( diffW+nWidth, diffH+nHeight );
+		}
+	} else if ( command=="sessionStarted" ) {
+		jLog( "sessionStarted..." );
+		document.page_sessionStarted = true;
+
+		if ( displayHg )
+			hideHourglass();
+		if ( platform=="plus" )
+			usageTracking();
+	} else if ( command=="scormSetValue" ) {
+		var separatorPos = args.indexOf("=");
+		if (separatorPos != -1) {
+			var variableName = args.substring(0, separatorPos);
+			var variableValue = args.substring(separatorPos+1);
+			jLog( "scormSetValue: " + variableName + " = " + variableValue );
+			doLMSSetValue(variableName, variableValue);
+		}
+	} else if ( command=="scormCommit" ) {
+			jLog( "scormCommit" );
+			doLMSCommit();
+	} else if ( command=="scormGetValue" ) {
+		var variableValue = doLMSGetValue(args);
+		jLog( "scormGetValue: " + args + " => " +  variableValue);
+		pageObj.SetVariable( "_level0.scormVariable", variableValue );
+	}
+}
+
+var playerHeight = null;
+var savedHgMaskDisplayStyle;
+var hgMaskHidden = false;
+
+function hideHourglass() {
+	var hgObj = document.getElementById("hg");
+	hgObj.style.display = "none";
+	var hgMaskObj = document.getElementById("hgMask");
+	hgMaskObj.style.display = "none";
+}
+function relocateHourglass() {
+	var hgObj = document.getElementById("hg");
+	var hgMaskObj = document.getElementById("hgMask");
+	var maskW = hgMaskObj.offsetWidth;
+	var maskH = hgMaskObj.offsetHeight;
+	var hgW = hgObj.offsetWidth;
+	var hgH = hgObj.offsetHeight;
+	var referenceHeight = (playerHeight == null) ? maskH : playerHeight;
+	var x = (maskW - hgW)/2;
+	var y = (referenceHeight - hgH)/2;
+	hgObj.style.left = x + "px";
+	hgObj.style.top = y + "px";
+}
+function hideMask() {
+	var hgMaskObj = document.getElementById("hgMask");
+	savedHgMaskDisplayStyle = hgMaskObj.style.display;
+	hgMaskObj.style.display = "none";
+	hgMaskHidden = true;
+}
+function showMask() {
+	if (hgMaskHidden) {
+		hgMaskHidden = false;
+		var hgMaskObj = document.getElementById("hgMask");
+		hgMaskObj.style.display = savedHgMaskDisplayStyle;
+	}
+}
+function onLoaded() {
+	if (displayHg) {
+		relocateHourglass();
+		hideMask();
+	}
+}
+
+// Hook for Internet Explorer
+if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 &&
+	  navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+	  html = '';
+	  html += '<SCRIPT type="text/javascript" LANGUAGE=javascript FOR=page EVENT="FSCommand( command, args )">\n';
+	  html += '	page_DoFSCommand(command, args)\n';
+	  html += '<\/SCRIPT>\n';
+	  docWrite(html);
+} else {
+	  html = '';
+	  html += '<SCRIPT type="text/javascript" LANGUAGE=JavaScript\> \n';
+	  html += 'function page_FSCommand( command, args) {\n';
+	  html += '  page_DoFSCommand(command, args)\n';
+	  html += '}\n';
+	  html += '<\/SCRIPT> \n';
+	  docWrite(html);
+}
+
+</SCRIPT>
+<!-- start PLAYER PLACEHOLDER -->
+<SCRIPT type="text/javascript">
+if ( platform=="plus" )
+	docWrite('<div align="center" style="width: 100%; top: 0pt; position:absolute;">');
+else
+	docWrite('<div align="center">');
+
+// add exit button/link if needed
+if (useExit) {
+	if (useExit=="true")
+		useExit = "Save&amp;Exit";
+	docWrite("<a href='#' onclick='saveState();if (!useFinish) alert(\"Finished\");return false;'>"+useExit+"</a>");
+}
+
+// use background value
+var bodyBackground = setBackground();
+var w = getParam(windowLocation,"width",1024);
+var h = getParam(windowLocation,"height",768);
+var align = getParam(windowLocation,"align","center");
+var flashvars = getParam(windowLocation,"flashvars","");
+
+playerHeight = h;
+
+// hourglass flash object - initial dimensions and offset (recalculated in onLoaded() function)
+var hgWidth = parseInt(getParam(windowLocation,"hgw",550));
+var hgHeight = parseInt(getParam(windowLocation,"hgh",400));
+var hgDir = "../common/hg/";
+var hgLeft = (w - hgWidth)/2;
+var hgTop = (h - hgHeight)/2;
+
+// enable immediate lesson state updates
+var useISS = toBool(getParam(windowLocation,"iss",false));
+if (useISS)
+	flashvars = "useUpdateResults=true" + (flashvars.length>0 ? ("&"+flashvars) : "");
+
+// enable player zooming
+var enableZoom = toBool(getParam(windowLocation,"zoom",false));
+if (enableZoom)
+	flashvars = "enableZoom=true" + (flashvars.length>0 ? ("&"+flashvars) : "");
+
+// enable SCORM interactions
+var enableSCI = toBool(getParam(windowLocation,"sci",false));
+if (enableSCI)
+{
+	flashvars = "enableInteractions=true" + (flashvars.length>0 ? ("&"+flashvars) : "");
+	if (getParam(windowLocation,"api")=="13")
+		flashvars = "scorm2004=true" + (flashvars.length>0 ? ("&"+flashvars) : "");
+	if (toBool(getParam(windowLocation,"sciJournaling",false)))
+		flashvars = "sciJournaling=true" + (flashvars.length>0 ? ("&"+flashvars) : "");
+}
+jLog("FlashVars: " + flashvars);
+
+var html = '';
+html += '<table align="'+align+'" id="playerbox" name="playerbox" width="'+w+'" height="'+h+'" cellspacing=0 cellpadding=0>';
+html += '<tr><td id=pageBox name=pageBox style="position:relative">';
+
+html += '<div id="playerDiv" name="playerDiv" style="position:relative; left:0px; top:0px; z-index:1">';
+html += getFlashHtml( getParam( windowLocation, "playerHref", "lplayer.swf" ), {
+	width: "100%",
+	height: h,
+	bgcolor: bodyBackground,
+	wmode: getParam(windowLocation,"wmode","window"),
+	flashvars: "COMPACT_STATE=true" + (flashvars.length>0?("&"+flashvars):""),
+	scale: (enableZoom ? "showall" : "noscale")
+	} );
+html += '<\/div>';
+
+if (displayHg) {
+	html += '<div id="hgMask" name="hgMask" style="position:absolute; left:0px; top:0px; width:100%; height:100%; background-color:white; z-index:2">';
+	html += '<\/div>';
+	html += '<div id="hg" name="hg" style="position:absolute; left:' + hgLeft + 'px; top:' + hgTop + 'px; z-index:3">';
+	html += getFlashHtml( hgDir+hgSwf, {
+		width: hgWidth,
+		height: hgHeight,
+		wmode: "window",
+		id: "hourglassAnimation"
+		} );
+	html += '<\/div>';
+}
+
+html += '<\/td><\/tr>';
+html += '<\/table>';
+html += getFlashHtml( "../common/scorm/flashCompressor.swf", {width:1,height:1,id:"compressor"} );
+docWrite(html);
+
+docWrite('<div id="messageBox2" style="display:none;color:red"><\/div>');
+docWrite('<div id="messageBox" style="display:none"><br>&nbsp;<br>&copy; Young Digital Planet<\/div>');
+docWrite('<\/div>');
+</SCRIPT>
+<!-- end PLAYER PLACEHOLDER -->
+
+<div style="display:none" id="recplaceholder">
+</div>
+
+</BODY>
+</HTML>

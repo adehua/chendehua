@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Indium is a soft, malleable and ductile metal. </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">It is very soft and easily abraded on hard surfaces. Polished indium stays untarnished, because the element is resistant to corrosion. Indium reacts with oxygen when heated to form indium(III) oxide -</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">I</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">n</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">.  Indium reacts also with the halogens, sulphur, selenium, phosphorus and nitrogen. Dissolves in acids but does not react with alkalis. Indium was discovered by two German chemists: Theodor Richter and Ferdinand Reich in 1863. The name is derived from the Latin </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">indicum</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">, meaning ”indigo”, because the metal's spectrum shows a prominent indigo blue line.</text>
+   </par>
+</scrollbox>

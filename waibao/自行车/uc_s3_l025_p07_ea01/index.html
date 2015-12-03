@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="libs/jquery-1.10.2.min.js"></script>
+    <!-- <script type="text/javascript" src="libs/velocity.min.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/underscore-min.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/RequestAnimationFrame.js"></script> -->
+    <!-- <script type="text/javascript" src="libs/presentation-template.js"></script> -->
+    <script type="text/javascript" src="libs/interactive-activity.js"></script>
+    <script type="text/javascript" src="libs/image-animation.js"></script>
+    <script type="text/javascript" src="libs/bg-animation.js"></script>
+  </head>
+  <body>
+  <div class="ia-container">
+
+    <svg id="anim-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 630 300">
+        <image id="bg0" x="0" y="0" width="630" height="700" xlink:href="images/bg.png" />
+        <image id="bg1" x="0" y="-700" width="630" height="700" xlink:href="images/bg.png" />
+    </svg>
+
+    <div id="biker">
+      <svg id="anim-bike" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 74 152">
+        <image id="bike" x="-2" y="-2" width="800" height="480" xlink:href="images/biker.png" />
+      </svg>
+    </div>
+
+    <svg id="interactive-layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 630 300">
+      <defs>
+        <radialGradient id="a" cx="50%" cy="30%" r="80%" fx="50%" fy="-30%">
+          <stop offset="30%" stop-color="#FFFFFF" />
+          <stop offset="100%" stop-color="#8DABBC"/>
+        </radialGradient>
+        <g id="c">
+          <path fill="url(#a)" d="M126.95 15v-.15q-.002-.053 0-.1-.013-.092-.05-.2 0-.092-.05-.2-.102-.615-.5-1.2l-.2-.3-.05-.1q-.354-.45-.85-.9L111 6.3q-.403-.076-.85-.2-.218-.024-.45-.1-.2-.007-.4-.05-.187-.036-.4-.1-.193-.007-.4-.05Q90.35 2 64.45 2 38.85 2 20.4 5.8 2.25 9.6 2.25 15v.1q.002.05 0 .1.026.363.1.7.743 2.404 5.15 4.45.848.378 1.8.75.99.378 2.1.75 1.357.434 2.85.85 2.778.753 6.15 1.45Q38.85 28 64.45 28q25.9 0 44.05-3.85 15.063-3.062 17.8-7.25.198-.233.3-.5l.2-.5q.053-.09.05-.2.1-.336.1-.7z"/>
+          <path fill-opacity=".247" d="M126.85 14.35h.05q-.136-.614-.55-1.2.398.585.5 1.2z"/>
+          <path fill-opacity=".498" d="M126.9 14.55q.037.108.05.2-.016-.197-.05-.4h-.05q.05.108.05.2z"/>
+        </g>
+        <path id="d" stroke="#6C85AC" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M126.95 14.75q-.002.047 0 .1V15q0 .364-.075.725-.022.086-.05.175l-.2.5q-.127.267-.3.525-2.763 4.163-17.825 7.225Q90.35 28 64.45 28q-25.6 0-44.05-3.85-3.372-.697-6.125-1.45-1.518-.416-2.85-.85-1.134-.372-2.125-.75-.952-.372-1.775-.75-4.432-2.046-5.15-4.425-.1-.362-.125-.725.002-.05 0-.1V15q0-5.4 18.15-9.2Q38.85 2 64.45 2q25.9 0 44.05 3.8.207.043.425.075.188.04.375.075.2.043.4.075.232.05.45.1.447.1.875.2l14.225 5.55q.496.424.85.875m.075.125l.2.275q.39.586.525 1.2.034.203.05.4l-.025-.175-.05-.225q-.127-.615-.5-1.2"/>
+      </defs>
+      <g id="continue_btn">
+        <use xlink:href="#c"/>
+        <use xlink:href="#d"/>
+        <text writing-mode="lr">
+          <tspan x="28" y="20" baseline-shift="0%" kerning="0" font-family="Arial" font-weight="bold" font-size="14" fill="#014689">CONTINUE</tspan>
+        </text>
+      </g>
+    </svg>
+
+  </div>
+  </body>
+</html>

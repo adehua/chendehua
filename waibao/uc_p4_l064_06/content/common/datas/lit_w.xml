@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="windows-1250"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.7 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Due to its high reactivity, lithium occurs naturally only in the combined state - as chemical compounds, usually in association with sodium and potassium minerals. The lithium present in minerals constitutes only </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2 · </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">10</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">-3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">% of the Earth's crust by weight. It ranks 31st in abundance on the Earth. </text>
+   </par>
+</scrollbox>

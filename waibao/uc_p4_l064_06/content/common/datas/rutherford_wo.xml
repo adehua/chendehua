@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Rutherfordium is a synthetic, radioactive metal. It was first produced in 1964 by the Russian researchers directed by G.N. Flerov, by the bombardment of plutonium-242 with neon-22 ions. In 1969 the  American team of researchers led by Albert Ghiorso reported a successful preparation of this element. They obtained it by bombarding californiium-239 with a mixture of carbon-12 and carbon-13 ions. The most stable rutherfordium isotope is </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">261</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Rf, whose half-life is found to be 65 seconds. The element was named in honour of the physicist Ernest Rutherford.</text>
+   </par>
+</scrollbox>

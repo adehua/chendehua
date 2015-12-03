@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="windows-1250"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.7 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial CE" fh="15" fc="16777215" fa="1" charset="238">Helium is the second most abundant element in the universe, after hydrogen, constituting about 25% of the mass of the universe (28% of the sun). Helium content in the Earth's crust is found to be 8 · </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">10</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">-7</text>
+      </subsup>
+      <text fn="Arial CE" fh="15" fc="16777215" fa="1" charset="238">%, and the element ranks 71st in abundance. Trace amounts of helium are present in the upper part of the atmosphere. Helium is a product of the radioactive decay of elements found in rocks.</text>
+   </par>
+</scrollbox>

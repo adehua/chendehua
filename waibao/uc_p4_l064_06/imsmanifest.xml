@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<manifest identifier="YDP-73129d51cb5204350" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd" version="1.2">
+   <metadata>
+      <schema>ADL SCORM</schema>
+      <schemaversion>1.2</schemaversion>
+      <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+         <general>
+            <title>
+               <langstring>Physics - Lower Secondary</langstring>
+            </title>
+            <description>
+               <langstring>Physics - Lower Secondary :: XII. Alternating current :: 63. Transformer</langstring>
+            </description>
+         </general>
+      </lom>
+   </metadata>
+   <organizations default="toc0">
+      <organization identifier="toc0">
+         <title>Physics - Lower Secondary</title>
+         <item identifier="I_sco_a195_004" identifierref="sco_a195_004">
+            <title>Turns ratio</title>
+         </item>
+      </organization>
+   </organizations>
+   <resources>
+      <resource identifier="sco_a195_004" type="webcontent" adlcp:scormtype="sco" href="proxy/scorm/uc_p4_l064_06.html">
+         <file href="content/uc_p4_l064_06.flo" />
+         <file href="proxy/scorm/uc_p4_l064_06.html" />
+      </resource>
+   </resources>
+</manifest>

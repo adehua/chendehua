@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid red;margin:auto;display:block;">
+</canvas>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	canvas.width = 1027;
+	canvas.height = 768;
+	var context = canvas.getContext("2d");
+	//笔画
+	// context.beginPath();
+	// context.moveTo(100,100);
+	// context.lineTo(700,700);
+	// context.lineTo(400,700);
+	// context.lineTo(100,100);
+	// context.lineWidth = 5;
+	// context.strokeStyle = "red";
+	// context.stroke();	//笔画
+	// context.fillStyle = "rgb(2,100,30)";
+	// context.fill();
+	// context.lineWidth = 5;
+	// context.strokeStyle = "red";
+	// context.stroke();	//笔画
+	// context.closePath();
+	// context.beginPath();
+	// context.moveTo(800,100);
+	// context.lineTo(700,700);
+	// context.lineTo(400,700);
+	// context.strokeStyle = "yellow";
+	// context.lineTo(300,300);
+	// context.stroke();	//笔画
+	// context.closePath();
+	context.beginPath();
+	context.arc(300,300,200,1.5*Math.PI,0.5*Math.PI,true);
+	context.lineWidth = 5;
+	context.strokeStyle = "red";
+	// context.fillStyle = "rgb(2,100,30)";
+	// context.fill();
+	context.stroke();
+	context.closePath();
+</script>
+</body>
+</html>

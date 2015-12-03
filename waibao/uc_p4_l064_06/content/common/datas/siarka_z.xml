@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Sulphur has a variety of applications. It is used in the production of sulphuric(VI) acid – </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">H</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">S</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">4</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> – </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">and carbon disulphide </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> – C</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">S</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">. It is utilised in the vulcanisation of rubber and in the manufacture of matches, fireworks and gunpowder. Sulphur compounds are applied in medicine in the treatment of skin conditions, and in agriculture as pesticides. Sulphur is also used in the production of pigments and dyes.</text>
+   </par>
+</scrollbox>

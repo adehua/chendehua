@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Silver is a white, lustrous metal. It exhibits good malleability and ductility and is easily rolled into very thin sheets. It is the best conductor of heat and electricity of all the metals. Silver is unaffected by oxygen, but is oxidised by ozone – </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">. It also reacts with hydrogen sulphide </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">– </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">H</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">S - to form silver sulphide – A</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">g</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">S. </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Molten silver has the ability to dissolve oxygen, which is then rapidly liberated when the metal is cooled. Silver was known in ancient times. The alchemists attributed silver with the symbol of the moon.</text>
+   </par>
+</scrollbox>

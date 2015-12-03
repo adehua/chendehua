@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page width="246" height="300" startup="markcorrectbutton.hide();showerrorsbutton.hide();showanswersbutton.hide();resetbutton.hide();resetwrongbutton.hide();mistakescount.hide();markErrorsCount.hide();showAnswersCount.hide();resetWrongCount.hide();markCorrectCount.hide();resetCount.hide();done.hide();errors.hide();result.hide();todo.hide();close.hide()" modal="false" service="pl_ydp_cms_page_container_resultviewer_ResultDialogHandler" controlVisibility="false" binaryCheck="false" doneAfterVisit="false" backgroundFeedbacks="false">
+  <properties>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="textexportversion" type="integer" value="0"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderType="single" borderColor="666666" borderThickness="1" borderLeftMargin="3" borderTopMargin="0" borderRightMargin="3" borderBottomMargin="0"/>
+  </tooltipDecoration>
+  <text name="markErrorsCount" x="393" y="140" width="45" height="19" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-1622591863">&lt;p&gt;&lt;font color="#ffffff"&gt;%d&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="showAnswersCount" x="393" y="175" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-510783189">&lt;p&gt;&lt;font color="#ffffff"&gt;%d&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="resetWrongCount" x="393" y="210" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-1405181082">&lt;p&gt;&lt;font color="#ffffff"&gt;%d&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="markCorrectCount" x="393" y="105" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-1078490651">&lt;p&gt;&lt;font color="#ffffff"&gt;%d&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="resetCount" x="393" y="243" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-1880034070">&lt;p&gt;&lt;font color="#ffffff"&gt;%d&lt;/font&gt;&lt;/p&gt;</text>
+  <button name="close" x="204" y="4" width="28" height="27" src="close03_icon.swf" tipId="Przycisk-1770492843" tip="close" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <button name="resetbutton" x="326" y="240" width="25" height="25" src="res_act.swf" tipId="Przycisk-1669962089" tip="" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <shape name="move_panel" x="0" y="0" width="200" height="27" keepRatio="true">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <button name="resetwrongbutton" x="326" y="205" width="25" height="25" src="rem_err.swf" tipId="Przycisk-1149347773" tip="" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <twoStateButton name="showanswersbutton" x="326" y="171" width="25" height="25" src="s_ans.swf" tipId="Przycisk-1176346445" tip="" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </twoStateButton>
+  <twoStateButton name="showerrorsbutton" x="326" y="135" width="25" height="25" src="m_err.swf" tipId="Przycisk-1094640193" tip="" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </twoStateButton>
+  <twoStateButton name="markcorrectbutton" x="326" y="101" width="25" height="25" src="m_cor.swf" tipId="Przycisk-1916604370" tip="" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </twoStateButton>
+  <text name="done" x="162" y="140" width="45" height="19" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-782581847">&lt;p&gt;&lt;font color="#003366"&gt;&lt;b&gt;%d&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="errors" x="162" y="175" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-782581847">&lt;p&gt;&lt;font color="#003366"&gt;&lt;b&gt;%d&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="result" x="162" y="210" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-782581847">&lt;p&gt;&lt;font color="#003366"&gt;&lt;b&gt;%d&amp;nbsp;%&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="todo" x="162" y="105" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-782581847">&lt;p&gt;&lt;font color="#003366"&gt;&lt;b&gt;%d&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;</text>
+  <text name="mistakescount" x="162" y="243" width="45" height="20" autoCorrect="false" moduleEditable="false" idMode="frame" gapFrameSize="1" letterMode="false" ignoreEditableDnD="false" draggableSizeFromSL="false" tooltipOnClick="true" translationID="Tekst2-1236001921">&lt;p&gt;&lt;font color="#990000"&gt;&lt;b&gt;%d&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;</text>
+  <movie name="PicturePlayer" x="0" y="0" width="100" height="100" src="raport0_100.swf" alignment="5">
+    <progress name="ProgressBar" x="52" y="143" width="0" height="0" src="" type="progressbar" alignment="horizontal" frameColor="ffffffff" frameThickness="0" background="ffb0bdd2" frameMargin="0" color="ff003366" progressIndicator="continous" elementCount="20" elementDistance="2" elementSize="7" slider=""/>
+  </movie>
+</page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<![CDATA[
+
+PL
+
+Informacje dla playera scorm. Gdy ten plik instnieje w katalogu player'a i 
+zawiera URL bazowy dla materiału, to zostanie on użyty zamiast URL'a bazowego
+swf'a playera.
+Nazwa tego pliku powinna zostać zmieniona na playerinfo.xml.
+
+
+EN
+
+This file allows to workaround problem with cross domain security for SCORM packages (2 servers: content server (www.server1.com) and lms server (www.server2.com))
+
+1. Export SCORM package as usual
+
+2. Place exported SCORM package at content server at example url  http://www.server1.com/course1/
+
+3. Copy this file (playerinfo.xml.example) to file playerinfo.xml and edit <contentBase> attribute 'src' to point the folder of lplayer.swf which is http://www.server1.com/course1/runtime/rtleo/
+
+4. In the root of content server create file crossdomain.xml (so it should be at http://www.server1.com/crossdomain.xml) and edit it to the following form:
+
+<?xml version="1.0"?>
+<cross-domain-policy>
+  <allow-access-from domain="www.server2.com" />
+</cross-domain-policy>
+
+5. Send course package WITHOUT 'content' folder but including file 'runtime/rtleo/playerinfo.xml' to the owner of lms server (www.server2.com) in order to register course
+
+
+]]>-->
+<player>
+	<contentBase src='http://www.server1.com/course1/runtime/rtleo/' />
+</player>

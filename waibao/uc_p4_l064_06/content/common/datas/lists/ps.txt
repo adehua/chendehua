@@ -1,0 +1,111 @@
+﻿H*0*Hydrogen#Hydrogenium#Hydrogen#1#1.00794#30#I#0.00008988#-253#-259#3#3#wodor_i.XML#wodor_wo.XML#wodor_w.XML#wodor_o.XML#wodor_z.XML
+He*1*Helium#Helium#Helium#2#4.002602#31#0#0.0001785#-269#-272#3#3#hel_i.XML#hel_wo.XML#hel_w.XML#hel_o.XML#hel_z.XML
+Li*2*Lithium#Lithium#Lithium#3#6.941#152#I#0.535#1342#181#2#1#lit_i.XML#lit_wo.XML#lit_w.XML#lit_o.XML#lit_z.XML
+Be*3*Beryllium#Beryllium#Beryllium#4#9.01218#112#II#1.848#2971#1287#2#1#beryl_i.XML#beryl_wo.XML#beryl_w.XML#beryl_o.XML#beryl_z.XML
+B*4*Boron#Borum#Boron#5#10.811#85#III#2.460#3900#2079#2#2#bor_i.XML#bor_wo.XML#bor_w.XML#bor_o.XML#bor_z.XML
+C*5*Carbon#Carboneum#Carbon#6#12.0107#77#II,IV#2.267#4827#3550#2#3#wegiel_i.XML#wegiel_wo.XML#wegiel_w.XML#wegiel_o.XML#wegiel_z.XML
+N*6*Nitrogen#Nitrogenium#Nitrogen#7#14.0067#70#I,II,III,IV,V#0.0012506#-196#-210#3#3#azot_i.XML#azot_wo.XML#azot_w.XML#azot_o.XML#azot_z.XML
+O*7*Oxygen#Oxygenium#Oxygen#8#15.9994#66#II#0.001429#-183#-218#3#3#tlen_i.XML#tlen_wo.XML#tlen_w.XML#tlen_o.XML#tlen_z.XML
+F*8*Fluorine#Fluorum#Fluorine#9#18.9984032#64#I#0.001696#-188#-220#3#3#fluor_i.XML#fluor_wo.XML#fluor_w.XML#fluor_o.XML#fluor_z.XML
+Ne*9*Neon#Neon#Neon#10#20.1797#71#0#0.0008999#-246#-249#3#3#neon_i.XML#neon_wo.XML#neon_w.XML#neon_o.XML#neon_z.XML
+Na*10*Sodium#Natrium#Sodium#11#22.989770#186#I#0.968#883#98#2#1#sod_i.XML#sod_wo.XML#sod_w.XML#sod_o.XML#sod_z.XML
+Mg*11*Magnesium#Magnesium#Magnesium#12#24.3050#160#II#1.738#1105#650#2#1#magnez_i.XML#magnez_wo.XML#magnez_w.XML#magnez_o.XML#magnez_z.XML
+Al*12*Aluminium#Aluminium#Aluminium#13#26.981538#143#III#2.6989#2519#660#2#1#glin_i.XML#glin_wo.XML#glin_w.XML#glin_o.XML#glin_z.XML
+Si*13*Silicon#Silicium#Silicon#14#28.0855#118#II,IV#2.330#3280#1410#2#2#krzem_i.XML#krzem_wo.XML#krzem_w.XML#krzem_o.XML#krzem_z.XML
+P*14*Phosphorus#Phosphorus#Phosphorus#15#30.973761#110#III,V#1.823#280#44#2#3#fosfor_i.XML#fosfor_wo.XML#fosfor_w.XML#fosfor_o.XML#fosfor_z.XML
+S*15*Sulphur#Sulfur#Sulphur#16#32.065#104#II,IV,VI#2.07#445#115#2#3#siarka_i.XML#siarka_wo.XML#siarka_w.XML#siarka_o.XML#siarka_z.XML
+Cl*16*Chlorine#Chlorum#Chlorine#17#35.4527#99#I,III,V,VII#0.003214#-34#-102#3#3#chlor_i.XML#chlor_wo.XML#chlor_w.XML#chlor_o.XML#chlor_z.XML
+Ar*17*Argon#Argon#Argon#18#39.948#98#0#0.0017837#-186#-190#3#3#argon_i.XML#argon_wo.XML#argon_w.XML#argon_o.XML#argon_z.XML
+K*18*Potassium#Kalium#Potassium#19#39.0983#227#I#0.862#765#63#2#1#potas_i.XML#potas_wo.XML#potas_w.XML#potas_o.XML#potas_z.XML
+Ca*19*Calcium#Calcium#Calcium#20#40.078#197#II#1.55#1484#842#2#1#wapn_i.XML#wapn_wo.XML#wapn_w.XML#wapn_o.XML#wapn_z.XML
+Sc*20*Scandium#Scandium#Scandium#21#44.95591#162#III#2.989#2830#1541#2#1#skand_i.XML#skand_wo.XML#skand_w.XML#skand_o.XML#skand_z.XML
+Ti*21*Titanium#Titanum#Titanium#22#47.867#147#II,III,IV#4.54#3287#1668#2#1#tytan_i.XML#tytan_wo.XML#tytan_w.XML#tytan_o.XML#tytan_z.XML
+V*22*Vanadium#Vanadium#Vanadium#23#50.9415#128#II,III,IV,V#6.11#3407#1910#2#1#wanad_i.XML#wanad_wo.XML#wanad_w.XML#wanad_o.XML#wanad_z.XML
+Cr*23*Chromium#Chromium#Chromium#24#51.9961#125#II,III,VI#7.19#2671#1857#2#1#chrom_i.XML#chrom_wo.XML#chrom_w.XML#chrom_o.XML#chrom_z.XML
+Mn*24*Manganese#Manganum#Manganese#25#54.938049#137#II,III,IV,VI,VII#7.47#2061#1246#2#1#mangan_i.XML#mangan_wo.XML#mangan_w.XML#mangan_o.XML#mangan_z.XML
+Fe*25*Iron#Ferrum#Iron#26#55.845#124#II,III#7.874#2750#1538#2#1#zelazo_i.XML#zelazo_wo.XML#zelazo_w.XML#zloto_o.XML#zelazo_z.XML
+Co*26*Cobalt#Cobaltum#Cobalt#27#58.93320#125#II,III#8.9#3100#1495#2#1#kobalt_i.XML#kobalt_wo.XML#kobalt_w.XML#kobalt_o.XML#kobalt_z.XML
+Ni*27*Nickel#Niccolum#Nickel#28#58.6934#124#II,III#8.902#2913#1455#2#1#nikiel_i.XML#nikiel_wo.XML#nikiel_w.XML#nikiel_o.XML#nikiel_z.XML
+Cu*28*Copper#Cuprum#Copper#29#63.546#128#I,II#8.96#2567#1085#2#1#miedz_i.XML#miedz_wo.XML#miedz_w.XML#miedz_o.XML#miedz_z.XML
+Zn*29*Zinc#Zincum#Zinc#30#65.409#134#II#7.14#907#420#2#1#cynk_i.XML#cynk_wo.XML#cynk_w.XML#cynk_o.XML#cynk_z.XML
+Ga*30*Gallium#Gallium#Gallium#31#69.723#135#III#5.904#2404#30#2#1#gal_i.XML#gal_wo.XML#gal_w.XML#gal_o.XML#gal_z.XML
+Ge*31*Germanium#Germanium#Germanium#32#72.64#122#II,IV#5.323#2830#938#2#1#german_i.XML#german_wo.XML#german_w.XML#german_o.XML#german_z.XML
+As*32*Arsenic#Arsenicum#Arsenic#33#74.9216#120#III,V#5.727#614 (sub)#817#2#2#arsen_i.XML#arsen_wo.XML#arsen_w.XML#arsen_o.XML#arsen_z.XML
+Se*33*Selenium#Selenium#Selenium#34#78.96#119#II,IV,VI#4.819 (grey)#685#220.5#2#2#selen_i.XML#selen_wo.XML#selen_w.XML#selen_o.XML#selen_z.XML
+Br*34*Bromine#Bromum#Bromine#35#79.904#114#I,III,IV,V,VI,VII#3.122#59#-7#1#3#brom_i.XML#brom_wo.XML#brom_w.XML#brom_o.XML#brom_z.XML#
+Kr*35*Krypton#Krypton#Krypton#36#83.798#112#0#0.003745#-153#-157#3#3#krypton_i.XML#krypton_wo.XML#krypton_w.XML#krypton_o.XML#krypton_z.XML#
+Rb*36*Rubidium#Rubidium#Rubidium#37#85.4678#248#I#1.532#688#39#2#1#rubid_i.XML#rubid_wo.XML#rubid_w.XML#rubid_o.XML#rubid_z.XML#
+Sr*37*Strontium#Strontium#Strontium#38#87.62#215#II#2.63#1382#777#2#1#stront_i.XML#stront_wo.XML#stront_w.XML#stront_z.XML##
+Y*38*Yttrium#Yttrium#Yttrium#39#88.90585#180#III#4.472#3338#1526#2#1#itr_i.XML#itr_wo.XML#itr_w.XML#itr_o.XML#itr_z.XML#
+Zr*39*Zirconium#Zyrconium#Zirconium#40#91.224#160#IV#6.506#4377#1855#2#1#cyrkon_i.XML#cyrkon_wo.XML#cyrkon_w.XML#cyrkon_o.XML#cyrkon_z.XML#
+Nb*40*Niobium#Niobium#Niobium#41#92.90638#146#III,V#8.57#4744#2477#2#1#niob_i.XML#niob_wo.XML#niob_w.XML#niob_o.XML#niob_z.XML#
+Mo*41*Molybdenum#Molibdaenum#Molybdenum#42#95.94#139#II,III,VI#10.28#4612#2617#2#1#molibden_i.XML#molibden_wo.XML#molibden_w.XML#molibden_o.XML#molibden_z.XML#
+Tc*42*Technetium#Technetium#Technetium#43#97.9072#136#III,IV,VII#11.5#4877#2172#2#1#technet_i.XML#technet_wo.XML#technet_w.XML#technet_o.XML#technet_z.XML#
+Ru*43*Ruthenium#Ruthenium#Ruthenium#44#101.07#134#III,IV,VIII#12.45#3900#2310#2#1#ruten_i.XML#ruten_wo.XML#ruten_w.XML#ruten_o.XML#ruten_z.XML#
+Rh*44*Rhodium#Rhodium#Rhodium#45#102.9055#134#III,IV,VI#12.41#3727#1966#2#1#rod_i.XML#rod_wo.XML#rod_w.XML#rod_o.XML#rod_z.XML#
+Pd*45*Palladium#Palladium#Palladium#46#106.42#137#II,IV#12.023#3140#1554#2#1#pallad_i.XML#pallad_wo.XML#pallad_w.XML#pallad_o.XML#pallad_z.XML#
+Ag*46*Silver#Argentum#Silver#47#107.8682#144#I,II#10.50#2212#962#2#1#srebro_i.XML#srebro_wo.XML#srebro_w.XML#srebro_o.XML#srebro_z.XML#
+Cd*47*Cadmium#Cadmium#Cadmium#48#112.411#151#II#8.65#765#321#2#1#kadm_i.XML#kadm_wo.XML#kadm_w.XML#kadm_o.XML#kadm_z.XML#
+In*48*Indium#Indium#Indium#49#114.818#167#III#7.31#2080#157#2#1#ind_i.XML#ind_wo.XML#ind_w.XML#ind_o.XML#ind_z.XML#
+Sn*49*Tin#Stannum#Tin#50#118.710#140#II,IV#7.31 (white)#2270#232#2#1#cyna_i.XML#cyna_wo.XML#cyna_w.XML#cyna_o.XML#cyna_z.XML
+Sb*50*Antimony#Stibium#Antimony#51#121.760#145#III,V#6.697#1750#631#2#2#antymon_i.XML#antymon_wo.XML#antymon_w.XML#antymon_o.XML#antymon_z.XML#
+Te*51*Tellurium#Tellurium#Tellurium#52#127.60#142#II,IV,VI#6.24#990#450#2#2#tellur_i.XML#tellur_wo.XML#tellur_w.XML#tellur_o.XML#tellur_z.XML#
+I*52*Iodine#Iodum#Iodine#53#126.90447#133#I,III,V,VII#4.93#184#114#2#3#jod_i.XML#jod_wo.XML#jod_w.XML#jod_o.XML#jod_z.XML#
+Xe*53*Xenon#Xenon#Xenon#54#131.293#131#0#0.005887#-108#-112#3#3#ksenon_i.XML#ksenon_wo.XML#ksenon_w.XML#ksenon_o.XML#ksenon_z.XML#
+Cs*54*Caesium#Cesium#Caesium#55#132.90545#265#I#1.873#671#28#2#1#cez_i.XML#cez_wo.XML#cez_w.XML#cez_o.XML#cez_z.XML#
+Ba*55*Barium#Barium#Barium#56#137.327#222#II#3.510#1870#727#2#1#bar_i.XML#bar_wo.XML#bar_w.XML#bar_o.XML#bar_z.XML#
+La*56*Lanthanum#Lanthanaum#Lanthanum#57#138.9055#187#III#6.145#3470#928#2#1#lantan_i.XML#lantan_wo.XML#lantan_w.XML#lantan_o.XML#lantan_z.XML#
+Ce*57*Cerium#Cerium#Cerium#58#140.116#182#III,IV#6.770#3470#795#2#1#cer_i.XML#cer_wo.XML#cer_w.XML#cer_o.XML#cer_z.XML#
+Pr*58*Praseodymium#Praseodymium#Praseodymium#59#140.90765#182#III,IV#6.773#3020#935#2#1#prazeodym_i.XML#prazeodym_wo.XML#prazeodym_w.XML#prazeodym_o.XML#prazeodym_z.XML#
+Nd*59*Neodymium#Neodymium#Neodymium#60#144.24#181#III#7.007#3100#1024#2#1#neodym_i.XML#neodym_wo.XML#neodym_w.XML#neodym_o.XML#neodym_z.XML#
+Pm*60*Promethium#Promethium#Promethium#61#144.9127#183#III#7.264#3000#1042#2#1#promet_i.XML#promet_wo.XML#promet_w.XML#promet_o.XML#promet_z.XML#
+Sm*61*Samarium#Samarium#Samarium#62#150.36#180#II,III#7.52#1803#1072#2#1#samar_i.XML#samar_wo.XML#samar_w.XML#samar_o.XML#samar_z.XML#
+Eu*62*Europium#Europium#Europium#63#151.964#208#II,III#5.243#1439#826#2#1#europ_i.XML#europ_wo.XML#europ_w.XML#europ_o.XML#europ_z.XML#
+Gd*63*Gadolinium#Gadolinium#Gadolinium#64#157.25#180#III#7.901#3000#1312#2#1#gadolin_i.XML#gadolin_wo.XML#gadolin_w.XML#gadolin_o.XML#gadolin_z.XML#
+Tb*64*Terbium#Terbium#Terbium#65#158.92534#177#III,IV#8.229#2800#1356#2#1#terb_i.XML#terb_wo.XML#terb_w.XML#terb_o.XML#terb_z.XML
+Dy*65*Dysprosium#Dysprosium#Dysprosium#66#162.500#178#III#8.551#2567#1407#2#1#dysproz_i.XML#dysproz_wo.XML#dysproz_w.XML#dysproz_o.XML#dysproz_z.XML
+Ho*66*Holmium#Holmium#Holmium#67#164.93032#176#III#8.795#2700#1461#2#1#holm_i.XML#holm_wo.XML#holm_w.XML#holm_o.XML#holm_z.XML
+Er*67*Erbium#Erbium#Erbium#68#167.259#176#III#9.066#2868#1497#2#1#erb_i.XML#erb_wo.XML#erb_w.XML#erb_o.XML#erb_z.XML
+Tm*68*Thulium#Tulium#Thulium#69#168.93421#176#III#9.321#1730#1545#2#1#tul_i.XML#tul_wo.XML#tul_w.XML#tul_o.XML#tul_z.XML
+Yb*69*Ytterbium#Ytterbium#Ytterbium#70#173.04#193#II,III#6.965#1430#824#2#1#iterb_i.XML#iterb_wo.XML#iterb_w.XML#iterb_o.XML#iterb_z.XML
+Lu*70*Lutetium#Lutetium#Lutetium#71#174.967#174#III#9.841#3402#1652#2#1#lutet_i.XML#lutet_wo.XML#lutet_w.XML#lutet_o.XML#lutet_z.XML
+Hf*71*Hafnium#Hafnium#Hafnium#72#178.49#159#IV#13.31#4602#2233#2#1#hafn_i.XML#hafn_wo.XML#hafn_w.XML#hafn_o.XML#hafn_z.XML
+Ta*72*Tantalum#Tantalum#Tantalum#73#180.9479#146#IV,V#16.654#5458#3017#2#1#tantal_i.XML#tantal_wo.XML#tantal_w.XML#tantal_o.XML#tantal_z.XML
+W*73*Tungsten#Wolfram#Tungsten#74#183.84#139#II,III,VI#19.25#5660#3422#2#1#wolfram_i.XML#wolfram_wo.XML#wolfram_w.XML#wolfram_o.XML#wolfram_z.XML
+Re*74*Rhenium#Rhenium#Rhenium#75#186.207#137#IV,VI,VII#21.04#5627#3186#2#1#ren_i.XML#ren_wo.XML#ren_w.XML#ren_o.XML#ren_z.XML
+Os*75*Osmium#Osmium#Osmium#76#190.23#135#III,IV,VI,VIII#22.610#5012#3033#2#1#osm_i.XML#osm_wo.XML#osm_w.XML#osm_o.XML#osm_z.XML
+Ir*76*Iridium#Iridium#Iridium#77#192.217#136#III,IV,VI#22.650#4550#2466#2#1#iryd_i.XML#iryd_wo.XML#iryd_w.XML#iryd_o.XML#iryd_z.XML
+Pt*77*Platinum#Platinum#Platinum#78#195.078#139#II,III,IV,VI#21.45#4170#1768#2#1#platyna_i.XML#platyna_wo.XML#platyna_w.XML#platyna_o.XML#platyna_z.XML
+Au*78*Gold#Aurum#Gold#79#196.96655#144#I,III#19.282#2856#1064#2#1#zloto_i.XML#zloto_wo.XML#zloto_w.XML#zloto_o.XML#zloto_z.XML
+Hg*79*Mercury#Hydrargyrum#Mercury#80#200.59#151#I,II#13.534#357#-39#1#1#rtec_i.XML#rtec_wo.XML#rtec_w.XML#rtec_o.XML#rtec_z.XML
+Tl*80*Thallium#Thallium#Thallium#81#204.3833#170#I,III#11.85#1473#304#2#1#tal_i.XML#tal_wo.XML#tal_w.XML#tal_o.XML#tal_z.XML#
+Pb*81*Lead#Plumbum#Lead#82#207.2#176#II,IV#11.342#1749#327#2#1#olow_i.XML#olow_wo.XML#olow_w.XML#olow_o.XML#olow_z.XML#
+Bi*82*Bismuth#Bismutum#Bismuth#83#208.98036#150#III,V#9.780#1564#271#2#1#bizmut_i.XML#bizmut_wo.XML#bizmut_w.XML#bizmut_o.XML#bizmut_z.XML#
+Po*83*Polonium#Polonium#Polonium#84#208.9824#168#II,IV#9.196#962#254#2#1#polon_i.XML#polon_wo.XML#polon_w.XML#polon_o.XML#polon_z.XML#
+At*84*Astatine#Astatinum#Astatine#85#209.9871#143#I,V,VII#no data#337#302#2#3#astat_i.XML#astat_wo.XML#astat_w.XML#astat_o.XML#astat_z.XML
+Rn*85*Radon#Radon#Radon#86#222.0176#145#0#0.00973#-62#-71#3#3#radon_i.XML#radon_wo.XML#radon_w.XML#radon_o.XML#radon_z.XML#
+Fr*86*Francium#Francium#Francium#87#223.0197#270#I#1.87#677#27#2#1#frans_i.XML#frans_wo.XML#frans_w.XML#frans_o.XML#frans_z.XML#
+Ra*87*Radium#Radium#Radium#88#226.0254#215#II#5.50#1737#700#2#1#rad_i.XML#rad_wo.XML#rad_w.XML#rad_o.XML#rad_z.XML#
+Ac*88*Actinium#Actinium#Actinium#89#227.0277#188#III#10.07#3200#1050#2#1#aktyn_i.XML#aktyn_wo.XML#aktyn_w.XML#aktyn_o.XML#aktyn_z.XML#
+Th*89*Thorium#Thorium#Thorium#90#232.0381#179#IV#11.724#4820#1750#2#1#tor_i.XML#tor_wo.XML#tor_w.XML#tor_o.XML#tor_z.XML#
+Pa*90*Protactinium#Protactinum#Protactinium#91#231.03588#163#IV,V#15.37#4200#1568#2#1#proaktyn_i.XML#proaktyn_wo.XML#proaktyn_w.XML#proaktyn_o.XML#proaktyn_z.XML#
+U*91*Uranium#Uranium#Uranium#92#238.02891#156#III,IV,V,VI#19.05#3927#1132#2#1#uran_i.XML#uran_wo.XML#uran_w.XML#uran_o.XML#uran_z.XML#
+Np*92*Neptunium#Neptunium#Neptunium#93#237.0482#155#III,IV,V,VI#20.25#3902#637#2#1#neptun_i.XML#neptun_wo.XML#neptun_w.XML#neptun_o.XML#neptun_z.XML#
+Pu*93*Plutonium#Plutonium#Plutonium#94#244.0642#159#III,IV,V,VI#19.84#3230#639#2#1#pluton_i.XML#pluton_wo.XML#pluton_w.XML#pluton_o.XML#pluton_z.XML#
+Am*94*Americium#Americum#Americium#95#243.0614#173#III,IV,V,VI#13.69#2607#1176#2#1#ameryk_i.XML#ameryk_wo.XML#ameryk_w.XML#ameryk_o.XML#ameryk_z.XML#
+Cm*95*Curium#Curium#Curium#96#247.0704#174#III,IV#13.51#3110#1340#2#1#kiur_i.XML#kiur_wo.XML#kiur_w.XML#kiur_o.XML#kiur_z.XML#
+Bk*96*Berkelium#Berkelium#Berkelium#97#247.0703#170#III,IV#14.79#2600#986#2#1#berkel_i.XML#berkel_wo.XML#berkel_w.XML#berkel_o.XML#berkel_z.XML###
+Cf*97*Californium#Californium#Californium#98#251.0796#186#III,IV#15.1#1470#900#2#1#kaliforn_i.XML#kaliforn_wo.XML#kaliforn_w.XML#kaliforn_o.XML#kaliforn_z.XML###
+Es*98*Einsteinium#Einsteinum#Einsteinium#99#252.0830#186#II,III#no data#1500#860#2#1#einstein_i.XML#einstein_wo.XML#einstein_w.XML#einstein_o.XML#einstein_z.XML##
+Fm*99*Fermium#Fermium#Fermium#100#257.0951#no data#III#no data#no data#1527#2#1#ferm_i.XML#ferm_wo.XML#ferm_w.XML#ferm_o.XML#ferm_z.XML
+Md*100*Mendelevium#Mendelevium#Mendelevium#101#258.0984#no data#II,III#no data#no data#827#2#1#mendelew_i.XML#mendelew_wo.XML#mendelew_w.XML#mendelew_o.XML#mendelew_z.XML
+No*101*Nobelium#Nobelium#Nobelium#102#259.1010#no data#II,III#no data#no data#827#2#1#nobel_i.XML#nobel_wo.XML#nobel_w.XML#nobel_o.XML#nobel_z.XML
+Lr*102*Lawrencium#Lawrencium#Lawrencium#103#262.1097#no data#III#no data#no data#1627#2#1#lorens_i.XML#lorens_wo.XML#lorens_w.XML#lorens_o.XML#lorens_z.XML
+Rf*103*Rutherfordium#Rutherfordium#Rutherfordium#104#265#no data#IV#no data#no data#no data#2#1#rutherford_i.XML#rutherford_wo.XML##
+Db*104*Dubnium#Dubnium#Dubnium#105#268#no data#V#no data#no data#no data#2#1#dubn_i.XML#dubn_wo.XML##
+Sg*105*Seaborgium#Seaborgium#Seaborgium#106#263#no data#VI#no data#no data#no data#2#1#seaborg_i.XML#seaborg_wo.XML##
+Bh*106*Bohrium#Bohrium#Bohrium#107#272#no data#no data#no data#no data#no data#2#1#bohr_i.XML#bohr_wo.XML#
+Hs*107*Hassium#Hassium#Hassium#108#278#no data#no data#no data#no data#no data#2#1#has_i.XML#has_wo.XML#
+Mt*108*Meitnerium#Meitnerium#Meitnerium#109#278#no data#no data#no data#no data#no data#2#1#meitner_i.XML#meitner_wo.XML#
+Ds*109*Darmstadt#Darmstadtium#Darmstadtium#110#282#no data#no data#no data#no data#no data#2#1#darmstadt_i.XML#darmstadt_wo.XML#
+Rg*110*Roentgenium#Roentgenium#Roentgenium#111#284#no data#no data#no data#no data#no data#2#1#roentgenium_i.XML#roentgenium_wo.XML#

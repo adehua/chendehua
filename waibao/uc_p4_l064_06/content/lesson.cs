@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><toc xmlns="http://www.ydp.pl/leo/toc" xmlns:xlink="http://www.w3.org/1999/xlink"><section id="b12" name="Physics - Lower Secondary :: XII. Alternating current :: 63. Transformer"><item credit="0" id="a195_004" name="Turns ratio" xlink:href="uc_p4_l064_06.flo"/></section></toc>

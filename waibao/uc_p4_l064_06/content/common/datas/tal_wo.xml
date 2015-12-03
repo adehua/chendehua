@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Thallium is a soft, grey metal. It is not resistant to atmospheric exposure and combines with oxygen to produce thallium(II) oxide TlO and thallium(III) oxide – T</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">l</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">; it reacts with water to form thallium(I) hydroxide - TlOH. Thallium dissolves in acids to produce salts. Thallium and its compounds are toxic; they impart an emerald-green colour to a flame. The element was discovered by an English chemist William Crookes. Its name is derived from the Greek word thallos -  ”green twig”.</text>
+   </par>
+</scrollbox>

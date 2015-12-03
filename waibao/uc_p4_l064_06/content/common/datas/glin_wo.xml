@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Aluminium is a silvery-white, malleable and ductile metal. It is easily rolled into very thin sheets, as thin as 0.004 mm. It is a good conductor of heat and electricity. In air aluminium is made passive - becomes coated by a thin layer of aluminium oxide – A</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">l</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">, protecting the metal from further oxidation. Aluminium is the most abundant metal in the Earth's crust (7%); among the elements it is surpassed only by oxygen and silicon. The element was named ”aluminium” by Humphry Davy. It was first obtained in 1825 by the Danish chemist Hans Christian Oersted.</text>
+   </par>
+</scrollbox>

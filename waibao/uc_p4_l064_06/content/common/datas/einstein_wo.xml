@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Einsteinium is a synthetic, radioactive (transuranic)  element. It is a metal, a member of the actinide series. The half-life of the most stable einsteinium isotope, einsteinium-254, is found to be 276 days. Einsteinium forms compounds similarly to other transuranic elements, for example einsteinium(III) oxide, E</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">s</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">O</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">; einsteinium(III) chloride, EsC</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">l</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">; einsteinium(II) bromide </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">– EsB</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">r</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">;  einsteinium(III) bromide,</text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">EsB</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">r</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">3</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">, etc.</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> Einsteinium was discovered in 1952 by Albert Ghiorso and his colleagues. It was named after the physicist Albert Einstein.</text>
+   </par>
+</scrollbox>

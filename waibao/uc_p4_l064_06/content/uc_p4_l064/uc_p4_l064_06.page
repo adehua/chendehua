@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page background="ffffffff" backgroundFeedbacks="true" binaryCheck="false" controlVisibility="true" doneAfterVisit="false" height="500" modal="false" startup="e1.hide();e2.hide();e1_2.hide();txt1.hide();blok.block();blok1.block();blok2.block();blok3.block()" width="750">
+  <properties>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="moveLock" type="string" value="false"/>
+    <property name="textexportversion" type="integer" value="1"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <decoration>
+    <solidFill color="ffffffff"/>
+    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+  </decoration>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderBottomMargin="0" borderColor="666666" borderLeftMargin="3" borderRightMargin="3" borderThickness="1" borderTopMargin="0" borderType="single"/>
+  </tooltipDecoration>
+  <counters continous="true" evaluateAtReset="true" height="20" name="Counters1" passive="false" persistent="false" reevaluateAfterLoadState="true" width="20" x="790" y="500">
+    <counters>
+      <counter name="counter" type="simple"/>
+    </counters>
+    <feedbacks>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="3" counter="counter" op="&gt;=" type="counter"/>
+        </condition>
+        <action commands="player.executeAndWait(feedback,txt1,210,53)"/>
+      </feedback>
+    </feedbacks>
+  </counters>
+  <counters continous="false" evaluateAtReset="true" height="20" name="Check_hints_ctrl" passive="false" persistent="false" reevaluateAfterLoadState="true" width="20" x="900" y="0">
+    <counters>
+      <counter container="cCheck" field="hints" name="achints" type="container"/>
+    </counters>
+    <feedbacks>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="0" counter="achints" op="&gt;" type="counter"/>
+        </condition>
+        <action commands="e2.show()"/>
+      </feedback>
+    </feedbacks>
+  </counters>
+  <counters continous="true" evaluateAtReset="true" height="20" name="Counters" passive="false" persistent="true" reevaluateAfterLoadState="true" width="20" x="726" y="523">
+    <counters>
+      <counter container="cCheck" field="mistakes" name="errors" type="container"/>
+    </counters>
+    <feedbacks>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="0" counter="errors" op="&gt;" type="counter"/>
+        </condition>
+        <action commands="e1.show();e1.gotoAndPlay(2)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="1" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx@300(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027\ bold\=\u0027true\u0027&gt;1&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="2" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027\ bold\=\u0027true\u0027&gt;2&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="3" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027\ bold\=\u0027true\u0027&gt;3&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="4" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027&gt;4&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="5" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027&gt;5&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="6" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027&gt;6&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="7" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027&gt;7&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="8" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027&gt;8&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="9" counter="errors" op="==" type="counter"/>
+        </condition>
+        <action commands="ecount.setTextEx(\u000D\u000A&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement\ font-family\=\u0027Arial\u0027\ font-size\=\u002710\u0027\ color\=\u0027999999\u0027&gt;9&lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="9" counter="errors" op="&gt;" type="counter"/>
+        </condition>
+        <action commands="e1.hide();e1_2.show();e1_2.gotoAndPlay(2);e1_2.executeAndWait@1000(setErrors,${errors});ecount.setTextEx(&lt;text&gt;&lt;format\ font\=\u0027Arial\u0027\ size\=\u002712\u0027/&gt;&lt;melement&gt;\ &lt;/melement&gt;&amp;lt\u003Bbr&amp;gt\u003B&amp;lt\u003Bbr&amp;gt\u003B&lt;/text&gt;);e1_2.gotoAndPlay@200(2)"/>
+      </feedback>
+    </feedbacks>
+  </counters>
+  <button height="27" href="uc_p4_l064_06gu.page" name="guide" src="../common/order_play_icon.swf" tip="guide" tipId="Action Button1-701600069" tooltipAlignment="over" translationID="Action Button1-701600069" width="28" x="-2" y="32">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <tabsheet align="right" height="445" location="top" name="Tabbed Sheet2" panelspace="0" tabLocation="outside" tabspace="2" type="buttons" width="701" x="20" y="36">
+    <decoration>
+      <border/>
+    </decoration>
+    <tab name="Tab 1" src="../common/tab_01_icon.swf" switchTime="1">
+      <decoration>
+        <border/>
+      </decoration>
+      <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="68" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module6" tooltipOnClick="true" translationID="Text Module4-1934940146" width="243" x="458" y="23">&lt;p&gt;The&amp;nbsp;number&amp;nbsp;of&amp;nbsp;turns&amp;nbsp;in&amp;nbsp;the&amp;nbsp;secondary&amp;nbsp;coil&lt;/p&gt;&lt;p&gt;divided&amp;nbsp;by&amp;nbsp;the&amp;nbsp;number&amp;nbsp;of&amp;nbsp;turns&lt;/p&gt;&lt;p&gt;in&amp;nbsp;the&amp;nbsp;primary&amp;nbsp;coil&amp;nbsp;is&amp;nbsp;called&amp;nbsp;the&amp;nbsp;turns&amp;nbsp;ratio:&lt;/p&gt;</text>
+      <shape background="ffb5bed6" height="120" name="Shape12" width="4" x="445" y="153">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+      <ac containerId="" enableALLOKafterError="false" height="38" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="popup" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="187" x="521" y="361">
+        <resultWindows/>
+        <acfeedbacks>
+          <group condition="ALL_OK" sequence="random"/>
+          <group condition="OK" sequence="random"/>
+          <group condition="WRONG" sequence="random"/>
+          <group condition="HELP" sequence="random"/>
+        </acfeedbacks>
+        <convertResults/>
+        <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="24" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst" tooltipOnClick="true" translationID="Tekst8-819846513" width="122" x="40" y="3">&lt;p&gt;&lt;font color="#000000"&gt;turns&amp;nbsp;ratio&lt;/font&gt;&lt;/p&gt;</text>
+        <button height="27" href="../common/htmlglossary.swf?usePlayer=false&amp;topic=128&amp;x=167&amp;y=90" name="Przycisk" src="../common/grammar03_icon.swf" tip="glossary" tipId="Przycisk-846600093" tooltipAlignment="over" translationID="Przycisk-846600093" width="28" x="-1" y="0">
+          <onTurnOn command=""/>
+          <onTurnOff command=""/>
+        </button>
+        <shape background="ff9999ff" border="true" borderColor="ff9aa8bf" borderWidth="1" height="2" keepRatio="true" name="Figura1" width="69" x="33" y="17">
+          <moveTo x="0.0" y="2047.0"/>
+          <lineTo x="4095.0" y="2047.0"/>
+        </shape>
+      </ac>
+      <movie alignment="5" height="60" name="PicturePlayer8" src="media/uc_p4_l064_06_02w.swf" width="95" x="526" y="272">
+        <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="0" name="ProgressBar13" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+      </movie>
+      <shape background="ffffffff" border="true" borderColor="ffb0bdd2" borderWidth="1" height="54" name="Shape14" width="100" x="525" y="274">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+      <button height="27" href="script:PicturePlayer3.executeAndWait(goReset)" name="Action Button1" src="../common/reset_icon.swf" tip="reset" tipId="Action Button1-714982318" tooltipAlignment="over" translationID="Action Button1-714982318" width="43" x="368" y="372">
+        <onTurnOn command=""/>
+        <onTurnOff command=""/>
+      </button>
+      <movie alignment="5" height="60" name="PicturePlayer5" src="media/uc_p4_l064_06_01w.swf" width="60" x="540" y="83">
+        <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="0" name="ProgressBar10" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+      </movie>
+      <shape background="ffffffff" border="true" borderColor="ffb0bdd2" borderWidth="1" height="55" name="Shape7" width="64" x="539" y="85">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+      <shape background="ffb5bed6" height="45" name="Shape6" width="4" x="445" y="25">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+      <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="328" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module4" tooltipOnClick="true" translationID="Text Module4-355019677" width="253" x="458" y="76">&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The&amp;nbsp;turns&amp;nbsp;ratio&amp;nbsp;is&amp;nbsp;a&amp;nbsp;number&lt;/p&gt;&lt;p&gt;which&amp;nbsp;determines&amp;nbsp;how&amp;nbsp;much&amp;nbsp;a&amp;nbsp;given&lt;/p&gt;&lt;p&gt;transformer&amp;nbsp;increases&amp;nbsp;or&amp;nbsp;decreases&lt;/p&gt;&lt;p&gt;the&amp;nbsp;voltage.&amp;nbsp;When&amp;nbsp;&lt;i&gt;k&lt;/i&gt;&amp;nbsp;&amp;gt;&amp;nbsp;1,&amp;nbsp;it&amp;nbsp;&amp;nbsp;means&lt;/p&gt;&lt;p&gt;that&amp;nbsp;the&amp;nbsp;transformer&amp;nbsp;increases&amp;nbsp;the&amp;nbsp;voltage,&lt;/p&gt;&lt;p&gt;and&amp;nbsp;when&amp;nbsp;&lt;i&gt;k&lt;/i&gt;&amp;nbsp;&amp;lt;&amp;nbsp;1,&amp;nbsp;the&amp;nbsp;voltage&amp;nbsp;is&amp;nbsp;decreased&lt;/p&gt;&lt;p&gt;by&amp;nbsp;the&amp;nbsp;transformer.&lt;/p&gt;&lt;p&gt;Thus:&lt;/p&gt;</text>
+      <movie alignment="5" height="366" name="PicturePlayer3" src="media/uc_p4_l064_06_01s.swf" width="391" x="26" y="26">
+        <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="3" name="ProgressBar8" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="109" x="141" y="179"/>
+      </movie>
+      <shape background="ffffffff" border="true" borderColor="ffb0bdd2" borderWidth="1" height="372" name="Shape1" width="397" x="23" y="23">
+        <moveTo x="0.0" y="0.0"/>
+        <lineTo x="4095.0" y="0.0"/>
+        <lineTo x="4095.0" y="4095.0"/>
+        <lineTo x="0.0" y="4095.0"/>
+        <lineTo x="0.0" y="0.0"/>
+      </shape>
+      <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module3" tooltipOnClick="true" translationID="Text Module3-376272621" width="172" x="25" y="-1">&lt;p&gt;Study&amp;nbsp;the&amp;nbsp;turns&amp;nbsp;ratio.&lt;/p&gt;</text>
+    </tab>
+    <tab name="Tab 2" src="../common/tab_02_icon.swf" switchTime="1">
+      <decoration>
+        <border/>
+      </decoration>
+      <ac containerId="" enableALLOKafterError="true" height="57" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Feedback" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="532" x="71" y="376">
+        <resultWindows/>
+        <acfeedbacks>
+          <group condition="ALL_OK" sequence="random"/>
+          <group condition="OK" sequence="random"/>
+          <group condition="WRONG" sequence="random"/>
+          <group condition="HELP" sequence="random"/>
+        </acfeedbacks>
+        <convertResults/>
+        <ac containerId="" enableALLOKafterError="false" height="40" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="txt1" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="290" x="16" y="8">
+          <resultWindows/>
+          <acfeedbacks>
+            <group condition="ALL_OK" sequence="random"/>
+            <group condition="OK" sequence="random"/>
+            <group condition="WRONG" sequence="random"/>
+            <group condition="HELP" sequence="random"/>
+          </acfeedbacks>
+          <convertResults/>
+          <movie alignment="5" height="60" name="player1" src="media/uc_p4_l064_06_02w.swf" width="95" x="96" y="-10">
+            <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="0" name="ProgressBar14" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+          </movie>
+          <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="txt12" tooltipOnClick="true" translationID="Text Module1-350302581" width="274" x="0" y="9">&lt;p&gt;Apply&amp;nbsp;the&amp;nbsp;formula:&lt;/p&gt;</text>
+        </ac>
+        <externalActivity alignment="5" height="50" name="player" src="../common/pillow.swf" width="204" x="0" y="0">
+          <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="0" name="ProgressBar15" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+        </externalActivity>
+      </ac>
+      <ac containerId="06_1" enableALLOKafterError="true" height="435" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="cCheck" onGoodAnswer="_root.showURL(../common/bravo.mp3,false);player.executeAndWait(feedback,stop)" onReset="_root.closePopup(../common/confirm_reset.page);player.executeAndWait(feedback,stop)*;Counters1.reset();player.executeAndWait(feedback,stop)*;txt1.hide()" onResetWrong="e2.show();player.executeAndWait(feedback,stop)*" onSetMarkCorrect="e2.show()" onSetShowAnswers="e2.show()" onSetShowErrors="e2.show()" onWrongAnswer="_root.showURL(../common/wrong.mp3,false);Counters1.inc(counter,1)" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="710" x="0" y="-12">
+        <resultWindows>
+          <resultWindow from="0" href="../common/raport_page.page" to="100"/>
+        </resultWindows>
+        <acfeedbacks>
+          <group condition="ALL_OK" sequence="random">
+            <feedback type="compound">
+              <feedback href="../common/allok.mp3"/>
+            </feedback>
+          </group>
+          <group condition="OK" sequence="random"/>
+          <group condition="WRONG" sequence="cyclic">
+            <feedback type="empty"/>
+          </group>
+          <group condition="HELP" sequence="random"/>
+        </acfeedbacks>
+        <convertResults/>
+        <button height="27" href="script:cCheck_resetCntr.evaluate()" name="cCheck_newReset" src="../common/reset_icon.swf" tip="reset" tipId="cCheck_newReset-1515497139" tooltipAlignment="over" translationID="cCheck_newReset-1515497139" width="43" x="615" y="407">
+          <onTurnOn command=""/>
+          <onTurnOff command=""/>
+        </button>
+        <tabsheet align="middle" height="330" location="left" name="Zakladki1" panelspace="0" tabLocation="outside" tabspace="0" type="buttons" width="645" x="23" y="69">
+          <decoration>
+            <border/>
+          </decoration>
+          <tab name="Tab 1" src="../common/tabintab.swf" switchTime="1">
+            <decoration>
+              <border/>
+            </decoration>
+            <ac containerId="" enableALLOKafterError="false" height="260" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container5" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="120" x="508" y="26">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <sourceList2 childMode="false" extendToHighest="true" height="80" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="90" x="20" y="151">
+                <itemBkgnd>
+                  <solidFill color="ffe3ffcc"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <solidFill color="ffffeaa4"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">100&lt;br&gt;</slItem>
+                <slItem sound="">300&lt;br&gt;</slItem>
+                <slItem sound="">400&lt;br&gt;</slItem>
+                <slItem sound="">500&lt;br&gt;</slItem>
+                <slItem sound="">700&lt;br&gt;</slItem>
+                <slItem sound="">1000&lt;br&gt;</slItem>
+              </sourceList2>
+              <labelling dragOverColor="ffe3ffcc" height="142" name="Labeling" transparentSLMode="false" width="78" x="12" y="-1">
+                <markCorrectWrong correctStyle="rectFrame" errorStyle="cross" hmargin="0" lineWidth="2" vmargin="0"/>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="32">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>500</answer>
+                </label>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="88">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>1000</answer>
+                </label>
+              </labelling>
+            </ac>
+            <ac containerId="" enableALLOKafterError="false" height="109" includeerrorsinresult="true" initiallySolved="false" isActive="false" mouseOpaque="false" name="blok" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="100" x="518" y="167">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <shape background="96d6ff9f" height="88" name="Shape16" width="85" x="4" y="4">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+              <sourceList2 childMode="false" extendToHighest="true" height="81" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List1" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="80" x="10" y="10">
+                <itemBkgnd>
+                  <solidFill color="ffdaffad"/>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">&lt;font color="#98b66e"&gt;100&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;300&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;400&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;500&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;700&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;1000&lt;/font&gt;&lt;br&gt;</slItem>
+              </sourceList2>
+              <shape background="ffd6ff9f" border="true" borderColor="ffb0bdd2" borderWidth="1" height="91" name="Shape15" width="90" x="3" y="3">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+            </ac>
+            <ac containerId="" enableALLOKafterError="false" height="50" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container4" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="50" x="0" y="0">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+            </ac>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="24" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst36" tooltipOnClick="true" translationID="Tekst-1847306176" width="56" x="528" y="88">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 24 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <ac containerId="" enableALLOKafterError="false" height="310" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="610" x="13" y="11">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <movie alignment="5" height="293" name="PicturePlayer1" src="media/uc_p4_l064_06_01i.swf" width="480" x="5" y="5">
+                <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="3" name="ProgressBar" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="109" x="180" y="166"/>
+              </movie>
+            </ac>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="24" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst35" tooltipOnClick="true" translationID="Tekst-1550292776" width="56" x="528" y="32">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 12 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+          </tab>
+          <tab name="Tab 2" src="../common/tabintab.swf" switchTime="1">
+            <decoration>
+              <border/>
+            </decoration>
+            <ac containerId="" enableALLOKafterError="false" height="260" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container6" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="120" x="508" y="26">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <labelling dragOverColor="ffe3ffcc" height="142" name="Labeling1" transparentSLMode="false" width="78" x="12" y="-1">
+                <markCorrectWrong correctStyle="rectFrame" errorStyle="cross" hmargin="0" lineWidth="2" vmargin="0"/>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="32">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>600</answer>
+                </label>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="88">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>300</answer>
+                </label>
+              </labelling>
+              <sourceList2 childMode="false" extendToHighest="true" height="110" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List3" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="80" x="20" y="151">
+                <itemBkgnd>
+                  <solidFill color="ffe3ffcc"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <solidFill color="ffffeaa4"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">100&lt;br&gt;</slItem>
+                <slItem sound="">300&lt;br&gt;</slItem>
+                <slItem sound="">400&lt;br&gt;</slItem>
+                <slItem sound="">600&lt;br&gt;</slItem>
+                <slItem sound="">700&lt;br&gt;</slItem>
+                <slItem sound="">900&lt;br&gt;</slItem>
+                <slItem sound="">1000&lt;br&gt;</slItem>
+              </sourceList2>
+            </ac>
+            <ac containerId="" enableALLOKafterError="false" height="129" includeerrorsinresult="true" initiallySolved="false" isActive="false" mouseOpaque="false" name="blok1" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="100" x="518" y="167">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <shape background="96d6ff9f" height="116" name="Shape17" width="85" x="4" y="4">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+              <sourceList2 childMode="false" extendToHighest="true" height="111" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List2" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="80" x="10" y="10">
+                <itemBkgnd>
+                  <solidFill color="ffdaffad"/>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">&lt;font color="#98b66e"&gt;100&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;300&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;400&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;600&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;700&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;900&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;1000&lt;/font&gt;&lt;br&gt;</slItem>
+              </sourceList2>
+              <shape background="ffd6ff9f" border="true" borderColor="ffb0bdd2" borderWidth="1" height="118" name="Shape18" width="90" x="3" y="3">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+            </ac>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst38" tooltipOnClick="true" translationID="Tekst-788516086" width="72" x="528" y="88">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 110 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst37" tooltipOnClick="true" translationID="Tekst-1113073631" width="68" x="528" y="32">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 220 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <ac containerId="" enableALLOKafterError="false" height="310" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container1" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="610" x="13" y="11">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <movie alignment="5" height="293" name="PicturePlayer2" src="media/uc_p4_l064_06_02i.swf" width="480" x="5" y="5">
+                <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="3" name="ProgressBar1" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="109" x="180" y="166"/>
+              </movie>
+            </ac>
+          </tab>
+          <tab name="Tab 3" src="../common/tabintab.swf" switchTime="1">
+            <decoration>
+              <border/>
+            </decoration>
+            <ac containerId="" enableALLOKafterError="false" height="260" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container7" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="120" x="508" y="26">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <labelling dragOverColor="ffe3ffcc" height="142" name="Labeling2" transparentSLMode="false" width="78" x="12" y="-1">
+                <markCorrectWrong correctStyle="rectFrame" errorStyle="cross" hmargin="0" lineWidth="2" vmargin="0"/>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="32">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>200</answer>
+                </label>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="88">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>800</answer>
+                </label>
+              </labelling>
+              <sourceList2 childMode="false" extendToHighest="true" height="110" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List5" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="80" x="20" y="151">
+                <itemBkgnd>
+                  <solidFill color="ffe3ffcc"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <solidFill color="ffffeaa4"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">100&lt;br&gt;</slItem>
+                <slItem sound="">200&lt;br&gt;</slItem>
+                <slItem sound="">300&lt;br&gt;</slItem>
+                <slItem sound="">500&lt;br&gt;</slItem>
+                <slItem sound="">600&lt;br&gt;</slItem>
+                <slItem sound="">800&lt;br&gt;</slItem>
+                <slItem sound="">900&lt;br&gt;</slItem>
+              </sourceList2>
+            </ac>
+            <ac containerId="" enableALLOKafterError="false" height="119" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="blok2" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="100" x="518" y="167">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <shape background="96d6ff9f" height="115" name="Shape19" width="85" x="4" y="4">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+              <sourceList2 childMode="false" extendToHighest="true" height="111" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List4" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="80" x="10" y="10">
+                <itemBkgnd>
+                  <solidFill color="ffdaffad"/>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">&lt;font color="#98b66e"&gt;100&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;200&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;300&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;500&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;600&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;800&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;900&lt;/font&gt;&lt;br&gt;</slItem>
+              </sourceList2>
+              <shape background="ffd6ff9f" border="true" borderColor="ffb0bdd2" borderWidth="1" height="118" name="Shape20" width="90" x="3" y="3">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+            </ac>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst40" tooltipOnClick="true" translationID="Tekst-1508310906" width="72" x="528" y="88">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 24 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst39" tooltipOnClick="true" translationID="Tekst-923773579" width="68" x="528" y="32">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 6 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <ac containerId="" enableALLOKafterError="false" height="310" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container2" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="610" x="13" y="11">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <movie alignment="5" height="293" name="PicturePlayer4" src="media/uc_p4_l064_06_03i.swf" width="480" x="5" y="5">
+                <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="3" name="ProgressBar3" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="109" x="180" y="166"/>
+              </movie>
+            </ac>
+          </tab>
+          <tab name="Tab 4" src="../common/tabintab.swf" switchTime="1">
+            <decoration>
+              <border/>
+            </decoration>
+            <ac containerId="" enableALLOKafterError="false" height="260" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container8" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="120" x="508" y="26">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <labelling dragOverColor="ffe3ffcc" height="142" name="Labeling3" transparentSLMode="false" width="78" x="12" y="-1">
+                <markCorrectWrong correctStyle="rectFrame" errorStyle="cross" hmargin="0" lineWidth="2" vmargin="0"/>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="32">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>400</answer>
+                </label>
+                <label background="ffffffff" frameBorder="single" frameColor="b0bdd2" frameSize="1" height="23" width="35" x="37" y="88">
+                  <decoration>
+                    <solidFill color="ffffffff"/>
+                    <border borderBottomMargin="0" borderColor="b0bdd2" borderLeftMargin="0" borderRightMargin="0" borderThickness="1" borderTopMargin="0" borderType="single"/>
+                  </decoration>
+                  <answer/>
+                  <answer>100</answer>
+                </label>
+              </labelling>
+              <sourceList2 childMode="false" extendToHighest="true" height="120" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List7" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="120" x="20" y="151">
+                <itemBkgnd>
+                  <solidFill color="ffe3ffcc"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <solidFill color="ffffeaa4"/>
+                  <border borderColor="5c77a3" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">100&lt;br&gt;</slItem>
+                <slItem sound="">200&lt;br&gt;</slItem>
+                <slItem sound="">300&lt;br&gt;</slItem>
+                <slItem sound="">400&lt;br&gt;</slItem>
+                <slItem sound="">600&lt;br&gt;</slItem>
+                <slItem sound="">900&lt;br&gt;</slItem>
+                <slItem sound="">1000&lt;br&gt;</slItem>
+              </sourceList2>
+            </ac>
+            <ac containerId="" enableALLOKafterError="false" height="129" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="blok3" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="110" x="518" y="167">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <shape background="96d6ff9f" height="115" name="Shape21" width="85" x="4" y="4">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+              <sourceList2 childMode="false" extendToHighest="true" height="121" inGapBkgndEnabled="false" itemHeight="maxitem" itemJustify="left" itemShadow="true" itemShadowDepth="2" itemVAlign="top" itemWidth="35" layout="vertical" name="Source List6" randomize="false" removable="true" textJustify="center" textWordWrap="false" verticalSpacing="5" width="80" x="10" y="10">
+                <itemBkgnd>
+                  <solidFill color="ffdaffad"/>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgnd>
+                <itemBkgndMouseOver>
+                  <border borderColor="b3d5a2" borderThickness="1" borderType="single"/>
+                </itemBkgndMouseOver>
+                <slItem sound="">&lt;font color="#98b66e"&gt;100&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;200&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;300&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;400&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;600&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;900&lt;/font&gt;&lt;br&gt;</slItem>
+                <slItem sound="">&lt;font color="#98b66e"&gt;1000&lt;/font&gt;&lt;br&gt;</slItem>
+              </sourceList2>
+              <shape background="ffd6ff9f" border="true" borderColor="ffb0bdd2" borderWidth="1" height="118" name="Shape22" width="90" x="3" y="3">
+                <moveTo x="0.0" y="0.0"/>
+                <lineTo x="4095.0" y="0.0"/>
+                <lineTo x="4095.0" y="4095.0"/>
+                <lineTo x="0.0" y="4095.0"/>
+                <lineTo x="0.0" y="0.0"/>
+              </shape>
+            </ac>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst42" tooltipOnClick="true" translationID="Tekst-1875793213" width="72" x="528" y="88">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 3 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="22" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Tekst41" tooltipOnClick="true" translationID="Tekst-760776400" width="68" x="528" y="32">
+              <format font="Arial" size="12"/>
+              <melement font-family="Arial" italic="true">V</melement>
+              <melement align="sub" font-family="Arial">1</melement>
+              <melement font-family="Arial"> = 12 V</melement>
+              <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+            <ac containerId="" enableALLOKafterError="false" height="310" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Container3" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="620" x="13" y="11">
+              <resultWindows/>
+              <acfeedbacks>
+                <group condition="ALL_OK" sequence="random"/>
+                <group condition="OK" sequence="random"/>
+                <group condition="WRONG" sequence="random"/>
+                <group condition="HELP" sequence="random"/>
+              </acfeedbacks>
+              <convertResults/>
+              <movie alignment="5" height="293" name="PicturePlayer6" src="media/uc_p4_l064_06_04i.swf" width="480" x="5" y="5">
+                <progress alignment="horizontal" background="ffb0bdd2" color="ff003366" elementCount="20" elementDistance="2" elementSize="7" frameColor="ffffffff" frameMargin="1" frameThickness="0" height="3" name="ProgressBar4" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="109" x="180" y="166"/>
+              </movie>
+            </ac>
+          </tab>
+          <commands>
+            <onUserAction command=""/>
+            <onSwitchTab command="" id="0"/>
+            <onSwitchTab command="" id="1"/>
+            <onSwitchTab command="" id="2"/>
+            <onSwitchTab command="" id="3"/>
+          </commands>
+        </tabsheet>
+        <ac containerId="" enableALLOKafterError="false" height="26" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="ecounts" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="146" x="568" y="434">
+          <resultWindows/>
+          <acfeedbacks>
+            <group condition="ALL_OK" sequence="random"/>
+            <group condition="OK" sequence="random"/>
+            <group condition="WRONG" sequence="random"/>
+            <group condition="HELP" sequence="random"/>
+          </acfeedbacks>
+          <convertResults/>
+          <linkedText autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="34" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="ecount" tooltipOnClick="true" translationID="ecount-823351464" width="42" x="31" y="-15">
+            <format font="Arial" size="12"/>
+            <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+          <movie alignment="5" height="18" name="e1_2" src="../common/e1_2.swf" width="36" x="11" y="-13">
+            <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="0" frameThickness="0" height="0" name="ProgressBar7" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+          </movie>
+          <movie alignment="5" height="15" name="e2" src="../common/e2.swf" width="18" x="-5" y="-10">
+            <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="1" frameThickness="0" height="0" name="ProgressBar11" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+          </movie>
+          <movie alignment="5" height="18" name="e1" src="../common/e1.swf" width="36" x="11" y="-13">
+            <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="1" frameThickness="0" height="0" name="ProgressBar12" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+          </movie>
+        </ac>
+        <shape background="ffb0bdd2" height="145" name="Shape4" width="6" x="33" y="159">
+          <moveTo x="0.0" y="0.0"/>
+          <lineTo x="4095.0" y="0.0"/>
+          <lineTo x="4095.0" y="4095.0"/>
+          <lineTo x="0.0" y="4095.0"/>
+          <lineTo x="0.0" y="0.0"/>
+        </shape>
+        <counters continous="false" evaluateAtReset="false" height="10" name="cCheck_resetCntr" passive="true" persistent="false" reevaluateAfterLoadState="false" width="10" x="17" y="13">
+          <counters>
+            <counter container="cCheck" field="done" name="done" type="container"/>
+            <counter container="cCheck" field="errors" name="err" type="container"/>
+          </counters>
+          <feedbacks>
+            <feedback>
+              <condition op="or" type="logical">
+                <condition arg="0" counter="done" op="&gt;" type="counter"/>
+                <condition arg="0" counter="err" op="&gt;" type="counter"/>
+              </condition>
+              <action commands="_root.stopPlayers();cCheck.checkActivity(../common/confirm_reset.page)"/>
+            </feedback>
+            <feedback>
+              <condition op="and" type="logical">
+                <condition arg="0" counter="done" op="==" type="counter"/>
+                <condition arg="0" counter="err" op="==" type="counter"/>
+              </condition>
+              <action commands="_root.stopPlayers();cCheck.checkActivity(../common/nothing_to_reset.page)"/>
+            </feedback>
+          </feedbacks>
+        </counters>
+        <ac containerId="" enableALLOKafterError="false" height="90" includeerrorsinresult="true" initiallySolved="false" isActive="false" mouseOpaque="false" name="instruction" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="620" x="0" y="-5">
+          <resultWindows/>
+          <acfeedbacks>
+            <group condition="ALL_OK" sequence="random"/>
+            <group condition="OK" sequence="random"/>
+            <group condition="WRONG" sequence="random"/>
+            <group condition="HELP" sequence="random"/>
+          </acfeedbacks>
+          <convertResults/>
+          <movie alignment="5" height="10" name="Check_pict" src="../common/exercise_pictogram.swf" width="10" x="15" y="17">
+            <progress alignment="horizontal" background="00ffffff" color="00ffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="00ffffff" frameMargin="1" frameThickness="0" height="0" name="ProgressBar9" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+          </movie>
+          <shape border="true" borderColor="ff5c77a3" borderWidth="1" height="36" name="Shape8" width="413" x="20" y="17">
+            <moveTo x="0.0" y="0.0"/>
+            <lineTo x="0.0" y="4095.0"/>
+            <lineTo x="4095.0" y="4095.0"/>
+            <lineTo x="0.0" y="4095.0"/>
+            <lineTo x="0.0" y="0.0"/>
+          </shape>
+          <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="37" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text1" tooltipOnClick="true" translationID="Tekst-547510634" width="427" x="32" y="13">&lt;p&gt;&lt;b&gt;&lt;font face="Arial" color="#415da3"&gt;Determine&amp;nbsp;the&amp;nbsp;number&amp;nbsp;of&amp;nbsp;turns&amp;nbsp;in&amp;nbsp;the&amp;nbsp;primary&amp;nbsp;coil&amp;nbsp;and&amp;nbsp;in&amp;nbsp;the&amp;nbsp;secondary&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;font face="Arial" color="#415da3"&gt;coil&amp;nbsp;so&amp;nbsp;that&amp;nbsp;a&amp;nbsp;given&amp;nbsp;device&amp;nbsp;will&amp;nbsp;be&amp;nbsp;supplied&amp;nbsp;with&amp;nbsp;the&amp;nbsp;required&amp;nbsp;voltage.&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;</text>
+        </ac>
+        <check height="27" name="Check_Button" src="../common/check_icon.swf" tip="check" tipId="Check Button-493353254" tooltipAlignment="over" width="43" x="658" y="407"/>
+        <ac containerId="" enableALLOKafterError="false" height="342" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="Common" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="634" x="44" y="58">
+          <resultWindows/>
+          <acfeedbacks>
+            <group condition="ALL_OK" sequence="random"/>
+            <group condition="OK" sequence="random"/>
+            <group condition="WRONG" sequence="random"/>
+            <group condition="HELP" sequence="random"/>
+          </acfeedbacks>
+          <convertResults/>
+          <linkedText autoCorrect="false" draggableSizeFromSL="false" dropdownFrameColor="ffb0bdd2" feedbackClozeActivation="onTyping" gapFrameSize="1" height="27" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module10" tooltipOnClick="true" translationID="Text Module2-1415452082" width="140" x="534" y="71">
+            <format font="Arial" size="12"/>
+            <melement italic="true">N</melement>
+            <melement align="sub">1</melement>
+            <melement> =</melement>
+            <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+          <linkedText autoCorrect="false" draggableSizeFromSL="false" dropdownFrameColor="ffb0bdd2" feedbackClozeActivation="onTyping" gapFrameSize="1" height="27" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module11" tooltipOnClick="true" translationID="Text Module2-1160674547" width="140" x="534" y="127">
+            <format font="Arial" size="12"/>
+            <melement italic="true">N</melement>
+            <melement align="sub">2</melement>
+            <melement> =</melement>
+            <melement> </melement>&lt;br&gt;&lt;br&gt;</linkedText>
+          <shape background="ffffffff" border="true" borderColor="ffb0bdd2" borderWidth="1" height="299" name="Shape9" width="486" x="22" y="24">
+            <moveTo x="0.0" y="0.0"/>
+            <lineTo x="4095.0" y="0.0"/>
+            <lineTo x="4095.0" y="4095.0"/>
+            <lineTo x="0.0" y="4095.0"/>
+            <lineTo x="0.0" y="0.0"/>
+          </shape>
+        </ac>
+        <shape border="true" borderColor="ffb0bdd2" borderWidth="1" height="331" name="Shape5" width="651" x="32" y="66">
+          <gradient cx="0" cy="0" height="-1" length="331" originX="0" originY="0" phase="0" type="vertical" width="-1" zoom="1000">
+            <node color="ffd7e1eb" pos="0"/>
+            <node color="ffffffff" pos="255"/>
+          </gradient>
+          <moveTo x="0.0" y="0.0"/>
+          <lineTo x="4095.0" y="0.0"/>
+          <lineTo x="4095.0" y="4095.0"/>
+          <lineTo x="0.0" y="4095.0"/>
+          <lineTo x="0.0" y="0.0"/>
+        </shape>
+      </ac>
+    </tab>
+    <commands>
+      <onUserAction command=""/>
+      <onSwitchTab command="" id="0"/>
+      <onSwitchTab command="" id="1"/>
+    </commands>
+  </tabsheet>
+  <ac containerId="" enableALLOKafterError="false" height="500" includeerrorsinresult="true" initiallySolved="false" isActive="true" mouseOpaque="false" name="back" presentationTime="0" rememberBlockade="false" showAttemptedAnswers="false" width="750" x="0" y="0">
+    <resultWindows/>
+    <acfeedbacks>
+      <group condition="ALL_OK" sequence="random"/>
+      <group condition="OK" sequence="random"/>
+      <group condition="WRONG" sequence="random"/>
+      <group condition="HELP" sequence="random"/>
+    </acfeedbacks>
+    <convertResults/>
+    <movie alignment="5" height="500" name="PicturePlayer" src="../common/back.swf" width="750" x="0" y="0">
+      <progress alignment="horizontal" background="ffffffff" color="ffffffff" elementCount="20" elementDistance="2" elementSize="7" frameColor="ff000000" frameMargin="0" frameThickness="0" height="0" name="ProgressBar2" progressIndicator="continous" slider="" src="" tooltipAlignment="default" type="progressbar" width="0" x="0" y="0"/>
+    </movie>
+    <text autoCorrect="false" draggableSizeFromSL="false" gapFrameSize="1" height="39" idDeselectFeedback="true" idMode="frame" ignoreEditableDnD="false" letterMode="false" moduleEditable="false" name="Text Module" tooltipOnClick="true" translationID="Text Module-941705212" width="389" x="61" y="5">&lt;p&gt;&lt;b&gt;&lt;font color="#999999" size="14"&gt;Turns&amp;nbsp;ratio&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;</text>
+    <shape background="ff5c77a3" height="5" name="Shape3" width="82" x="648" y="46">
+      <moveTo x="0.0" y="0.0"/>
+      <lineTo x="4095.0" y="0.0"/>
+      <lineTo x="4095.0" y="4095.0"/>
+      <lineTo x="0.0" y="4095.0"/>
+      <lineTo x="0.0" y="0.0"/>
+    </shape>
+    <shape border="true" borderColor="ff5c77a3" borderWidth="1" height="435" name="Shape2" width="710" x="20" y="45">
+      <gradient cx="0" cy="0" height="-1" length="435" originX="0" originY="0" phase="0" type="vertical" width="-1" zoom="1000">
+        <node color="ffdbedfd" pos="0"/>
+        <node color="ffffffff" pos="255"/>
+      </gradient>
+      <moveTo x="0.0" y="0.0"/>
+      <lineTo x="4095.0" y="0.0"/>
+      <lineTo x="4095.0" y="4095.0"/>
+      <lineTo x="0.0" y="4095.0"/>
+      <lineTo x="0.0" y="0.0"/>
+    </shape>
+  </ac>
+  <counters continous="true" evaluateAtReset="true" height="20" name="Check_pctrl" passive="false" persistent="false" reevaluateAfterLoadState="true" width="20" x="600" y="520">
+    <counters>
+      <counter container="cCheck" field="errors" name="c_errors" type="container"/>
+      <counter container="cCheck" field="result" name="c_result" type="container"/>
+      <counter name="c_all_ok" type="simple"/>
+    </counters>
+    <feedbacks>
+      <feedback>
+        <condition op="and" type="logical">
+          <condition arg="0" counter="c_errors" op="==" type="counter"/>
+          <condition arg="100" counter="c_result" op="&lt;&gt;" type="counter"/>
+        </condition>
+        <action commands="Check_pict.executeAndWait(changeStage,1)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="0" counter="c_errors" op="&lt;&gt;" type="counter"/>
+        </condition>
+        <action commands="Check_pict.executeAndWait(changeStage,2)"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="-1" counter="c_errors" op="&gt;" type="counter"/>
+        </condition>
+        <action commands="Check_pict.executeAndWait(setErrors,${c_errors})"/>
+      </feedback>
+      <feedback>
+        <condition op="or" type="logical">
+          <condition arg="100" counter="c_result" op="==" type="counter"/>
+        </condition>
+        <action commands="Check_pict.executeAndWait(changeStage,3)"/>
+      </feedback>
+      <feedback>
+        <condition op="and" type="logical">
+          <condition arg="100" counter="c_result" op="==" type="counter"/>
+          <condition arg="0" counter="c_all_ok" op="==" type="counter"/>
+        </condition>
+        <action commands="Check_pctrl.set(c_all_ok,1);_root.showURL(../common/allok.mp3,false)"/>
+      </feedback>
+      <feedback>
+        <condition op="and" type="logical">
+          <condition arg="100" counter="c_result" op="&lt;&gt;" type="counter"/>
+        </condition>
+        <action commands="Check_pctrl.set(c_all_ok,0)"/>
+      </feedback>
+    </feedbacks>
+  </counters>
+</page>

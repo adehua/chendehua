@@ -1,0 +1,19 @@
+﻿{"frames": {
+
+"n 实例 10000":
+{
+	"frame": {"x":0,"y":0,"w":119,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":32},
+	"sourceSize": {"w":119,"h":32}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "14.0.0.110",
+	"image": "uc_p4_l064_06_01s.png",
+	"format": "RGBA8888",
+	"size": {"w":128,"h":128},
+	"scale": "1"
+}
+}

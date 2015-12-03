@@ -1,0 +1,91 @@
+﻿{"frames": {
+
+"n1_mc0000":
+{
+	"frame": {"x":0,"y":0,"w":24,"h":119},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0001":
+{
+	"frame": {"x":24,"y":0,"w":26,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0002":
+{
+	"frame": {"x":50,"y":0,"w":28,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0003":
+{
+	"frame": {"x":78,"y":0,"w":30,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0004":
+{
+	"frame": {"x":108,"y":0,"w":32,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0005":
+{
+	"frame": {"x":140,"y":0,"w":35,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0006":
+{
+	"frame": {"x":175,"y":0,"w":37,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0007":
+{
+	"frame": {"x":212,"y":0,"w":39,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0008":
+{
+	"frame": {"x":0,"y":121,"w":41,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+},
+"n1_mc0009":
+{
+	"frame": {"x":41,"y":121,"w":43,"h":121},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":121},
+	"sourceSize": {"w":43,"h":121}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "14.0.0.110",
+	"image": "ssss.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":256},
+	"scale": "1"
+}
+}

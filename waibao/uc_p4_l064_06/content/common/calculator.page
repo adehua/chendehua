@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page width="224" height="269" startup="close.hide()" modal="false" controlVisibility="false" binaryCheck="false" doneAfterVisit="false" backgroundFeedbacks="true">
+  <properties>
+    <property name="hidewhenloading" type="boolean" value="true"/>
+    <property name="showanswerscolor" type="color" value="ff00cc00"/>
+    <property name="textexportversion" type="integer" value="1"/>
+    <property name="showerrorscolor" type="color" value="ffff0000"/>
+  </properties>
+  <tooltipDecoration shadowDisplacement="2" textColor="ff666666">
+    <solidFill color="ffffffff"/>
+    <border borderType="single" borderColor="666666" borderThickness="1" borderLeftMargin="3" borderTopMargin="0" borderRightMargin="3" borderBottomMargin="0"/>
+  </tooltipDecoration>
+  <button name="close" x="214" y="4" width="28" height="27" src="close03_icon.swf" tipId="Przycisk-1632901825" tip="close" tooltipAlignment="over">
+    <onTurnOn command=""/>
+    <onTurnOff command=""/>
+  </button>
+  <shape name="move_panel" x="12" y="1" width="197" height="20">
+    <moveTo x="0.0" y="0.0"/>
+    <lineTo x="4095.0" y="0.0"/>
+    <lineTo x="4095.0" y="4095.0"/>
+    <lineTo x="0.0" y="4095.0"/>
+    <lineTo x="0.0" y="0.0"/>
+  </shape>
+  <movie name="PicturePlayer" x="0" y="0" width="250" height="268" src="calculator.swf" alignment="5">
+    <progress name="ProgressBar" x="72" y="123" width="109" height="3" src="" type="progressbar" alignment="horizontal" frameColor="ffffffff" frameThickness="0" background="ffb0bdd2" frameMargin="1" color="ff003366" progressIndicator="continous" elementCount="20" elementDistance="2" elementSize="7" slider=""/>
+  </movie>
+</page>

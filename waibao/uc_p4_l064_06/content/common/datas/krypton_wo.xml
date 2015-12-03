@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Krypton is a colourless, odourless noble gas, slightly soluble in water. It is quite inert. Its atoms do not combine into diatomic molecules. Under specific conditions (electrical discharges, low temperature), krypton (II) fluoride </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Kr</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">F</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> has been obtained. Krypton was discovered by the British chemists William Ramsay and Morris Travers during the distillation of noble gases. Its name is derived from the Greek </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">kryptos,</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> meaning ”hidden”.</text>
+   </par>
+</scrollbox>

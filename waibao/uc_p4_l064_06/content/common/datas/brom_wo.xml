@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Bromine is a non-metal. Under normal conditions it is a brown, volatile liquid with a pungent, choking odour; it severely irritates the mucous membranes of the respiratory tract. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Bromine is poisonous and may cause burns. It dissolves in water to produce bromine water, used in laboratories as an oxidising agent. Its name is derived from the Greek word </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">bromos</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> - stink. Bromine was discovered and prepared by a French chemist,  Antoine Jerome Balard, in 1826.</text>
+   </par>
+</scrollbox>

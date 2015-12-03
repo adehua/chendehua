@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="windows-1250"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.6 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Dubnium is a radioactive, artificial metal. It was first obtained in 1967 in the town of Dubna by a team of Russian researchers, directed by G.H. Flerov from the United Institute for Nuclear Research. They bombarded americium-243 with neon-22 ions. In 1970 a group of American researchers directed by Albert Ghiorso also announced the successful preparation of the element, by the bombardment of californium-249 with ions of nitrogen-15. It was named after the town where it was first obtained. The most stable dubnium isotope is </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">262</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Db, with a half-life of 34 seconds.</text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"></text>
+   </par>
+</scrollbox>

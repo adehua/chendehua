@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="windows-1250"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.7 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Seaborgium is a synthetic, radioactive metal. It was first obtained in 1974 by the Russian researchers from the United Nuclear Institute in Dubna near Moscow. It was produced by the bombardment of three different isotopes of lead with chromium ions. The longest-lived isotope of seaborgium is </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">263</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Sg with a half-life of 0.8 seconds. </text>
+   </par>
+</scrollbox>

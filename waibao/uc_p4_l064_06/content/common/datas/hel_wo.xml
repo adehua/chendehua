@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Helium is a colourless, odourless and tasteless gas. It was discovered by the French chemist Pierre Janssen in 1868 by spectroscopic examination of the gaseous atmosphere surrounding the Sun, during an eclipse. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">The existence of helium on Earth was conformed by the British chemist </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Sir William Ramsay. The name of the element is derived from the Greek word </text>
+      <text fn="Arial" fh="15" fc="16777215" fs="i" fa="1" charset="238">helios</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> , meaning ”sun”.</text>
+   </par>
+</scrollbox>

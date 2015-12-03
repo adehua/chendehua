@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Potassium was discovered by the English chemist Sir Humphry Davy in 1807. It is soft enough to be cut with a knife. A freshly cut surface is silvery-white and lustrous. Potassium is highly reactive. It oxidises in contact with air and reacts violently with water to release hydrogen, which ignites. Potassium vapour imparts a lilac colour to a flame. The potassium found naturally is a mixture of three isotopes: </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">39</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">K, </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">40</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">K, </text>
+      <subsup>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">41</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">K</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">. Potassium ions are essential </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">for living organisms.</text>
+   </par>
+</scrollbox>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Metallic beryllium is produced by the electrolysis of a molten mixture of beryllium chloride - </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">BeCl</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> and sodium chloride - NaCl - a</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">t a temperature of about </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">1350 </text>
+      <text fn="Symbol" fh="15" fc="16777215" fa="1" charset="2">°</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">C. Sodium chloride is added to improve the electrical conductivity of the mixture. Another method of metallic </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">beryllium preparation involves the reduction of beryllium fluoride - </text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">BeF</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> - by magnesium.</text>
+   </par>
+</scrollbox>

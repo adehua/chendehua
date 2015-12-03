@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="windows-1252"?>
+<!-- File created by XML_Editor.ocx (RTF-XML editor-parser) v2.8 (xml) -->
+<scrollbox>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Magnesium is produced by the electrolysis of a molten mixture of magnesium chloride </text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">- Mg</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Cl</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">, sodium chloride - NaCl and </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">calcium chloride  - Ca</text>
+      <subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">Cl</text>
+      <text fn="Arial" fh="13" fc="0" fa="1" charset="238"></text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">2</text>
+      </subsup>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0"> at a temperature of 700</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238"> </text>
+      <text fn="Symbol" fh="15" fc="16777215" fa="1" charset="2">°</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">C. </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">Magnesium can also be obtained by the reduction of </text>
+   </par>
+   <par align="l" li="0" ri="0" iln="0">
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="238">magnesium oxide - MgO - by carbon at 2000 </text>
+      <text fn="Symbol" fh="15" fc="16777215" fa="1" charset="2">°</text>
+      <text fn="Arial" fh="15" fc="16777215" fa="1" charset="0">C.</text>
+   </par>
+</scrollbox>
