@@ -23,7 +23,7 @@ DOM
 var dhEvent = {
 	addHandler:function(element,type,handler){
 		 if(element.addEventListener){//谷歌下添加事件
-		 	element.addEventListener(element,type,handler);
+		 	element.addEventListener(type,handler,false);
 		 }else if(element.attachEvent){	//IE下添加事件
 		 	element.attachEvent('on' + type,handler);
 		 }else{//低版本下添加事件
